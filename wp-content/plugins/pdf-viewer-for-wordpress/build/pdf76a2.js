@@ -8,7 +8,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -58,7 +58,7 @@ var _util = __w_pdfjs_require__(2);
 var _base_factory = __w_pdfjs_require__(5);
 
 const DEFAULT_LINK_REL = "noopener noreferrer nofollow";
-const SVG_NS = "http://www.w3.org/2000/svg";
+const SVG_NS = "https://www.w3.org/2000/svg";
 const PixelsPerInch = {
   CSS: 96.0,
   PDF: 72.0,
@@ -457,7 +457,7 @@ function isValidFetchUrl(url, baseUrl) {
     const {
       protocol
     } = baseUrl ? new URL(url, baseUrl) : new URL(url);
-    return protocol === "http:" || protocol === "https:";
+    return protocol === "https:" || protocol === "https:";
   } catch (ex) {
     return false;
   }
@@ -995,7 +995,7 @@ function _isValidProtocol(url) {
   }
 
   switch (url.protocol) {
-    case "http:":
+    case "https:":
     case "https:":
     case "ftp:":
     case "mailto:":
@@ -1018,7 +1018,7 @@ function createValidAbsoluteUrl(url, baseUrl = null, options = null) {
         const dots = url.match(/\./g);
 
         if (dots && dots.length >= 2) {
-          url = `http://${url}`;
+          url = `https://${url}`;
         }
       }
 
@@ -11874,8 +11874,8 @@ exports.SVGGraphics = SVGGraphics;
     fontWeight: "normal",
     fillColor: "#000000"
   };
-  const XML_NS = "http://www.w3.org/XML/1998/namespace";
-  const XLINK_NS = "http://www.w3.org/1999/xlink";
+  const XML_NS = "https://www.w3.org/XML/1998/namespace";
+  const XLINK_NS = "https://www.w3.org/1999/xlink";
   const LINE_CAP_STYLES = ["butt", "round", "square"];
   const LINE_JOIN_STYLES = ["miter", "round", "bevel"];
 
@@ -13665,7 +13665,7 @@ class PDFNodeStream {
   constructor(source) {
     this.source = source;
     this.url = parseUrl(source.url);
-    this.isHttp = this.url.protocol === "http:" || this.url.protocol === "https:";
+    this.isHttp = this.url.protocol === "https:" || this.url.protocol === "https:";
     this.isFsUrl = this.url.protocol === "file:";
     this.httpHeaders = this.isHttp && source.httpHeaders || {};
     this._fullRequestReader = null;
@@ -13972,7 +13972,7 @@ class PDFNodeStreamFullReader extends BaseFullReader {
 
     this._request = null;
 
-    if (this._url.protocol === "http:") {
+    if (this._url.protocol === "https:") {
       this._request = http.request(createRequestOptions(this._url, stream.httpHeaders), handleResponse);
     } else {
       this._request = https.request(createRequestOptions(this._url, stream.httpHeaders), handleResponse);
@@ -14018,7 +14018,7 @@ class PDFNodeStreamRangeReader extends BaseRangeReader {
 
     this._request = null;
 
-    if (this._url.protocol === "http:") {
+    if (this._url.protocol === "https:") {
       this._request = http.request(createRequestOptions(this._url, this._httpHeaders), handleResponse);
     } else {
       this._request = https.request(createRequestOptions(this._url, this._httpHeaders), handleResponse);

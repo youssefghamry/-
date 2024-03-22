@@ -263,7 +263,7 @@ var Mailcheck = {
 
   // Encode the email address to prevent XSS but leave in valid
   // characters, following this official spec:
-  // http://en.wikipedia.org/wiki/Email_address#Syntax
+  // https://en.wikipedia.org/wiki/Email_address#Syntax
   encodeEmail: function(email) {
     var result = encodeURI(email);
     result = result.replace('%20', ' ').replace('%25', '%').replace('%5E', '^')
@@ -280,7 +280,7 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 // Support AMD style definitions
-// Based on jQuery (see http://stackoverflow.com/a/17954882/1322410)
+// Based on jQuery (see https://stackoverflow.com/a/17954882/1322410)
 if (typeof define === "function" && define.amd) {
   define("mailcheck", [], function() {
     return Mailcheck;

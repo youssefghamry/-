@@ -9,7 +9,7 @@
 /*
  *  jquery-boilerplate - v3.4.0
  *  A jump-start for jQuery plugins development.
- *  http://jqueryboilerplate.com
+ *  https://jqueryboilerplate.com
  *
  *  Made by Zeno Rocha
  *  Under MIT License
