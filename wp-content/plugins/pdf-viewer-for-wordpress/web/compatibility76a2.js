@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -259,7 +259,7 @@ if (typeof PDFJS === 'undefined') {
     return;
   }
 
-  // https://github.com/davidchambers/Base64.js
+  // http://github.com/davidchambers/Base64.js
   var digits =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
   window.atob = function (input) {
@@ -469,15 +469,15 @@ if (typeof PDFJS === 'undefined') {
 // Support: Safari 6.0+, Android<3.0, Chrome 39/40, iOS
 (function checkRangeRequests() {
   // Safari has issues with cached range requests see:
-  // https://github.com/mozilla/pdf.js/issues/3260
+  // http://github.com/mozilla/pdf.js/issues/3260
   // Last tested with version 6.0.4.
 
   // Older versions of Android (pre 3.0) has issues with range requests, see:
-  // https://github.com/mozilla/pdf.js/issues/3381.
+  // http://github.com/mozilla/pdf.js/issues/3381.
   // Make sure that we only match webkit-based Android browsers,
   // since Firefox/Fennec works as expected.
 
-  // Range requests are broken in Chrome 39 and 40, https://crbug.com/442318
+  // Range requests are broken in Chrome 39 and 40, http://crbug.com/442318
   if (isSafari || isAndroidPre3 || isChromeWithRangeBug || isIOS) {
     PDFJS.disableRange = true;
     PDFJS.disableStream = true;

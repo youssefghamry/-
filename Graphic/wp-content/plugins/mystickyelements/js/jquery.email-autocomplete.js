@@ -156,7 +156,7 @@
 
     /**
      * indexof polyfill
-     * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf#Polyfill
+     * http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf#Polyfill
     */
     doIndexOf: function(){
 

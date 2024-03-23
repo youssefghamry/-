@@ -1,6 +1,6 @@
 /*
  * International Telephone Input v17.0.16
- * https://github.com/jackocnr/intl-tel-input.git
+ * http://github.com/jackocnr/intl-tel-input.git
  * Licensed under the MIT license
  */
 
@@ -14,10 +14,10 @@
         return function () {
             // Array of country objects for the flag dropdown.
             // Here is the criteria for the plugin to support a given country/territory
-            // - It has an iso2 code: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-            // - It has it's own country calling code (it is not a sub-region of another country): https://en.wikipedia.org/wiki/List_of_country_calling_codes
-            // - It has a flag in the region-flags project: https://github.com/behdad/region-flags/tree/gh-pages/png
-            // - It is supported by libphonenumber (it must be listed on this page): https://github.com/googlei18n/libphonenumber/blob/master/resources/ShortNumberMetadata.xml
+            // - It has an iso2 code: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+            // - It has it's own country calling code (it is not a sub-region of another country): http://en.wikipedia.org/wiki/List_of_country_calling_codes
+            // - It has a flag in the region-flags project: http://github.com/behdad/region-flags/tree/gh-pages/png
+            // - It is supported by libphonenumber (it must be listed on this page): http://github.com/googlei18n/libphonenumber/blob/master/resources/ShortNumberMetadata.xml
             // Each country array has the following information:
             // [
             //    Country name,
@@ -119,7 +119,7 @@
                 // specify the path to the libphonenumber script to enable validation/formatting
                 utilsScript: ""
             };
-            // https://en.wikipedia.org/wiki/List_of_North_American_Numbering_Plan_area_codes#Non-geographic_area_codes
+            // http://en.wikipedia.org/wiki/List_of_North_American_Numbering_Plan_area_codes#Non-geographic_area_codes
             var regionlessNanpNumbers = [ "800", "822", "833", "844", "855", "866", "877", "880", "881", "882", "883", "884", "885", "886", "887", "888", "889" ];
             // utility function to iterate over an object. can't use Object.entries or native forEach because
             // of IE11
@@ -795,7 +795,7 @@
                             }
                             if (!this.isMobile) {
                                 var pos = this.telInput.getBoundingClientRect();
-                                // windowTop from https://stackoverflow.com/a/14384091/217866
+                                // windowTop from http://stackoverflow.com/a/14384091/217866
                                 var windowTop = window.pageYOffset || document.documentElement.scrollTop;
                                 var inputTop = pos.top + windowTop;
                                 var dropdownHeight = this.countryList.offsetHeight;
@@ -1164,7 +1164,7 @@
                         value: function _scrollTo(element, middle)
                         {
                             var container = this.countryList;
-                            // windowTop from https://stackoverflow.com/a/14384091/217866
+                            // windowTop from http://stackoverflow.com/a/14384091/217866
                             var windowTop = window.pageYOffset || document.documentElement.scrollTop;
                             var containerHeight = container.offsetHeight;
                             var containerTop = container.getBoundingClientRect().top + windowTop;
@@ -1235,7 +1235,7 @@
                                 // iterate over chars
                                 for (var i = 0; i < number.length; i++) {
                                     var c = number.charAt(i);
-                                    // if char is number (https://stackoverflow.com/a/8935649/217866)
+                                    // if char is number (http://stackoverflow.com/a/8935649/217866)
                                     if (!isNaN(parseInt(c, 10))) {
                                         numericChars += c;
                                         // if current numericChars make a valid dial code

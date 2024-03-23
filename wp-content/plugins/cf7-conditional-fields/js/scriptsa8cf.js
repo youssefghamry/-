@@ -1781,7 +1781,7 @@ module.exports = __webpack_require__(/*! es6-promise */ "./node_modules/es6-prom
  * @overview es6-promise - a tiny implementation of Promises/A+.
  * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
  * @license   Licensed under MIT license
- *            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
+ *            See http://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
  * @version   3.3.1
  */
 (function (global, factory) {
@@ -1850,7 +1850,7 @@ module.exports = __webpack_require__(/*! es6-promise */ "./node_modules/es6-prom
 
   function useNextTick() {
     // node version 0.10.x displays a deprecation warning when nextTick is used recursively
-    // see https://github.com/cujojs/when/issues/410 for details
+    // see http://github.com/cujojs/when/issues/410 for details
     return function () {
       return process.nextTick(flush);
     };
@@ -3399,7 +3399,7 @@ var runtime = function (exports) {
         if (method === "throw") {
           throw arg;
         } // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        // http://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
 
 
         return doneResult();
@@ -3549,7 +3549,7 @@ var runtime = function (exports) {
   // @@iterator function is called on it. Some browsers' implementations of the
   // iterator prototype chain incorrectly implement this, causing the Generator
   // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  // See http://github.com/facebook/regenerator/issues/274 for more details.
 
   Gp[iteratorSymbol] = function () {
     return this;

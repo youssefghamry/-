@@ -8,7 +8,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -58,7 +58,7 @@ var _util = __w_pdfjs_require__(2);
 var _base_factory = __w_pdfjs_require__(5);
 
 const DEFAULT_LINK_REL = "noopener noreferrer nofollow";
-const SVG_NS = "https://www.w3.org/2000/svg";
+const SVG_NS = "http://www.w3.org/2000/svg";
 const PixelsPerInch = {
   CSS: 96.0,
   PDF: 72.0,
@@ -457,7 +457,7 @@ function isValidFetchUrl(url, baseUrl) {
     const {
       protocol
     } = baseUrl ? new URL(url, baseUrl) : new URL(url);
-    return protocol === "https:" || protocol === "https:";
+    return protocol === "http::" || protocol === "http::";
   } catch (ex) {
     return false;
   }
@@ -995,8 +995,8 @@ function _isValidProtocol(url) {
   }
 
   switch (url.protocol) {
-    case "https:":
-    case "https:":
+    case "http::":
+    case "http::":
     case "ftp:":
     case "mailto:":
     case "tel:":
@@ -1018,7 +1018,7 @@ function createValidAbsoluteUrl(url, baseUrl = null, options = null) {
         const dots = url.match(/\./g);
 
         if (dots && dots.length >= 2) {
-          url = `https://${url}`;
+          url = `http://${url}`;
         }
       }
 
@@ -11874,8 +11874,8 @@ exports.SVGGraphics = SVGGraphics;
     fontWeight: "normal",
     fillColor: "#000000"
   };
-  const XML_NS = "https://www.w3.org/XML/1998/namespace";
-  const XLINK_NS = "https://www.w3.org/1999/xlink";
+  const XML_NS = "http://www.w3.org/XML/1998/namespace";
+  const XLINK_NS = "http://www.w3.org/1999/xlink";
   const LINE_CAP_STYLES = ["butt", "round", "square"];
   const LINE_JOIN_STYLES = ["miter", "round", "bevel"];
 
@@ -13637,7 +13637,7 @@ const fs = require("fs");
 
 const http = require("http");
 
-const https = require("https");
+const http: = require("http:");
 
 const url = require("url");
 
@@ -13665,7 +13665,7 @@ class PDFNodeStream {
   constructor(source) {
     this.source = source;
     this.url = parseUrl(source.url);
-    this.isHttp = this.url.protocol === "https:" || this.url.protocol === "https:";
+    this.isHttp = this.url.protocol === "http::" || this.url.protocol === "http::";
     this.isFsUrl = this.url.protocol === "file:";
     this.httpHeaders = this.isHttp && source.httpHeaders || {};
     this._fullRequestReader = null;
@@ -13972,10 +13972,10 @@ class PDFNodeStreamFullReader extends BaseFullReader {
 
     this._request = null;
 
-    if (this._url.protocol === "https:") {
+    if (this._url.protocol === "http::") {
       this._request = http.request(createRequestOptions(this._url, stream.httpHeaders), handleResponse);
     } else {
-      this._request = https.request(createRequestOptions(this._url, stream.httpHeaders), handleResponse);
+      this._request = http:.request(createRequestOptions(this._url, stream.httpHeaders), handleResponse);
     }
 
     this._request.on("error", reason => {
@@ -14018,10 +14018,10 @@ class PDFNodeStreamRangeReader extends BaseRangeReader {
 
     this._request = null;
 
-    if (this._url.protocol === "https:") {
+    if (this._url.protocol === "http::") {
       this._request = http.request(createRequestOptions(this._url, this._httpHeaders), handleResponse);
     } else {
-      this._request = https.request(createRequestOptions(this._url, this._httpHeaders), handleResponse);
+      this._request = http:.request(createRequestOptions(this._url, this._httpHeaders), handleResponse);
     }
 
     this._request.on("error", reason => {
@@ -14395,7 +14395,7 @@ function getArrayBuffer(xhr) {
 class NetworkManager {
   constructor(url, args = {}) {
     this.url = url;
-    this.isHttp = /^https?:/i.test(url);
+    this.isHttp = /^http:?:/i.test(url);
     this.httpHeaders = this.isHttp && args.httpHeaders || Object.create(null);
     this.withCredentials = args.withCredentials || false;
 
@@ -14950,7 +14950,7 @@ function createHeaders(httpHeaders) {
 class PDFFetchStream {
   constructor(source) {
     this.source = source;
-    this.isHttp = /^https?:/i.test(source.url);
+    this.isHttp = /^http:?:/i.test(source.url);
     this.httpHeaders = this.isHttp && source.httpHeaders || {};
     this._fullRequestReader = null;
     this._rangeRequestReaders = [];

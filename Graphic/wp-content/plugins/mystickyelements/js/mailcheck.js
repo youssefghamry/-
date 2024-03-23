@@ -1,7 +1,7 @@
 /* globals define, module, jQuery */
 
 /*
- * Mailcheck https://github.com/mailcheck/mailcheck
+ * Mailcheck http://github.com/mailcheck/mailcheck
  * Author
  * Derrick Ko (@derrickko)
  *
@@ -124,7 +124,7 @@ var Mailcheck = {
   },
 
   sift4Distance: function(s1, s2, maxOffset) {
-    // sift4: https://siderite.blogspot.com/2014/11/super-fast-and-accurate-string-distance.html
+    // sift4: http://siderite.blogspot.com/2014/11/super-fast-and-accurate-string-distance.html
     if (maxOffset === undefined) {
         maxOffset = 5; //default
     }
@@ -263,7 +263,7 @@ var Mailcheck = {
 
   // Encode the email address to prevent XSS but leave in valid
   // characters, following this official spec:
-  // https://en.wikipedia.org/wiki/Email_address#Syntax
+  // http://en.wikipedia.org/wiki/Email_address#Syntax
   encodeEmail: function(email) {
     var result = encodeURI(email);
     result = result.replace('%20', ' ').replace('%25', '%').replace('%5E', '^')
@@ -280,7 +280,7 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 // Support AMD style definitions
-// Based on jQuery (see https://stackoverflow.com/a/17954882/1322410)
+// Based on jQuery (see http://stackoverflow.com/a/17954882/1322410)
 if (typeof define === "function" && define.amd) {
   define("mailcheck", [], function() {
     return Mailcheck;

@@ -2,7 +2,7 @@
  * MixItUp loadmore v0.0.1
  *
  * @author    Wayne Durack.
- * @link      https://github.com/trolleymusic/mixitup-loadmore
+ * @link      http://github.com/trolleymusic/mixitup-loadmore
  */ 
 
 (function ($, undf) {

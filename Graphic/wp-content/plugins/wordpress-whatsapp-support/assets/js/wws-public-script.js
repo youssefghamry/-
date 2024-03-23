@@ -65,7 +65,7 @@ const wwsWidget = {
      * Send group invitation
      */
     sendGroupInvitation: function( groupID ) {
-        window.open('https://chat.whatsapp.com/' + groupID );
+        window.open('http://chat.whatsapp.com/' + groupID );
     },
 
     /* 

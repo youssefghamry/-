@@ -1,10 +1,10 @@
 /*
  * jPlayer Plugin for jQuery JavaScript Library
- * https://www.jplayer.org
+ * http://www.jplayer.org
  *
  * Copyright (c) 2009 - 2013 Happyworm Ltd
  * Licensed under the MIT license.
- * https://opensource.org/licenses/MIT
+ * http://opensource.org/licenses/MIT
  *
  * Author: Mark J Panaghiston
  * Version: 2.5.0
