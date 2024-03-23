@@ -2,9 +2,14 @@
 @media only screen and (max-width: 767px) {
   body {font-family: 'Droid Arabic Naskh', serif;
     font-size: 14px;
+	    direction: rtl;
+    text-align: center;
+
   }
   p {
     font-size: 14px;
+	    text-align: center;
+
   }
   .ptb-100 {
     padding-top: 60px;
@@ -112,11 +117,12 @@
     margin-top: 60px;
   }
   .banner-image img:nth-child(1) {
-    bottom: 80px;
+    bottom: 770px;
     left: -9px;
-    width: 100px;
+    width: 105px;
     margin: 0 auto;
     right: 0;
+	
   }
   .banner-image img:nth-child(2) {
     left: 0;
@@ -1363,7 +1369,7 @@
     margin-top: 20px;
   }
   .saas-banner-two .saas-banner-image {
-    margin-top: 30px;
+   /* margin-top: 30px;*/
   }
   .choose-area-two .choose-text h4 {
     font-size: 18px;
@@ -2940,7 +2946,7 @@
     padding-top: 100px;
   }
   .saas-banner-two .saas-banner-image {
-    margin-top: 40px;
+   /* margin-top: 40px;*/
   }
   .saas-banner-two .banner-content h1 {
     font-size: 40px;

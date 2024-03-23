@@ -76,7 +76,7 @@ button {
 }
 
 .ptb-100 {
-  padding: 50px;
+  padding: 10px;
 
   padding-top: 100px;
   padding-bottom: 100px;
@@ -221,7 +221,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title h2 {     text-align: center;
-  max-width: 560px;
   text-transform: capitalize;
   font-size: 40px;
   margin-left: auto;
@@ -2590,17 +2589,18 @@ Services Area CSS
 Services Details Area CSS
 =================================================*/
 .services-details-overview {
-  -ms-flex-align: center !important;
-  -webkit-box-align: center !important;
-          align-items: center !important;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -25px;
-  margin-left: -25px;
-  margin-bottom: 60px;
+    -ms-flex-align: center !important;
+    -webkit-box-align: center !important;
+    align-items: center !important;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -25px;
+    margin-left: -25px;
+    margin-bottom: 60px;
+    flex-direction: row-reverse;
 }
 
 .services-details-overview:last-child {
@@ -3326,7 +3326,7 @@ Features Area CSS
   overflow: hidden;
   position: relative;
   z-index: 1;
-      background: #f2dafb;
+      background: #ffffff;
 
 }
 
