@@ -8,9 +8,17 @@
   }
   p {
     font-size: 14px;
-	    text-align: center;
+	    text-align: right;
 
   }
+  h1,h2,h3,h4,h5,h6{
+    text-align: right;
+
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+}
   .ptb-100 {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1215,6 +1223,8 @@
   }
   .pb-70 {
     padding-bottom: 30px;
+    text-align: right;
+
   }
   .section-title p {
     margin-top: 5px;
