@@ -6,6 +6,8 @@
   p {
     font-size: 14px;
   }
+  svg{    display: none;
+}
   .ptb-100 {
     padding-top: 60px;
     padding-bottom: 60px;
