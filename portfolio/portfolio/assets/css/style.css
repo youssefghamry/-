@@ -9035,13 +9035,12 @@ Topbar Wrap Area CSS
 =================================================*/
 .topbar-wrap-area {
   background-color: #6A2186;
-  padding-top: 15px;
-  padding-bottom: 15px;
+ 
 }
 
 .topbar-wrap-area .container-fluid {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .topbar-social-links {

@@ -413,8 +413,47 @@ var wpcf7cf_global_settings = {"ajaxurl":"http:\/\/jaadara.com\/wp-admin\/admin-
     // Insert Twitter Pixel ID and Standard Event data below
     twq('init', 'o4chn');
     twq('track', 'PageView');
-</script>
+	
+	/*******************************************************/
+	document.addEventListener('keydown', function(e) {
+    // منع F12 (أدوات المطور)
+    if (e.key === 'F12') {
+        e.preventDefault();
+    }
 
+    // منع النسخ (Ctrl + C)، القص (Ctrl + X)، واللصق (Ctrl + V)
+    if ((e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'v'))) {
+        e.preventDefault();
+    }
+
+    // منع حفظ الصفحة (Ctrl + S)
+    if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+    }
+
+    // يمكنك إضافة منع أزرار أخرى حسب الحاجة
+});
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // منع القائمة السياقية (زر الفأرة الأيسر)
+});
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey) {
+        e.preventDefault(); // يمنع أي اختصار مرتبط بمفتاح Ctrl
+    }
+});
+
+/*******************************************************/
+</script>
+<style>
+/* تعطيل التحديد النصي في الصفحة باستخدام CSS */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
 <script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="8e812b0d3d2e8c54004e9228-|49" defer></script></body>
 
 <!-- Mirrored from jaadara.com/  /3.x [XR&CO'2014], Sun, 25 Feb 2024 22:45:15 GMT -->

@@ -8,11 +8,19 @@
   }
   p {
     font-size: 14px;
+<<<<<<< HEAD
 	    text-align: right;
 
   }
   h1,h2,h3,h4,h5,h6{
     text-align: right;
+=======
+	    text-align: right !important;
+
+  }
+  h1,h2,h3,h4,h5,h6{
+    text-align: right !important;
+>>>>>>> d7f12d21135ef528e80b0cd9e814df4115b9bfee
 
   }
   a {
