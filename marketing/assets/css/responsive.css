@@ -76,6 +76,8 @@
   .form-control {
     font-size: 15px;
   }
+  .bd-featured-card .featured-image{display: none !important;}
+  .bd-services-card .services-image{display: none !important;}
   .mean-container a.meanmenu-reveal span {
     background-color: #272b2b;
     position: relative;
@@ -108,7 +110,8 @@
   }
   .banner-section {
     height: 100%;
-    padding-top: 140px;
+	    padding-top: 20px;
+
   }
   .banner-content {
     text-align: center;
@@ -296,6 +299,8 @@
     font-size: 14px;
     padding-top: 11px;
     padding-bottom: 8px;
+	        display: none;
+
   }
   .about-content {
     padding-left: 0;
@@ -310,7 +315,7 @@
     font-size: 26px;
   }
   .about-content .features-list {
-    text-align: left;
+    text-align: right;
     margin-top: -5px;
   }
   .about-content .features-list li {
@@ -367,7 +372,7 @@
     font-size: 24px;
   }
   .overview-box .overview-content .content .features-list {
-    text-align: left;
+    text-align: right;
     margin-top: -5px;
   }
   .overview-box .overview-content .content .features-list li {
@@ -469,6 +474,8 @@
   .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-title {
     font-size: 15px;
   }
+  .services-details-overview .services-details-desc .services-details-accordion .accordion {    text-align: right;
+}
   .services-details-overview .services-details-image {
     -ms-flex: 0 0 100%;
     -webkit-box-flex: 0;
@@ -1404,9 +1411,12 @@
   }
   .saas-banner-two {
     height: 100%;
-    padding-top: 130px;
+    padding-top: 30px;
     padding-bottom: 80px;
   }
+  .key-features-card .key-content .icon-image {
+    display: none;
+}
   .saas-banner-two .container.mt-50 {
     margin-top: 0;
   }
@@ -2304,7 +2314,7 @@
   }
   .banner-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 40px;
   }
   .banner-content {
     margin-top: 0;
@@ -2447,6 +2457,7 @@
     font-size: 14px;
     padding-top: 13px;
     padding-bottom: 9px;
+	
   }
   .about-content {
     margin-top: 35px;
@@ -2509,7 +2520,7 @@
     margin-right: auto;
   }
   .overview-box .overview-content .content .features-list {
-    text-align: left;
+    text-align: right;
   }
   .overview-box .overview-content .content .features-list li span {
     font-size: 15px;
@@ -2983,11 +2994,11 @@
   .analysis-img {
     margin-bottom: 30px;
   }
-  .saas-banner-two {
+  /*.saas-banner-two {
     padding-bottom: 80px;
     height: 100%;
     padding-top: 100px;
-  }
+  }*/
   .saas-banner-two .saas-banner-image {
    /* margin-top: 40px;*/
   }
@@ -3235,7 +3246,7 @@
   }
   .cs-banner-section {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
   }
   .cs-banner-section .container-fluid {
     padding-right: var(--bs-gutter-x, 0.75rem);
