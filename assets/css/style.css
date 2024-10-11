@@ -47,13 +47,15 @@
 Default CSS
 =================================================*/
 @import url("http://fonts.googleapis.com/css?family=Overpass:100,100i,200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap");
-body {font-family: 'Droid Arabic Naskh', serif;
+
+body {
+  font-family: 'Droid Arabic Naskh', serif;
   padding: 0;
   margin: 0;
   font-size: 26px;
   font-family: "Overpass", sans-serif;
-      direction: rtl;
-    text-align: right;
+  direction: rtl;
+  text-align: right;
 
 }
 
@@ -115,7 +117,12 @@ p:last-child {
   background-color: #fafafa;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   color: #212529;
 }
@@ -126,14 +133,14 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   position: fixed;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   border-radius: 30px;
   display: inline-block;
   color: #ffffff;
   background-color: #82b440;
   padding: 10px 20px 10px 42px;
   -webkit-box-shadow: 0 1px 20px 1px #82b440;
-          box-shadow: 0 1px 20px 1px #82b440;
+  box-shadow: 0 1px 20px 1px #82b440;
   font-size: 13px;
   font-weight: 600;
 }
@@ -144,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 15px;
   position: absolute;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .buy-now-btn:hover {
@@ -184,20 +191,22 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: -1;
   border-radius: 5px;
 }
 
-.default-btn:hover, .default-btn:focus {
+.default-btn:hover,
+.default-btn:focus {
   color: #ffffff;
   -webkit-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
   -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
-.default-btn:hover span, .default-btn:focus span {
+.default-btn:hover span,
+.default-btn:focus span {
   width: 225%;
   height: 562.5px;
 }
@@ -220,7 +229,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-.section-title h2 {     text-align: center;
+.section-title h2 {
+  text-align: center;
   max-width: 560px;
   text-transform: capitalize;
   font-size: 40px;
@@ -248,9 +258,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
 }
 
-.form-control:hover, .form-control:focus {
+.form-control:hover,
+.form-control:focus {
   -webkit-box-shadow: unset;
-          box-shadow: unset;
+  box-shadow: unset;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -271,7 +282,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-control:focus {
   -webkit-box-shadow: unset;
-          box-shadow: unset;
+  box-shadow: unset;
   border-color: #6A2186;
 }
 
@@ -291,7 +302,10 @@ Preloader Area CSS
   top: 0;
   left: 0;
 }
-li {text-align: right;}
+
+li {
+  text-align: right;
+}
 
 .preloader .loader {
   position: absolute;
@@ -299,7 +313,7 @@ li {text-align: right;}
   left: 0;
   right: 0;
   -webkit-transform: translateY(-43%);
-          transform: translateY(-43%);
+  transform: translateY(-43%);
   text-align: center;
   margin: 0 auto;
   width: 50px;
@@ -313,7 +327,7 @@ li {text-align: right;}
   height: 100%;
   background: #ffffff;
   -webkit-animation: animate .5s linear infinite;
-          animation: animate .5s linear infinite;
+  animation: animate .5s linear infinite;
   position: absolute;
   top: 0;
   left: 0;
@@ -330,10 +344,11 @@ li {text-align: right;}
   left: 0;
   border-radius: 50%;
   -webkit-animation: shadow .5s linear infinite;
-          animation: shadow .5s linear infinite;
+  animation: shadow .5s linear infinite;
 }
 
-.preloader::before, .preloader::after {
+.preloader::before,
+.preloader::after {
   content: '';
   position: absolute;
   left: 0;
@@ -355,7 +370,8 @@ li {text-align: right;}
   visibility: hidden;
 }
 
-.preloader.preloader-deactivate::after, .preloader.preloader-deactivate::before {
+.preloader.preloader-deactivate::after,
+.preloader.preloader-deactivate::before {
   width: 0;
 }
 
@@ -368,6 +384,7 @@ li {text-align: right;}
   0% {
     left: -100px;
   }
+
   100% {
     left: 110%;
   }
@@ -377,6 +394,7 @@ li {text-align: right;}
   0% {
     left: -100px;
   }
+
   100% {
     left: 110%;
   }
@@ -386,22 +404,26 @@ li {text-align: right;}
   17% {
     border-bottom-right-radius: 3px;
   }
+
   25% {
     -webkit-transform: translateY(9px) rotate(22.5deg);
-            transform: translateY(9px) rotate(22.5deg);
+    transform: translateY(9px) rotate(22.5deg);
   }
+
   50% {
     -webkit-transform: translateY(18px) scale(1, 0.9) rotate(45deg);
-            transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
     border-bottom-right-radius: 40px;
   }
+
   75% {
     -webkit-transform: translateY(9px) rotate(67.5deg);
-            transform: translateY(9px) rotate(67.5deg);
+    transform: translateY(9px) rotate(67.5deg);
   }
+
   100% {
     -webkit-transform: translateY(0) rotate(90deg);
-            transform: translateY(0) rotate(90deg);
+    transform: translateY(0) rotate(90deg);
   }
 }
 
@@ -409,36 +431,40 @@ li {text-align: right;}
   17% {
     border-bottom-right-radius: 3px;
   }
+
   25% {
     -webkit-transform: translateY(9px) rotate(22.5deg);
-            transform: translateY(9px) rotate(22.5deg);
+    transform: translateY(9px) rotate(22.5deg);
   }
+
   50% {
     -webkit-transform: translateY(18px) scale(1, 0.9) rotate(45deg);
-            transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
     border-bottom-right-radius: 40px;
   }
+
   75% {
     -webkit-transform: translateY(9px) rotate(67.5deg);
-            transform: translateY(9px) rotate(67.5deg);
+    transform: translateY(9px) rotate(67.5deg);
   }
+
   100% {
     -webkit-transform: translateY(0) rotate(90deg);
-            transform: translateY(0) rotate(90deg);
+    transform: translateY(0) rotate(90deg);
   }
 }
 
 @-webkit-keyframes shadow {
   50% {
     -webkit-transform: scale(1.2, 1);
-            transform: scale(1.2, 1);
+    transform: scale(1.2, 1);
   }
 }
 
 @keyframes shadow {
   50% {
     -webkit-transform: scale(1.2, 1);
-            transform: scale(1.2, 1);
+    transform: scale(1.2, 1);
   }
 }
 
@@ -503,7 +529,9 @@ Navbar Area CSS
   margin-right: 15px;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item a:hover, .aronix-nav .navbar .navbar-nav .nav-item a:focus, .aronix-nav .navbar .navbar-nav .nav-item a.active {
+.aronix-nav .navbar .navbar-nav .nav-item a:hover,
+.aronix-nav .navbar .navbar-nav .nav-item a:focus,
+.aronix-nav .navbar .navbar-nav .nav-item a.active {
   color: #6A2186;
 }
 
@@ -522,13 +550,15 @@ Navbar Area CSS
   margin-left: 0;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item:hover a, .aronix-nav .navbar .navbar-nav .nav-item:focus a, .aronix-nav .navbar .navbar-nav .nav-item.active a {
+.aronix-nav .navbar .navbar-nav .nav-item:hover a,
+.aronix-nav .navbar .navbar-nav .nav-item:focus a,
+.aronix-nav .navbar .navbar-nav .nav-item.active a {
   color: #6A2186;
 }
 
 .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu {
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   background: #ffffff;
   position: absolute;
   border: none;
@@ -561,7 +591,9 @@ Navbar Area CSS
   font-size: 15px;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
   color: #6A2186;
 }
 
@@ -576,7 +608,9 @@ Navbar Area CSS
   color: #696997;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
   color: #6A2186;
 }
 
@@ -592,7 +626,9 @@ Navbar Area CSS
   text-transform: capitalize;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
   color: #6A2186;
 }
 
@@ -608,7 +644,9 @@ Navbar Area CSS
   text-transform: capitalize;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
   color: #6A2186;
 }
 
@@ -624,7 +662,9 @@ Navbar Area CSS
   text-transform: capitalize;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
   color: #6A2186;
 }
 
@@ -640,7 +680,9 @@ Navbar Area CSS
   text-transform: capitalize;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
   color: #6A2186;
 }
 
@@ -656,7 +698,9 @@ Navbar Area CSS
   text-transform: capitalize;
 }
 
-.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus,
+.aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
   color: #6A2186;
 }
 
@@ -824,10 +868,10 @@ Navbar Area CSS
   width: 100%;
   z-index: 999;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
   background: #ffffff !important;
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-          animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -881,7 +925,7 @@ Navbar Area CSS
   z-index: 2;
   padding: 20px;
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   margin-top: 25px;
 }
 
@@ -923,7 +967,8 @@ Navbar Area CSS
   padding: 0;
 }
 
-.search-overlay.search-popup .search-form .search-button:hover, .search-overlay.search-popup .search-form .search-button:focus {
+.search-overlay.search-popup .search-form .search-button:hover,
+.search-overlay.search-popup .search-form .search-button:focus {
   color: #6A2186;
 }
 
@@ -1016,7 +1061,7 @@ Navbar Area CSS
 .sidebar-modal .sidebar-instagram-feed ul li {
   -ms-flex: 0 0 25%;
   -webkit-box-flex: 0;
-          flex: 0 0 25%;
+  flex: 0 0 25%;
   max-width: 25%;
   padding-left: 5px;
   padding-right: 5px;
@@ -1129,48 +1174,60 @@ Navbar Area CSS
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
   .navbar-area.is-sticky {
     border-bottom: none;
     -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
-            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
     padding-top: 15px;
     padding-bottom: 15px;
   }
+
   .aronix-responsive-nav {
     display: block;
   }
+
   .aronix-responsive-nav .aronix-responsive-menu {
     position: relative;
   }
+
   .aronix-responsive-nav .aronix-responsive-menu.mean-container .mean-nav ul {
     font-size: 14px;
   }
+
   .aronix-responsive-nav .aronix-responsive-menu.mean-container .mean-nav ul li a {
     font-size: 15px;
   }
+
   .aronix-responsive-nav .aronix-responsive-menu.mean-container .mean-nav ul li a.active {
     color: #6A2186;
   }
+
   .aronix-responsive-nav .aronix-responsive-menu.mean-container .mean-nav ul li li a {
     font-size: 15px;
   }
+
   .aronix-responsive-nav .aronix-responsive-menu.mean-container .navbar-nav {
     overflow-y: scroll;
     height: 336px;
     -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
-            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   }
+
   .aronix-responsive-nav .mean-container a.meanmenu-reveal {
     color: #212529;
   }
+
   .aronix-responsive-nav .mean-container a.meanmenu-reveal span {
     background: #212529;
   }
+
   .aronix-responsive-nav .logo {
     position: relative;
     width: 50%;
     z-index: 999;
   }
+
   .aronix-nav {
     display: none;
   }
@@ -1237,7 +1294,7 @@ Main Banner Area CSS
   outline: 0;
   color: #212529;
   -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
-          box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
+  box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
 }
 
 .main-banner-content form .input-newsletter::-webkit-input-placeholder {
@@ -1334,7 +1391,7 @@ Main Banner Area CSS
   outline: 0;
   color: #212529;
   -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
-          box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
+  box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
 }
 
 .banner-content form .input-newsletter::-webkit-input-placeholder {
@@ -1410,7 +1467,7 @@ Main Banner Area CSS
   right: 15%;
   top: 20%;
   -webkit-transform: translateY(-20%) translateX(-15%);
-          transform: translateY(-20%) translateX(-15%);
+  transform: translateY(-20%) translateX(-15%);
   z-index: -1;
 }
 
@@ -1420,7 +1477,7 @@ Main Banner Area CSS
   top: 12%;
   right: 36.5%;
   -webkit-animation: moveLeftBounce 3s linear infinite;
-          animation: moveLeftBounce 3s linear infinite;
+  animation: moveLeftBounce 3s linear infinite;
 }
 
 .cloud-icon2 {
@@ -1429,7 +1486,7 @@ Main Banner Area CSS
   top: 35%;
   right: 15%;
   -webkit-animation: moveLeftBounce 5s linear infinite;
-          animation: moveLeftBounce 5s linear infinite;
+  animation: moveLeftBounce 5s linear infinite;
 }
 
 .cloud-icon3 {
@@ -1438,7 +1495,7 @@ Main Banner Area CSS
   top: 50%;
   right: 40%;
   -webkit-animation: moveLeftBounce 3s linear infinite;
-          animation: moveLeftBounce 3s linear infinite;
+  animation: moveLeftBounce 3s linear infinite;
 }
 
 .hero-banner {
@@ -1504,7 +1561,7 @@ Main Banner Area CSS
   outline: 0;
   color: #212529;
   -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
-          box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
+  box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
 }
 
 .hero-banner-content form .input-newsletter::-webkit-input-placeholder {
@@ -1612,7 +1669,7 @@ Main Banner Area CSS
   outline: 0;
   color: #212529;
   -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
-          box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
+  box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
 }
 
 .hero-main-banner-content form .input-newsletter::-webkit-input-placeholder {
@@ -1759,13 +1816,13 @@ Main Banner Area CSS
   top: 10%;
   z-index: -1;
   -webkit-animation-name: rotateMe;
-          animation-name: rotateMe;
+  animation-name: rotateMe;
   -webkit-animation-duration: 20s;
-          animation-duration: 20s;
+  animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 .shape-..3 {
@@ -1774,13 +1831,13 @@ Main Banner Area CSS
   bottom: 5%;
   z-index: -1;
   -webkit-animation-name: rotateMe;
-          animation-name: rotateMe;
+  animation-name: rotateMe;
   -webkit-animation-duration: 15s;
-          animation-duration: 15s;
+  animation-duration: 15s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 .shape-..4 {
@@ -1789,7 +1846,7 @@ Main Banner Area CSS
   top: 8%;
   z-index: -1;
   -webkit-animation: animationFramesTwo 20s infinite linear;
-          animation: animationFramesTwo 20s infinite linear;
+  animation: animationFramesTwo 20s infinite linear;
 }
 
 .shape-..5 {
@@ -1798,7 +1855,7 @@ Main Banner Area CSS
   bottom: 25%;
   z-index: -1;
   -webkit-animation: animationFramesOne 20s infinite linear;
-          animation: animationFramesOne 20s infinite linear;
+  animation: animationFramesOne 20s infinite linear;
 }
 
 .shape-..6 {
@@ -1810,7 +1867,7 @@ Main Banner Area CSS
   z-index: -1;
   bottom: 0;
   -webkit-animation: rotate3d 4s linear infinite;
-          animation: rotate3d 4s linear infinite;
+  animation: rotate3d 4s linear infinite;
 }
 
 .shape-..6 .. {
@@ -1823,7 +1880,7 @@ Main Banner Area CSS
   top: 35%;
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 .shape-..7 .. {
@@ -1839,7 +1896,7 @@ Main Banner Area CSS
   text-align: center;
   z-index: -1;
   -webkit-animation: moveLeftBounce 5s linear infinite;
-          animation: moveLeftBounce 5s linear infinite;
+  animation: moveLeftBounce 5s linear infinite;
 }
 
 .shape-..8 .. {
@@ -1852,7 +1909,7 @@ Main Banner Area CSS
   top: 15%;
   z-index: -1;
   -webkit-animation: moveScale 3s linear infinite;
-          animation: moveScale 3s linear infinite;
+  animation: moveScale 3s linear infinite;
 }
 
 .shape-..9 .. {
@@ -1865,248 +1922,284 @@ Main Banner Area CSS
   z-index: -1;
   top: 40%;
   -webkit-animation: animationFramesOne 20s infinite linear;
-          animation: animationFramesOne 20s infinite linear;
+  animation: animationFramesOne 20s infinite linear;
 }
 
 @-webkit-keyframes rotateMe {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes rotateMe {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes animationFramesOne {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
+
   20% {
     -webkit-transform: translate(73px, -1px) rotate(36deg);
-            transform: translate(73px, -1px) rotate(36deg);
+    transform: translate(73px, -1px) rotate(36deg);
   }
+
   40% {
     -webkit-transform: translate(141px, 72px) rotate(72deg);
-            transform: translate(141px, 72px) rotate(72deg);
+    transform: translate(141px, 72px) rotate(72deg);
   }
+
   60% {
     -webkit-transform: translate(83px, 122px) rotate(108deg);
-            transform: translate(83px, 122px) rotate(108deg);
+    transform: translate(83px, 122px) rotate(108deg);
   }
+
   80% {
     -webkit-transform: translate(-40px, 72px) rotate(144deg);
-            transform: translate(-40px, 72px) rotate(144deg);
+    transform: translate(-40px, 72px) rotate(144deg);
   }
+
   100% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
 }
 
 @keyframes animationFramesOne {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
+
   20% {
     -webkit-transform: translate(73px, -1px) rotate(36deg);
-            transform: translate(73px, -1px) rotate(36deg);
+    transform: translate(73px, -1px) rotate(36deg);
   }
+
   40% {
     -webkit-transform: translate(141px, 72px) rotate(72deg);
-            transform: translate(141px, 72px) rotate(72deg);
+    transform: translate(141px, 72px) rotate(72deg);
   }
+
   60% {
     -webkit-transform: translate(83px, 122px) rotate(108deg);
-            transform: translate(83px, 122px) rotate(108deg);
+    transform: translate(83px, 122px) rotate(108deg);
   }
+
   80% {
     -webkit-transform: translate(-40px, 72px) rotate(144deg);
-            transform: translate(-40px, 72px) rotate(144deg);
+    transform: translate(-40px, 72px) rotate(144deg);
   }
+
   100% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
 }
 
 @-webkit-keyframes animationFramesTwo {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
+
   20% {
     -webkit-transform: translate(-73px, 1px) rotate(-36deg);
-            transform: translate(-73px, 1px) rotate(-36deg);
+    transform: translate(-73px, 1px) rotate(-36deg);
   }
+
   40% {
     -webkit-transform: translate(-141px, -72px) rotate(-72deg);
-            transform: translate(-141px, -72px) rotate(-72deg);
+    transform: translate(-141px, -72px) rotate(-72deg);
   }
+
   60% {
     -webkit-transform: translate(-83px, -122px) rotate(-108deg);
-            transform: translate(-83px, -122px) rotate(-108deg);
+    transform: translate(-83px, -122px) rotate(-108deg);
   }
+
   80% {
     -webkit-transform: translate(40px, -72px) rotate(-144deg);
-            transform: translate(40px, -72px) rotate(-144deg);
+    transform: translate(40px, -72px) rotate(-144deg);
   }
+
   100% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
 }
 
 @keyframes animationFramesTwo {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
+
   20% {
     -webkit-transform: translate(-73px, 1px) rotate(-36deg);
-            transform: translate(-73px, 1px) rotate(-36deg);
+    transform: translate(-73px, 1px) rotate(-36deg);
   }
+
   40% {
     -webkit-transform: translate(-141px, -72px) rotate(-72deg);
-            transform: translate(-141px, -72px) rotate(-72deg);
+    transform: translate(-141px, -72px) rotate(-72deg);
   }
+
   60% {
     -webkit-transform: translate(-83px, -122px) rotate(-108deg);
-            transform: translate(-83px, -122px) rotate(-108deg);
+    transform: translate(-83px, -122px) rotate(-108deg);
   }
+
   80% {
     -webkit-transform: translate(40px, -72px) rotate(-144deg);
-            transform: translate(40px, -72px) rotate(-144deg);
+    transform: translate(40px, -72px) rotate(-144deg);
   }
+
   100% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
 }
 
 @-webkit-keyframes rotate3d {
   0% {
     -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
+
   100% {
     -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
 @keyframes rotate3d {
   0% {
     -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
+
   100% {
     -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
 @-webkit-keyframes moveScale {
   0% {
     -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    transform: scale(0.6);
   }
+
   50% {
     -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    transform: scale(0.8);
   }
+
   100% {
     -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    transform: scale(0.6);
   }
 }
 
 @keyframes moveScale {
   0% {
     -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    transform: scale(0.6);
   }
+
   50% {
     -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    transform: scale(0.8);
   }
+
   100% {
     -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    transform: scale(0.6);
   }
 }
 
 @-webkit-keyframes moveLeftBounce {
   0% {
     -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
   }
+
   50% {
     -webkit-transform: translateX(20px);
-            transform: translateX(20px);
+    transform: translateX(20px);
   }
+
   100% {
     -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveLeftBounce {
   0% {
     -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
   }
+
   50% {
     -webkit-transform: translateX(20px);
-            transform: translateX(20px);
+    transform: translateX(20px);
   }
+
   100% {
     -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
   }
 }
 
 @-webkit-keyframes moveBounce {
   0% {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
+
   50% {
     -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    transform: translateY(20px);
   }
+
   100% {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
 @keyframes moveBounce {
   0% {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
+
   50% {
     -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    transform: translateY(20px);
   }
+
   100% {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -2138,7 +2231,7 @@ Featured Services Area CSS
   top: 33px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   font-size: 55px;
   margin-top: -12px;
 }
@@ -2177,7 +2270,7 @@ Featured Services Area CSS
 
 .single-featured-box .default-btn:hover {
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
-          box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
+  box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
 }
 
 .single-featured-box .default-btn span {
@@ -2186,15 +2279,15 @@ Featured Services Area CSS
 
 .single-featured-box:hover {
   -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
   background-color: #ffffff;
 }
 
 .single-featured-box:hover .icon {
   -webkit-animation: iconTop 0.4s ease-in-out;
-          animation: iconTop 0.4s ease-in-out;
+  animation: iconTop 0.4s ease-in-out;
 }
 
 .single-featured-box:hover .default-btn {
@@ -2205,44 +2298,50 @@ Featured Services Area CSS
 @-webkit-keyframes iconTop {
   0% {
     -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
+
   25% {
     opacity: 0;
     -webkit-transform: translate(-50%, -70%);
-            transform: translate(-50%, -70%);
+    transform: translate(-50%, -70%);
   }
+
   50% {
     opacity: 0;
     -webkit-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
 }
 
 @keyframes iconTop {
   0% {
     -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
+
   25% {
     opacity: 0;
     -webkit-transform: translate(-50%, -70%);
-            transform: translate(-50%, -70%);
+    transform: translate(-50%, -70%);
   }
+
   50% {
     opacity: 0;
     -webkit-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
 }
 
@@ -2342,7 +2441,7 @@ About Area CSS
   left: 8px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .about-content .features-list li span:hover {
@@ -2409,7 +2508,7 @@ About Area CSS
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .about-text .features-list li:last-child {
@@ -2546,7 +2645,7 @@ Services Area CSS
 
 .single-services-box:hover {
   -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .single-services-box:hover::before {
@@ -2556,7 +2655,7 @@ Services Area CSS
 .single-services-box:hover h3 {
   color: #ffffff;
   -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 .single-services-box:hover h3 a {
@@ -2565,13 +2664,13 @@ Services Area CSS
 
 .single-services-box:hover p {
   -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  transform: translateY(-20px);
   color: #ffffff;
 }
 
 .single-services-box:hover .icon {
   -webkit-transform: translateY(-20px) rotate(360deg);
-          transform: translateY(-20px) rotate(360deg);
+  transform: translateY(-20px) rotate(360deg);
   background-color: #ffffff;
   color: #6A2186;
 }
@@ -2593,7 +2692,7 @@ Services Details Area CSS
 .services-details-overview {
   -ms-flex-align: center !important;
   -webkit-box-align: center !important;
-          align-items: center !important;
+  align-items: center !important;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -2611,7 +2710,7 @@ Services Details Area CSS
 .services-details-overview .services-details-desc {
   -ms-flex: 0 0 50%;
   -webkit-box-flex: 0;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
   padding-right: 25px;
   padding-left: 25px;
@@ -2644,14 +2743,14 @@ Services Details Area CSS
 
 .services-details-overview .services-details-desc .services-details-accordion .accordion {
   list-style-type: none;
-  padding-left:0;
+  padding-left: 0;
   margin-bottom: 0;
 }
 
 .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item {
   display: block;
   -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
-          box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+  box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   background: #ffffff;
   margin-bottom: 15px;
 }
@@ -2660,7 +2759,10 @@ Services Details Area CSS
   margin-bottom: 0;
 }
 
-.services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item:nth-child(2) .accordion-title i, .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item:nth-child(4) .accordion-title i, .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item:nth-child(6) .accordion-title i, .services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item:nth-child(8) .accordion-title i {
+.services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item:nth-child(2) .accordion-title i,
+.services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item:nth-child(4) .accordion-title i,
+.services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item:nth-child(6) .accordion-title i,
+.services-details-overview .services-details-desc .services-details-accordion .accordion .accordion-item:nth-child(8) .accordion-title i {
   background: #3F51B5;
 }
 
@@ -2692,7 +2794,7 @@ Services Details Area CSS
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 13px;
 }
 
@@ -2717,7 +2819,7 @@ Services Details Area CSS
 .services-details-overview .services-details-image {
   -ms-flex: 0 0 50%;
   -webkit-box-flex: 0;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
   padding-right: 15px;
   padding-left: 15px;
@@ -2815,7 +2917,7 @@ Overview Area CSS
   margin-bottom: 10px;
   font-size: 35px;
   text-transform: capitalize;
-      margin-top: 43px;
+  margin-top: 43px;
 
 }
 
@@ -3008,7 +3110,7 @@ Fun Facts Area CSS
 .single-fun-facts:hover {
   background-color: #6A2186;
   -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
   border-color: #ffffff;
 }
 
@@ -3045,23 +3147,23 @@ Projects Area CSS
   height: auto;
   width: 100%;
   padding: 25px 20px 20px;
-  -webkit-transition: opacity .3s,-webkit-transform .3s ease;
-  transition: opacity .3s,-webkit-transform .3s ease;
-  transition: transform .3s ease,opacity .3s;
-  transition: transform .3s ease,opacity .3s,-webkit-transform .3s ease;
+  -webkit-transition: opacity .3s, -webkit-transform .3s ease;
+  transition: opacity .3s, -webkit-transform .3s ease;
+  transition: transform .3s ease, opacity .3s;
+  transition: transform .3s ease, opacity .3s, -webkit-transform .3s ease;
   max-width: 370px;
   -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 
 .single-projects-box .projects-content h3 {
   margin-bottom: 0;
   -webkit-transform: translateX(20px);
-          transform: translateX(20px);
-  -webkit-transition: opacity .3s,-webkit-transform .3s ease;
-  transition: opacity .3s,-webkit-transform .3s ease;
-  transition: transform .3s ease,opacity .3s;
-  transition: transform .3s ease,opacity .3s,-webkit-transform .3s ease;
+  transform: translateX(20px);
+  -webkit-transition: opacity .3s, -webkit-transform .3s ease;
+  transition: opacity .3s, -webkit-transform .3s ease;
+  transition: transform .3s ease, opacity .3s;
+  transition: transform .3s ease, opacity .3s, -webkit-transform .3s ease;
   opacity: 0;
   font-size: 24px;
 }
@@ -3073,7 +3175,7 @@ Projects Area CSS
   color: #737b9a;
   opacity: 0;
   -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  transform: translateX(20px);
   -webkit-transition: -webkit-transform .4s ease;
   transition: -webkit-transform .4s ease;
   transition: transform .4s ease;
@@ -3088,7 +3190,7 @@ Projects Area CSS
   top: 25px;
   right: 25px;
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   -webkit-transition: all .4s ease-out 0s;
   transition: all .4s ease-out 0s;
   overflow: hidden;
@@ -3102,10 +3204,11 @@ Projects Area CSS
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.single-projects-box .plus-icon a span::after, .single-projects-box .plus-icon a span::before {
+.single-projects-box .plus-icon a span::after,
+.single-projects-box .plus-icon a span::before {
   position: absolute;
   content: '';
   width: 2px;
@@ -3114,7 +3217,7 @@ Projects Area CSS
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .single-projects-box .plus-icon a span::after {
@@ -3123,7 +3226,7 @@ Projects Area CSS
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .single-projects-box .plus-icon a:hover {
@@ -3136,35 +3239,35 @@ Projects Area CSS
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .single-projects-box:hover .projects-content h3 {
   opacity: 1;
   -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: opacity .5s .3s,-webkit-transform .5s ease .5s;
-  transition: opacity .5s .3s,-webkit-transform .5s ease .5s;
-  transition: transform .5s ease .5s,opacity .5s .3s;
-  transition: transform .5s ease .5s,opacity .5s .3s,-webkit-transform .5s ease .5s;
+  transform: translateX(0);
+  -webkit-transition: opacity .5s .3s, -webkit-transform .5s ease .5s;
+  transition: opacity .5s .3s, -webkit-transform .5s ease .5s;
+  transition: transform .5s ease .5s, opacity .5s .3s;
+  transition: transform .5s ease .5s, opacity .5s .3s, -webkit-transform .5s ease .5s;
 }
 
 .single-projects-box:hover .projects-content .category {
   opacity: 1;
   -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: opacity .5s .6s,-webkit-transform .5s ease .6s;
-  transition: opacity .5s .6s,-webkit-transform .5s ease .6s;
-  transition: transform .5s ease .6s,opacity .5s .6s;
-  transition: transform .5s ease .6s,opacity .5s .6s,-webkit-transform .5s ease .6s;
+  transform: translateX(0);
+  -webkit-transition: opacity .5s .6s, -webkit-transform .5s ease .6s;
+  transition: opacity .5s .6s, -webkit-transform .5s ease .6s;
+  transition: transform .5s ease .6s, opacity .5s .6s;
+  transition: transform .5s ease .6s, opacity .5s .6s, -webkit-transform .5s ease .6s;
 }
 
 .single-projects-box:hover .plus-icon a {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
-.projects-slides.owl-theme .owl-nav.disabled + .owl-dots {
+.projects-slides.owl-theme .owl-nav.disabled+.owl-dots {
   line-height: .01;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -3181,7 +3284,8 @@ Projects Area CSS
   border-radius: 50%;
 }
 
-.projects-slides.owl-theme .owl-dots .owl-dot:hover span, .projects-slides.owl-theme .owl-dots .owl-dot.active span {
+.projects-slides.owl-theme .owl-dots .owl-dot:hover span,
+.projects-slides.owl-theme .owl-dots .owl-dot.active span {
   background-color: #6A2186;
 }
 
@@ -3204,7 +3308,7 @@ Projects Details Area CSS
   left: 50%;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
   width: 75px;
   height: 75px;
   line-height: 75px;
@@ -3238,7 +3342,7 @@ Projects Details Area CSS
 
 .project-details-image:hover .. {
   -webkit-transform: scale(1.3) rotate(4deg);
-          transform: scale(1.3) rotate(4deg);
+  transform: scale(1.3) rotate(4deg);
 }
 
 .projects-details-desc {
@@ -3281,7 +3385,7 @@ Projects Details Area CSS
 .projects-details-desc .project-details-info .single-info-box {
   -ms-flex: 0 0 20%;
   -webkit-box-flex: 0;
-          flex: 0 0 20%;
+  flex: 0 0 20%;
   max-width: 20%;
   padding-left: 15px;
   padding-right: 15px;
@@ -3317,7 +3421,7 @@ Projects Details Area CSS
 .projects-details-desc .project-details-info .single-info-box .social li a:hover {
   color: #6A2186;
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /*================================================
@@ -3327,7 +3431,7 @@ Features Area CSS
   overflow: hidden;
   position: relative;
   z-index: 1;
-      background: #fffcde;
+  background: #fffcde;
 
 }
 
@@ -3366,7 +3470,7 @@ Features Area CSS
   display: block;
   border-radius: 2px;
   -webkit-box-shadow: 0px 10px 40px 0px rgba(107, 125, 179, 0.11);
-          box-shadow: 0px 10px 40px 0px rgba(107, 125, 179, 0.11);
+  box-shadow: 0px 10px 40px 0px rgba(107, 125, 179, 0.11);
   padding-right: 18px;
   padding-top: 15px;
   padding-bottom: 18px;
@@ -3408,21 +3512,23 @@ Features Area CSS
   margin-top: 3px;
 }
 
-.features-list-tab .tabs li.current a, .features-list-tab .tabs li:hover a {
+.features-list-tab .tabs li.current a,
+.features-list-tab .tabs li:hover a {
   background-color: #6A2186;
   color: #ffffff;
   -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 255, 0.22);
-          box-shadow: 0px 10px 40px 0px rgba(0, 0, 255, 0.22);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 255, 0.22);
 }
 
-.features-list-tab .tabs li.current a i, .features-list-tab .tabs li:hover a i {
+.features-list-tab .tabs li.current a i,
+.features-list-tab .tabs li:hover a i {
   color: #ffffff;
 }
 
 .features-list-tab .features-overview {
   -ms-flex-align: center !important;
   -webkit-box-align: center !important;
-          align-items: center !important;
+  align-items: center !important;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -3435,7 +3541,7 @@ Features Area CSS
 .features-list-tab .features-overview .overview-content {
   -ms-flex: 0 0 50%;
   -webkit-box-flex: 0;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
   padding-left: 15px;
   padding-right: 15px;
@@ -3526,7 +3632,7 @@ Features Area CSS
   left: 8px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .features-list-tab .features-overview .overview-content .content .features-list li span:hover {
@@ -3545,7 +3651,7 @@ Features Area CSS
 .features-list-tab .features-overview .overview-image {
   -ms-flex: 0 0 50%;
   -webkit-box-flex: 0;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
   padding-left: 15px;
   padding-right: 15px;
@@ -3569,7 +3675,7 @@ Team Area CSS
 .single-team-box {
   margin-bottom: 30px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
   background-color: #ffffff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3591,7 +3697,7 @@ Team Area CSS
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
   text-decoration: none;
   opacity: 0;
@@ -3641,12 +3747,12 @@ Team Area CSS
 
 .single-team-box:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .single-team-box:hover .image .. {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .single-team-box:hover .image .social {
@@ -3743,7 +3849,8 @@ Solution Area CSS
   font-size: 38px;
 }
 
-.solution-video .video-btn::after, .solution-video .video-btn::before {
+.solution-video .video-btn::after,
+.solution-video .video-btn::before {
   content: '';
   display: block;
   position: absolute;
@@ -3758,15 +3865,16 @@ Solution Area CSS
 
 .solution-video .video-btn::before {
   -webkit-animation: ripple 2s linear infinite;
-          animation: ripple 2s linear infinite;
+  animation: ripple 2s linear infinite;
 }
 
 .solution-video .video-btn::after {
   -webkit-animation: ripple 2s linear 1s infinite;
-          animation: ripple 2s linear 1s infinite;
+  animation: ripple 2s linear 1s infinite;
 }
 
-.solution-video .video-btn:hover, .solution-video .video-btn:focus {
+.solution-video .video-btn:hover,
+.solution-video .video-btn:focus {
   background-color: #6A2186;
   color: #ffffff;
 }
@@ -3774,16 +3882,18 @@ Solution Area CSS
 @-webkit-keyframes ripple {
   0% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
+
   75% {
     -webkit-transform: scale(1.75);
-            transform: scale(1.75);
+    transform: scale(1.75);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
     opacity: 0;
   }
 }
@@ -3791,16 +3901,18 @@ Solution Area CSS
 @keyframes ripple {
   0% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
+
   75% {
     -webkit-transform: scale(1.75);
-            transform: scale(1.75);
+    transform: scale(1.75);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
     opacity: 0;
   }
 }
@@ -3826,7 +3938,8 @@ Feedback Area CSS
   color: #ffffff;
 }
 
-.feedback-area.bg-color .section-title h2 {     text-align: center;
+.feedback-area.bg-color .section-title h2 {
+  text-align: center;
   color: #ffffff;
 }
 
@@ -3866,7 +3979,7 @@ Feedback Area CSS
   z-index: 1;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 15px #f1f1f1;
-          box-shadow: 0 0 15px #f1f1f1;
+  box-shadow: 0 0 15px #f1f1f1;
   padding: 30px;
   margin-bottom: 30px;
 }
@@ -3893,7 +4006,7 @@ Feedback Area CSS
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .single-feedback-item .client-info h3 {
@@ -3915,14 +4028,14 @@ Feedback Area CSS
 
 .feedback-slides .single-feedback-item {
   -webkit-box-shadow: 0px 5px 15px #f1f1f1;
-          box-shadow: 0px 5px 15px #f1f1f1;
+  box-shadow: 0px 5px 15px #f1f1f1;
   margin-top: 30px;
   margin-right: 15px;
   margin-left: 15px;
   margin-bottom: 30px;
 }
 
-.feedback-slides.owl-theme .owl-nav.disabled + .owl-dots {
+.feedback-slides.owl-theme .owl-nav.disabled+.owl-dots {
   line-height: .01;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -3939,7 +4052,8 @@ Feedback Area CSS
   border-radius: 50%;
 }
 
-.feedback-slides.owl-theme .owl-dots .owl-dot:hover span, .feedback-slides.owl-theme .owl-dots .owl-dot.active span {
+.feedback-slides.owl-theme .owl-dots .owl-dot:hover span,
+.feedback-slides.owl-theme .owl-dots .owl-dot.active span {
   background-color: #6A2186;
 }
 
@@ -3961,7 +4075,7 @@ Pricing Area CSS
   text-align: center;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.08);
   padding: 40px 30px 28px 30px;
   border-radius: 5px;
   -webkit-transition: 0.5s;
@@ -3990,8 +4104,8 @@ Pricing Area CSS
   color: #212529;
   line-height: 50px;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   position: relative;
   z-index: 1;
   font-size: 50px;
@@ -4096,7 +4210,7 @@ Pricing Area CSS
 
 .single-pricing-box:hover {
   -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 /*================================================
@@ -4107,7 +4221,7 @@ Partner Area CSS
   overflow: hidden;
   z-index: 1;
   padding-bottom: 90px;
-      direction: ltr;
+  direction: ltr;
 
 }
 
@@ -4121,7 +4235,7 @@ Partner Area CSS
   margin-bottom: 10px;
   -ms-flex: 0 0 20%;
   -webkit-box-flex: 0;
-          flex: 0 0 20%;
+  flex: 0 0 20%;
   max-width: 20%;
   padding-left: 5px;
   padding-right: 5px;
@@ -4151,7 +4265,7 @@ Partner Area CSS
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, 200%);
-          transform: translate(-50%, 200%);
+  transform: translate(-50%, 200%);
   -webkit-transition: -webkit-transform .4s ease;
   transition: -webkit-transform .4s ease;
   transition: transform .4s ease;
@@ -4162,18 +4276,18 @@ Partner Area CSS
 
 .single-partner-item a:hover ..:nth-child(1) {
   -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
+  transform: translateY(-200%);
 }
 
 .single-partner-item a:hover ..:nth-child(2) {
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .partner-slides .single-partner-item {
   -ms-flex: 0 0 100%;
   -webkit-box-flex: 0;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
@@ -4196,7 +4310,7 @@ Blog Area CSS
   margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 10px 55px 5px rgba(137, 173, 255, 0.2);
-          box-shadow: 0 10px 55px 5px rgba(137, 173, 255, 0.2);
+  box-shadow: 0 10px 55px 5px rgba(137, 173, 255, 0.2);
 }
 
 .single-blog-post .post-image {
@@ -4247,7 +4361,7 @@ Blog Area CSS
   background-color: #737b9a;
   content: '';
   -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  transform: rotate(10deg);
 }
 
 .single-blog-post .post-content .post-meta ul li a {
@@ -4317,24 +4431,24 @@ Blog Area CSS
 
 .single-blog-post:hover .post-image a .. {
   -webkit-transform: scale(1.2) rotate(4deg);
-          transform: scale(1.2) rotate(4deg);
+  transform: scale(1.2) rotate(4deg);
 }
 
 .single-blog-post:hover .post-content .post-meta {
   -webkit-transform: translateY(-35px);
-          transform: translateY(-35px);
+  transform: translateY(-35px);
   opacity: 0;
   visibility: hidden;
 }
 
 .single-blog-post:hover .post-content h3 {
   -webkit-transform: translateY(-35px);
-          transform: translateY(-35px);
+  transform: translateY(-35px);
 }
 
 .single-blog-post:hover .post-content P {
   -webkit-transform: translateY(-35px);
-          transform: translateY(-35px);
+  transform: translateY(-35px);
 }
 
 .single-blog-post:hover .post-content .read-more-btn {
@@ -4428,7 +4542,7 @@ Blog Details Area CSS
 .blog-details-desc .article-content .wp-block-gallery.columns-3 li {
   -ms-flex: 0 0 33.3333%;
   -webkit-box-flex: 0;
-          flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%;
   max-width: 33.3333%;
   padding-right: 10px;
   padding-left: 10px;
@@ -4554,14 +4668,15 @@ Blog Details Area CSS
   color: #ffffff;
   background-color: #6A2186;
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .blog-details-desc .post-navigation {
   margin-top: 30px;
 }
 
-blockquote, .blockquote {
+blockquote,
+.blockquote {
   overflow: hidden;
   background-color: #fafafa;
   padding: 50px !important;
@@ -4572,7 +4687,8 @@ blockquote, .blockquote {
   margin-top: 20px;
 }
 
-blockquote p, .blockquote p {
+blockquote p,
+.blockquote p {
   color: #212529;
   line-height: 1.6;
   margin-bottom: 0;
@@ -4581,11 +4697,13 @@ blockquote p, .blockquote p {
   font-size: 24px !important;
 }
 
-blockquote cite, .blockquote cite {
+blockquote cite,
+.blockquote cite {
   display: none;
 }
 
-blockquote::before, .blockquote::before {
+blockquote::before,
+.blockquote::before {
   color: #efefef;
   content: "\f10e";
   position: absolute;
@@ -4597,7 +4715,8 @@ blockquote::before, .blockquote::before {
   font-weight: 900;
 }
 
-blockquote::after, .blockquote::after {
+blockquote::after,
+.blockquote::after {
   content: '';
   position: absolute;
   left: 0;
@@ -4668,7 +4787,7 @@ blockquote::after, .blockquote::after {
   padding: 25px;
   margin-top: 30px;
   -webkit-box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.08);
-          box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.08);
+  box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.08);
   background-color: #ffffff;
 }
 
@@ -4689,10 +4808,11 @@ blockquote::after, .blockquote::after {
   background: #6A2186;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.comments-area ol, .comments-area ul {
+.comments-area ol,
+.comments-area ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -4708,7 +4828,8 @@ blockquote::after, .blockquote::after {
   margin-left: 20px;
 }
 
-.comments-area .comment-body {font-family: 'Droid Arabic Naskh', serif;
+.comments-area .comment-body {
+  font-family: 'Droid Arabic Naskh', serif;
   border-bottom: 1px solid #eeeeee;
   padding-left: 65px;
   color: #212529;
@@ -4799,7 +4920,7 @@ blockquote::after, .blockquote::after {
   background: #6A2186;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .comments-area .comment-respond .comment-reply-title #cancel-comment-reply-link {
@@ -4832,7 +4953,19 @@ blockquote::after, .blockquote::after {
   margin-bottom: 5px;
 }
 
-.comments-area .comment-respond input[type="date"], .comments-area .comment-respond input[type="time"], .comments-area .comment-respond input[type="datetime-local"], .comments-area .comment-respond input[type="week"], .comments-area .comment-respond input[type="month"], .comments-area .comment-respond input[type="text"], .comments-area .comment-respond input[type="email"], .comments-area .comment-respond input[type="url"], .comments-area .comment-respond input[type="password"], .comments-area .comment-respond input[type="search"], .comments-area .comment-respond input[type="tel"], .comments-area .comment-respond input[type="number"], .comments-area .comment-respond textarea {
+.comments-area .comment-respond input[type="date"],
+.comments-area .comment-respond input[type="time"],
+.comments-area .comment-respond input[type="datetime-local"],
+.comments-area .comment-respond input[type="week"],
+.comments-area .comment-respond input[type="month"],
+.comments-area .comment-respond input[type="text"],
+.comments-area .comment-respond input[type="email"],
+.comments-area .comment-respond input[type="url"],
+.comments-area .comment-respond input[type="password"],
+.comments-area .comment-respond input[type="search"],
+.comments-area .comment-respond input[type="tel"],
+.comments-area .comment-respond input[type="number"],
+.comments-area .comment-respond textarea {
   display: block;
   width: 100%;
   background-color: #ffffff;
@@ -4843,7 +4976,19 @@ blockquote::after, .blockquote::after {
   transition: 0.5s;
 }
 
-.comments-area .comment-respond input[type="date"]:focus, .comments-area .comment-respond input[type="time"]:focus, .comments-area .comment-respond input[type="datetime-local"]:focus, .comments-area .comment-respond input[type="week"]:focus, .comments-area .comment-respond input[type="month"]:focus, .comments-area .comment-respond input[type="text"]:focus, .comments-area .comment-respond input[type="email"]:focus, .comments-area .comment-respond input[type="url"]:focus, .comments-area .comment-respond input[type="password"]:focus, .comments-area .comment-respond input[type="search"]:focus, .comments-area .comment-respond input[type="tel"]:focus, .comments-area .comment-respond input[type="number"]:focus, .comments-area .comment-respond textarea:focus {
+.comments-area .comment-respond input[type="date"]:focus,
+.comments-area .comment-respond input[type="time"]:focus,
+.comments-area .comment-respond input[type="datetime-local"]:focus,
+.comments-area .comment-respond input[type="week"]:focus,
+.comments-area .comment-respond input[type="month"]:focus,
+.comments-area .comment-respond input[type="text"]:focus,
+.comments-area .comment-respond input[type="email"]:focus,
+.comments-area .comment-respond input[type="url"]:focus,
+.comments-area .comment-respond input[type="password"]:focus,
+.comments-area .comment-respond input[type="search"]:focus,
+.comments-area .comment-respond input[type="tel"]:focus,
+.comments-area .comment-respond input[type="number"]:focus,
+.comments-area .comment-respond textarea:focus {
   border-color: #6A2186;
 }
 
@@ -4909,7 +5054,8 @@ blockquote::after, .blockquote::after {
   font-size: 16px;
 }
 
-.comments-area .comment-respond .form-submit input:hover, .comments-area .comment-respond .form-submit input:focus {
+.comments-area .comment-respond .form-submit input:hover,
+.comments-area .comment-respond .form-submit input:focus {
   color: #ffffff;
   background-color: #212529;
 }
@@ -5166,16 +5312,18 @@ Pagination Area CSS
   line-height: 45px;
   color: #212529;
   -webkit-box-shadow: 0 2px 10px 0 #d8dde6;
-          box-shadow: 0 2px 10px 0 #d8dde6;
+  box-shadow: 0 2px 10px 0 #d8dde6;
   font-size: 15px;
   font-weight: 700;
 }
 
-.pagination-area .page-numbers.current, .pagination-area .page-numbers:hover, .pagination-area .page-numbers:focus {
+.pagination-area .page-numbers.current,
+.pagination-area .page-numbers:hover,
+.pagination-area .page-numbers:focus {
   background: #6A2186;
   color: #ffffff;
   -webkit-box-shadow: 0 2px 10px 0 #d8dde6;
-          box-shadow: 0 2px 10px 0 #d8dde6;
+  box-shadow: 0 2px 10px 0 #d8dde6;
 }
 
 /*================================================
@@ -5211,7 +5359,7 @@ Sidebar Area CSS
 
 .widget-area .widget_search {
   -webkit-box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1);
-          box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1);
+  box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1);
   background-color: #ffffff;
   padding: 15px;
 }
@@ -5552,7 +5700,8 @@ Sidebar Area CSS
   margin-right: 4px;
 }
 
-.widget-area .tagcloud a:hover, .widget-area .tagcloud a:focus {
+.widget-area .tagcloud a:hover,
+.widget-area .tagcloud a:focus {
   color: #ffffff;
   background-color: #6A2186;
   border-color: #6A2186;
@@ -5599,7 +5748,7 @@ Shop Area CSS
   border-radius: 0;
   border: none;
   -webkit-box-shadow: 0 0 29px 0 rgba(102, 102, 102, 0.1);
-          box-shadow: 0 0 29px 0 rgba(102, 102, 102, 0.1);
+  box-shadow: 0 0 29px 0 rgba(102, 102, 102, 0.1);
   float: unset;
   height: unset;
   line-height: initial;
@@ -5610,7 +5759,7 @@ Shop Area CSS
 .woocommerce-topbar .woocommerce-topbar-ordering .nice-select .list {
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 29px 0 rgba(102, 102, 102, 0.1);
-          box-shadow: 0 0 29px 0 rgba(102, 102, 102, 0.1);
+  box-shadow: 0 0 29px 0 rgba(102, 102, 102, 0.1);
   border-radius: 0;
   margin-top: 0;
   width: 100%;
@@ -5649,7 +5798,7 @@ Shop Area CSS
   margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
 }
 
 .single-product-box .product-image {
@@ -5692,7 +5841,7 @@ Shop Area CSS
   right: 20px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .single-product-box .product-image .add-to-cart-btn:hover {
@@ -5906,8 +6055,8 @@ Product Details Area CSS
   margin: auto;
   -webkit-user-select: none;
   -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
@@ -5915,7 +6064,7 @@ Product Details Area CSS
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .product-details-desc .buy-checkbox-btn .cbx span:first-child {
@@ -5924,7 +6073,7 @@ Product Details Area CSS
   height: 18px;
   border-radius: 3px;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   vertical-align: middle;
   border: 1px solid #ebebeb;
   -webkit-transition: all 0.2s ease;
@@ -5947,9 +6096,9 @@ Product Details Area CSS
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -5961,7 +6110,7 @@ Product Details Area CSS
   background: #212529;
   display: block;
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   opacity: 1;
   border-radius: 50%;
   -webkit-transition: 0.5s;
@@ -5979,20 +6128,20 @@ Product Details Area CSS
   border-color: #212529;
 }
 
-.product-details-desc .buy-checkbox-btn .inp-cbx:checked + .cbx span:first-child {
+.product-details-desc .buy-checkbox-btn .inp-cbx:checked+.cbx span:first-child {
   background: #212529;
   border-color: #212529;
   -webkit-animation: wave 0.4s ease;
-          animation: wave 0.4s ease;
+  animation: wave 0.4s ease;
 }
 
-.product-details-desc .buy-checkbox-btn .inp-cbx:checked + .cbx span:first-child svg {
+.product-details-desc .buy-checkbox-btn .inp-cbx:checked+.cbx span:first-child svg {
   stroke-dashoffset: 0;
 }
 
-.product-details-desc .buy-checkbox-btn .inp-cbx:checked + .cbx span:first-child:before {
+.product-details-desc .buy-checkbox-btn .inp-cbx:checked+.cbx span:first-child:before {
   -webkit-transform: scale(3.5);
-          transform: scale(3.5);
+  transform: scale(3.5);
   opacity: 0;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -6070,7 +6219,7 @@ Product Details Area CSS
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   left: 30px;
   width: 12px;
   height: 12px;
@@ -6094,17 +6243,20 @@ Product Details Area CSS
   transition: 0.5s;
 }
 
-.products-details-tab .tabs li a:hover, .products-details-tab .tabs li a:focus {
+.products-details-tab .tabs li a:hover,
+.products-details-tab .tabs li a:focus {
   color: #ffffff;
   background-color: #6A2186;
   border-color: #6A2186;
 }
 
-.products-details-tab .tabs li a:hover .dot, .products-details-tab .tabs li a:focus .dot {
+.products-details-tab .tabs li a:hover .dot,
+.products-details-tab .tabs li a:focus .dot {
   border-color: #ffffff;
 }
 
-.products-details-tab .tabs li a:hover .dot::before, .products-details-tab .tabs li a:focus .dot::before {
+.products-details-tab .tabs li a:hover .dot::before,
+.products-details-tab .tabs li a:focus .dot::before {
   background: #ffffff;
 }
 
@@ -6273,7 +6425,7 @@ Product Details Area CSS
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-form form .form-group .form-control {
   height: 55px;
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
-          box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
+  box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
   border: none;
 }
 
@@ -6286,7 +6438,7 @@ Product Details Area CSS
   border: none;
   margin-top: 10px;
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
-          box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
+  box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
 }
 
 .related-products {
@@ -6459,7 +6611,7 @@ Cart Area CSS
   padding: 40px;
   max-width: 620px;
   -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   margin-left: auto;
   margin-top: 50px;
@@ -6507,7 +6659,7 @@ Checkout Area CSS
 =================================================*/
 .user-actions {
   -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
   background: #ffffff;
   padding: 18px 20px 15px;
   margin-bottom: 65px;
@@ -6541,7 +6693,8 @@ Checkout Area CSS
   color: #212529;
 }
 
-.user-actions span a:hover, .user-actions span a:focus {
+.user-actions span a:hover,
+.user-actions span a:focus {
   color: #6A2186;
 }
 
@@ -6590,7 +6743,7 @@ Checkout Area CSS
 .billing-details .form-group .nice-select .list {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1);
-          box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1);
+  box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1);
   border-radius: 0;
   margin-top: 0;
   width: 100%;
@@ -6707,28 +6860,34 @@ Checkout Area CSS
   color: #6A2186;
 }
 
-.order-details .order-table table tbody tr td.order-subtotal span, .order-details .order-table table tbody tr td.order-shipping span, .order-details .order-table table tbody tr td.total-price span {
+.order-details .order-table table tbody tr td.order-subtotal span,
+.order-details .order-table table tbody tr td.order-shipping span,
+.order-details .order-table table tbody tr td.total-price span {
   color: #212529;
   font-weight: 600;
 }
 
-.order-details .order-table table tbody tr td.shipping-price, .order-details .order-table table tbody tr td.order-subtotal-price, .order-details .order-table table tbody tr td.product-subtotal {
+.order-details .order-table table tbody tr td.shipping-price,
+.order-details .order-table table tbody tr td.order-subtotal-price,
+.order-details .order-table table tbody tr td.product-subtotal {
   font-weight: 600;
 }
 
 .order-details .payment-box {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
   margin-top: 30px;
   padding: 30px;
 }
 
-.order-details .payment-box .payment-method p [type="radio"]:checked, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) {
+.order-details .payment-box .payment-method p [type="radio"]:checked,
+.order-details .payment-box .payment-method p [type="radio"]:not(:checked) {
   display: none;
 }
 
-.order-details .payment-box .payment-method p [type="radio"]:checked + label, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label {
+.order-details .payment-box .payment-method p [type="radio"]:checked+label,
+.order-details .payment-box .payment-method p [type="radio"]:not(:checked)+label {
   padding-left: 27px;
   cursor: pointer;
   display: block;
@@ -6738,7 +6897,8 @@ Checkout Area CSS
   font-weight: 600;
 }
 
-.order-details .payment-box .payment-method p [type="radio"]:checked + label::before, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::before {
+.order-details .payment-box .payment-method p [type="radio"]:checked+label::before,
+.order-details .payment-box .payment-method p [type="radio"]:not(:checked)+label::before {
   content: '';
   position: absolute;
   left: 0;
@@ -6750,7 +6910,8 @@ Checkout Area CSS
   background: #ffffff;
 }
 
-.order-details .payment-box .payment-method p [type="radio"]:checked + label::after, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::after {
+.order-details .payment-box .payment-method p [type="radio"]:checked+label::after,
+.order-details .payment-box .payment-method p [type="radio"]:not(:checked)+label::after {
   content: '';
   width: 12px;
   height: 12px;
@@ -6763,25 +6924,25 @@ Checkout Area CSS
   transition: 0.5s;
 }
 
-.order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::after {
+.order-details .payment-box .payment-method p [type="radio"]:not(:checked)+label::after {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
 }
 
-.order-details .payment-box .payment-method p [type="radio"]:checked + label::after {
+.order-details .payment-box .payment-method p [type="radio"]:checked+label::after {
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .order-details .payment-box .default-btn.order-btn {
   display: block;
   margin-top: 25px;
   -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
-          box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
+  box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
 }
 
 /*================================================
@@ -6796,7 +6957,7 @@ FAQ Area CSS
 .faq-accordion .accordion .accordion-item {
   display: block;
   -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
-          box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+  box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   background: #ffffff;
   margin-bottom: 20px;
 }
@@ -6805,7 +6966,10 @@ FAQ Area CSS
   margin-bottom: 0;
 }
 
-.faq-accordion .accordion .accordion-item:nth-child(2) .accordion-title i, .faq-accordion .accordion .accordion-item:nth-child(4) .accordion-title i, .faq-accordion .accordion .accordion-item:nth-child(6) .accordion-title i, .faq-accordion .accordion .accordion-item:nth-child(8) .accordion-title i {
+.faq-accordion .accordion .accordion-item:nth-child(2) .accordion-title i,
+.faq-accordion .accordion .accordion-item:nth-child(4) .accordion-title i,
+.faq-accordion .accordion .accordion-item:nth-child(6) .accordion-title i,
+.faq-accordion .accordion .accordion-item:nth-child(8) .accordion-title i {
   background: #3F51B5;
 }
 
@@ -6837,7 +7001,7 @@ FAQ Area CSS
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 13px;
 }
 
@@ -6859,7 +7023,10 @@ FAQ Area CSS
   display: block;
 }
 
-.faq-area .col-lg-6:nth-child(2) .faq-accordion .accordion .accordion-item:nth-child(2) .accordion-title i, .faq-area .col-lg-6:nth-child(2) .faq-accordion .accordion .accordion-item:nth-child(4) .accordion-title i, .faq-area .col-lg-6:nth-child(2) .faq-accordion .accordion .accordion-item:nth-child(6) .accordion-title i, .faq-area .col-lg-6:nth-child(2) .faq-accordion .accordion .accordion-item:nth-child(8) .accordion-title i {
+.faq-area .col-lg-6:nth-child(2) .faq-accordion .accordion .accordion-item:nth-child(2) .accordion-title i,
+.faq-area .col-lg-6:nth-child(2) .faq-accordion .accordion .accordion-item:nth-child(4) .accordion-title i,
+.faq-area .col-lg-6:nth-child(2) .faq-accordion .accordion .accordion-item:nth-child(6) .accordion-title i,
+.faq-area .col-lg-6:nth-child(2) .faq-accordion .accordion .accordion-item:nth-child(8) .accordion-title i {
   background: #6A2186;
 }
 
@@ -6879,7 +7046,7 @@ FAQ Area CSS
   background-color: #ffffff;
   border: none;
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
-          box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
+  box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
   height: 55px;
   font-size: 16px;
 }
@@ -6889,7 +7056,8 @@ FAQ Area CSS
   margin-right: -7px;
 }
 
-.faq-contact-form form .row .col-lg-12, .faq-contact-form form .row .col-lg-6 {
+.faq-contact-form form .row .col-lg-12,
+.faq-contact-form form .row .col-lg-6 {
   padding-left: 7px;
   padding-right: 7px;
 }
@@ -6902,7 +7070,7 @@ FAQ Area CSS
 .faq-contact-form form .default-btn {
   margin-top: 5px;
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
-          box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
+  box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
 }
 
 .faq-contact-form form .form-check .form-check-label {
@@ -6936,7 +7104,8 @@ FAQ Area CSS
   text-align: left !important;
 }
 
-.faq-contact-form form #msgSubmit.text-danger, .faq-contact-form form #msgSubmit.text-success {
+.faq-contact-form form #msgSubmit.text-danger,
+.faq-contact-form form #msgSubmit.text-success {
   margin-top: 8px;
   font-size: 23px;
   font-weight: 700;
@@ -6961,7 +7130,7 @@ Contact Area CSS
   background-color: #ffffff;
   border: none;
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
-          box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
+  box-shadow: 0 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
   height: 55px;
   font-size: 16px;
 }
@@ -6971,7 +7140,8 @@ Contact Area CSS
   margin-right: -7px;
 }
 
-.contact-form form .row .col-lg-12, .contact-form form .row .col-lg-6 {
+.contact-form form .row .col-lg-12,
+.contact-form form .row .col-lg-6 {
   padding-left: 7px;
   padding-right: 7px;
 }
@@ -6984,7 +7154,7 @@ Contact Area CSS
 .contact-form form .default-btn {
   margin-top: 5px;
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
-          box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
+  box-shadow: 0 5px 28.5px 1.5px rgba(0, 0, 255, 0.2);
 }
 
 .contact-form form .form-check .form-check-label {
@@ -7018,7 +7188,8 @@ Contact Area CSS
   text-align: left !important;
 }
 
-.contact-form form #msgSubmit.text-danger, .contact-form form #msgSubmit.text-success {
+.contact-form form #msgSubmit.text-danger,
+.contact-form form #msgSubmit.text-success {
   margin-top: 8px;
   font-size: 23px;
   font-weight: 700;
@@ -7030,7 +7201,7 @@ Contact Area CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
   background: #ffffff;
   padding: 30px;
 }
@@ -7069,7 +7240,7 @@ Contact Area CSS
 
 .contact-info-box:hover {
   -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .contact-info-box:hover .icon {
@@ -7180,7 +7351,7 @@ Footer Area CSS
 
 .single-footer-widget .footer-contact-info li .social li a:hover {
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .single-footer-widget .footer-contact-info li .social li a:hover i {
@@ -7198,7 +7369,7 @@ Footer Area CSS
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
   margin-bottom: 0;
@@ -7207,8 +7378,8 @@ Footer Area CSS
 
 .single-footer-widget .footer-quick-links li {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 45%;
-          flex: 0 0 45%;
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
   max-width: 45%;
   padding-left: 15px;
   padding-right: 15px;
@@ -7231,7 +7402,7 @@ Footer Area CSS
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-right: -5px;
   margin-left: -5px;
   margin-bottom: 0;
@@ -7240,8 +7411,8 @@ Footer Area CSS
 
 .single-footer-widget .footer-instagram-post li {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.333333%;
-          flex: 0 0 33.333333%;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
   max-width: 33.333333%;
   text-align: center;
   padding-left: 5px;
@@ -7354,12 +7525,13 @@ Go Top CSS
 .go-top.active {
   top: 98%;
   -webkit-transform: translateY(-98%);
-          transform: translateY(-98%);
+  transform: translateY(-98%);
   opacity: 1;
   visibility: visible;
 }
 
-.go-top:hover, .go-top:focus {
+.go-top:hover,
+.go-top:focus {
   color: #ffffff;
   background-color: #3F51B5;
 }
@@ -7446,7 +7618,7 @@ Start IT Startup Page CSS
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: -1;
 }
 
@@ -7470,48 +7642,64 @@ Start IT Startup Page CSS
 }
 
 @-webkit-keyframes border-transform {
-  0%, 100% {
+
+  0%,
+  100% {
     border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   }
+
   14% {
     border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
   }
+
   28% {
     border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
   }
+
   42% {
     border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
   }
+
   56% {
     border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
   }
+
   70% {
     border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
   }
+
   84% {
     border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
   }
 }
 
 @keyframes border-transform {
-  0%, 100% {
+
+  0%,
+  100% {
     border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   }
+
   14% {
     border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
   }
+
   28% {
     border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
   }
+
   42% {
     border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
   }
+
   56% {
     border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
   }
+
   70% {
     border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
   }
+
   84% {
     border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
   }
@@ -7570,9 +7758,9 @@ Start IT Startup Page CSS
 
 .service-card-one:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
   -webkit-box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.08);
 }
 
 .service-card-one.gray-bg {
@@ -7722,7 +7910,7 @@ Start IT Startup Page CSS
 
 .team-slider .single-team-box {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .team-slider .single-team-box .content {
@@ -7880,9 +8068,9 @@ Start IT Startup Page CSS
 
 .single-pricing-table:hover {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
   -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .single-pricing-table.center {
@@ -7926,7 +8114,7 @@ Start IT Startup Page CSS
 
 .lets-work .contact-btn .default-btn {
   -webkit-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
 }
 
 .lets-work .contact-btn .default-btn span {
@@ -7936,7 +8124,7 @@ Start IT Startup Page CSS
   left: 0 !important;
   top: 0 !important;
   -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
 }
 
 .lets-work .contact-btn .default-btn:hover span {
@@ -7983,7 +8171,7 @@ SEO Startup Page CSS
   border-radius: 0;
   line-height: 40px;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   border-radius: 0 5px 5px 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -8005,7 +8193,7 @@ SEO Startup Page CSS
   margin: 0;
   border-radius: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   line-height: 40px;
   border-radius: 5px 0 0 5px;
   -webkit-transition: 0.5s;
@@ -8069,7 +8257,7 @@ SEO Startup Page CSS
 
 .seo-banner .seo-banner-image.animate-tb {
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 .shape-..13 {
@@ -8109,7 +8297,8 @@ SEO Startup Page CSS
   width: 100%;
 }
 
-.about-area-two .section-title h2 {     text-align: center;
+.about-area-two .section-title h2 {
+  text-align: center;
   max-width: 100%;
   margin-bottom: 0;
 }
@@ -8125,11 +8314,12 @@ SEO Startup Page CSS
   right: 0;
   left: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   margin: 0;
 }
 
-.about-area-two .solution-video .video-btn:hover::after, .about-area-two .solution-video .video-btn:hover::before {
+.about-area-two .solution-video .video-btn:hover::after,
+.about-area-two .solution-video .video-btn:hover::before {
   border: 1px solid transparent;
 }
 
@@ -8200,7 +8390,8 @@ SEO Startup Page CSS
   max-width: 100%;
 }
 
-.choose-area-two .section-title h2 {     text-align: center;
+.choose-area-two .section-title h2 {
+  text-align: center;
   font-size: 36px;
   margin-left: 0;
 }
@@ -8263,7 +8454,8 @@ SEO Startup Page CSS
   margin-top: 10px;
 }
 
-.analysis-form .section-title h2 {     text-align: center;
+.analysis-form .section-title h2 {
+  text-align: center;
   max-width: 100%;
 }
 
@@ -8304,20 +8496,22 @@ SaaS Startup Page CSS
   -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: -1;
   border-radius: 5px;
 }
 
-.default-btn-two:hover, .default-btn-two:focus {
+.default-btn-two:hover,
+.default-btn-two:focus {
   color: #ffffff;
   -webkit-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.25);
   -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
-.default-btn-two:hover span, .default-btn-two:focus span {
+.default-btn-two:hover span,
+.default-btn-two:focus span {
   width: 225%;
   height: 562.5px;
 }
@@ -8355,7 +8549,7 @@ SaaS Startup Page CSS
 
 .saas-banner-two .saas-banner-image.animate-tb {
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 .saas-banner-two .saas-banner-image .solution-video {
@@ -8365,7 +8559,7 @@ SaaS Startup Page CSS
   right: 0;
   left: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   margin: 0;
 }
 
@@ -8374,11 +8568,13 @@ SaaS Startup Page CSS
   color: #ffffff;
 }
 
-.saas-banner-two .saas-banner-image .solution-video .video-btn:hover::after, .saas-banner-two .saas-banner-image .solution-video .video-btn:hover::before {
+.saas-banner-two .saas-banner-image .solution-video .video-btn:hover::after,
+.saas-banner-two .saas-banner-image .solution-video .video-btn:hover::before {
   border: 1px solid transparent;
 }
 
-.saas-banner-two .saas-banner-image .solution-video .video-btn::after, .saas-banner-two .saas-banner-image .solution-video .video-btn::before {
+.saas-banner-two .saas-banner-image .solution-video .video-btn::after,
+.saas-banner-two .saas-banner-image .solution-video .video-btn::before {
   border: 1px solid #6A2186;
 }
 
@@ -8427,7 +8623,7 @@ SaaS Startup Page CSS
 
 .fun-fact-card:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /*================================================
@@ -8500,9 +8696,11 @@ AI & Machine Learning Page CSS
   .navbar-area-two .navbar-brand .black-logo {
     display: none;
   }
+
   .navbar-area-two.is-sticky .black-logo {
     display: block;
   }
+
   .navbar-area-two.is-sticky .white-logo {
     display: none;
   }
@@ -8551,7 +8749,7 @@ AI & Machine Learning Page CSS
   right: 0;
   left: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   margin: 0;
 }
 
@@ -8565,11 +8763,13 @@ AI & Machine Learning Page CSS
   color: #ffffff;
 }
 
-.machine-learning-banner .solution-video .video-btn:hover::after, .machine-learning-banner .solution-video .video-btn:hover::before {
+.machine-learning-banner .solution-video .video-btn:hover::after,
+.machine-learning-banner .solution-video .video-btn:hover::before {
   border: 1px solid transparent;
 }
 
-.machine-learning-banner .solution-video .video-btn::after, .machine-learning-banner .solution-video .video-btn::before {
+.machine-learning-banner .solution-video .video-btn::after,
+.machine-learning-banner .solution-video .video-btn::before {
   border: 1px solid #ffffff;
 }
 
@@ -8599,7 +8799,7 @@ AI & Machine Learning Page CSS
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background-color: #ffffff;
   width: 40px;
   height: 40px;
@@ -8617,7 +8817,7 @@ AI & Machine Learning Page CSS
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background-color: #ffffff;
   width: 40px;
   height: 40px;
@@ -8630,7 +8830,8 @@ AI & Machine Learning Page CSS
   transition: 0.5s;
 }
 
-.machine-learning-slider.owl-theme .owl-nav .owl-prev:hover, .machine-learning-slider.owl-theme .owl-nav .owl-next:hover {
+.machine-learning-slider.owl-theme .owl-nav .owl-prev:hover,
+.machine-learning-slider.owl-theme .owl-nav .owl-next:hover {
   background-color: #6A2186;
   color: #ffffff;
 }
@@ -8642,13 +8843,14 @@ AI & Machine Learning Page CSS
   right: 60px;
 }
 
-.machine-learning-slider.owl-theme .owl-dots .owl-dot.active span, .machine-learning-slider.owl-theme .owl-dots .owl-dot:hover span {
+.machine-learning-slider.owl-theme .owl-dots .owl-dot.active span,
+.machine-learning-slider.owl-theme .owl-dots .owl-dot:hover span {
   background-color: #6A2186;
 }
 
 .featured-solution-card {
   -webkit-box-shadow: 0px 5px 20px 0px rgba(105, 146, 234, 0.14);
-          box-shadow: 0px 5px 20px 0px rgba(105, 146, 234, 0.14);
+  box-shadow: 0px 5px 20px 0px rgba(105, 146, 234, 0.14);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 30px 25px;
@@ -8708,7 +8910,8 @@ AI & Machine Learning Page CSS
   max-width: 100%;
 }
 
-.ml-services-area .section-title h2 {     text-align: center;
+.ml-services-area .section-title h2 {
+  text-align: center;
   max-width: 100%;
 }
 
@@ -8785,7 +8988,7 @@ AI & Machine Learning Page CSS
   width: 90px;
   height: 50px;
   -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -9074,7 +9277,7 @@ Topbar Wrap Area CSS
 .topbar-social-links li a i:hover {
   color: #3F51B5;
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .topbar-action-list {
@@ -9143,7 +9346,7 @@ Value Trade Area CSS
   padding: 16.8px 15px 15px 45px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 20px rgba(47, 143, 232, 0.07);
-          box-shadow: 0px 4px 20px rgba(47, 143, 232, 0.07);
+  box-shadow: 0px 4px 20px rgba(47, 143, 232, 0.07);
   border-radius: 5px;
 }
 
@@ -9154,7 +9357,7 @@ Value Trade Area CSS
   left: 15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .value-trade-card p {
@@ -9200,7 +9403,7 @@ Navbar Area CSS
   position: relative;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 20px rgba(47, 143, 232, 0.07);
-          box-shadow: 0px 4px 20px rgba(47, 143, 232, 0.07);
+  box-shadow: 0px 4px 20px rgba(47, 143, 232, 0.07);
 }
 
 .navbar-area-with-position-relative .aronix-nav .container-fluid {
@@ -9211,7 +9414,7 @@ Navbar Area CSS
 .navbar-area-with-position-relative.with-black-color {
   background-color: #1F1F22;
   -webkit-box-shadow: unset;
-          box-shadow: unset;
+  box-shadow: unset;
 }
 
 .navbar-area-with-position-relative.with-black-color.is-sticky {
@@ -9222,11 +9425,15 @@ Navbar Area CSS
   color: #ffffff;
 }
 
-.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item a:hover, .navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item a:focus, .navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item a.active {
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item a:hover,
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item a:focus,
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item a.active {
   color: #6A2186;
 }
 
-.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item:hover a, .navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item:focus a, .navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item.active a {
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item:hover a,
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item:focus a,
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item.active a {
   color: #6A2186;
 }
 
@@ -9234,7 +9441,9 @@ Navbar Area CSS
   color: #696997;
 }
 
-.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover,
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus,
+.navbar-area-with-position-relative.with-black-color .aronix-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
   color: #6A2186;
 }
 
@@ -9309,7 +9518,7 @@ Cryptocurrency Banner Area CSS
 .cryptocurrency-banner-content {
   position: relative;
   top: -50px;
-      right: 103px;
+  right: 103px;
 
 }
 
@@ -9393,10 +9602,10 @@ Cryptocurrency Banner Area CSS
   left: -230px;
   bottom: 10%;
   -webkit-transform: translateY(-12%);
-          transform: translateY(-12%);
+  transform: translateY(-12%);
   z-index: -1;
   -webkit-animation: moveLeftBounce 5s linear infinite;
-          animation: moveLeftBounce 5s linear infinite;
+  animation: moveLeftBounce 5s linear infinite;
 }
 
 .cryptocurrency-banner-image .cart2 {
@@ -9404,10 +9613,10 @@ Cryptocurrency Banner Area CSS
   top: 5%;
   right: 20%;
   -webkit-transform: translateY(-5%) translateX(-20%);
-          transform: translateY(-5%) translateX(-20%);
+  transform: translateY(-5%) translateX(-20%);
   z-index: -1;
   -webkit-animation: moveLeftBounce 8s linear infinite;
-          animation: moveLeftBounce 8s linear infinite;
+  animation: moveLeftBounce 8s linear infinite;
 }
 
 .cryptocurrency-banner-image .graph {
@@ -9415,10 +9624,10 @@ Cryptocurrency Banner Area CSS
   left: -70px;
   top: 38%;
   -webkit-transform: translateY(-38%);
-          transform: translateY(-38%);
+  transform: translateY(-38%);
   z-index: -11;
   -webkit-animation: moveLeftBounce 8s linear infinite;
-          animation: moveLeftBounce 8s linear infinite;
+  animation: moveLeftBounce 8s linear infinite;
 }
 
 .cryptocurrency-shape-1 {
@@ -9426,10 +9635,10 @@ Cryptocurrency Banner Area CSS
   left: 10%;
   top: -20px;
   -webkit-transform: translateX(-10%);
-          transform: translateX(-10%);
+  transform: translateX(-10%);
   z-index: -1;
   -webkit-animation: moveLeftBounce 5s linear infinite;
-          animation: moveLeftBounce 5s linear infinite;
+  animation: moveLeftBounce 5s linear infinite;
 }
 
 .cryptocurrency-shape-2 {
@@ -9437,19 +9646,19 @@ Cryptocurrency Banner Area CSS
   left: 40%;
   top: 100px;
   -webkit-transform: translateX(-40%);
-          transform: translateX(-40%);
+  transform: translateX(-40%);
   z-index: -1;
 }
 
 .cryptocurrency-shape-2 .. {
   -webkit-animation-name: rotateMe;
-          animation-name: rotateMe;
+  animation-name: rotateMe;
   -webkit-animation-duration: 20s;
-          animation-duration: 20s;
+  animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 .cryptocurrency-shape-3 {
@@ -9457,10 +9666,10 @@ Cryptocurrency Banner Area CSS
   bottom: 15%;
   left: 2%;
   -webkit-transform: translateY(-15%) translateX(-2%);
-          transform: translateY(-15%) translateX(-2%);
+  transform: translateY(-15%) translateX(-2%);
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 .cryptocurrency-shape-4 {
@@ -9469,18 +9678,18 @@ Cryptocurrency Banner Area CSS
   right: 5%;
   z-index: -1;
   -webkit-transform: translateY(-45%) translateX(-5%);
-          transform: translateY(-45%) translateX(-5%);
+  transform: translateY(-45%) translateX(-5%);
 }
 
 .cryptocurrency-shape-4 .. {
   -webkit-animation-name: rotateMe;
-          animation-name: rotateMe;
+  animation-name: rotateMe;
   -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+  animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 /*================================================
@@ -9511,7 +9720,7 @@ Stats Area CSS
 
 .stats-fun-fact-box:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /*================================================
@@ -9594,7 +9803,8 @@ Earning Platform Area CSS
   max-width: 725px;
 }
 
-.earning-platform-area .section-title h2 {     text-align: center;
+.earning-platform-area .section-title h2 {
+  text-align: center;
   max-width: 725px;
 }
 
@@ -9602,7 +9812,7 @@ Earning Platform Area CSS
   margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
   padding: 30px;
   border-radius: 5px;
   -webkit-transition: 0.5s;
@@ -9618,7 +9828,7 @@ Earning Platform Area CSS
   text-align: center;
   border-radius: 50px;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
   margin-bottom: 28px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -9631,7 +9841,7 @@ Earning Platform Area CSS
 
 .earning-platform-card:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /*================================================
@@ -9696,9 +9906,9 @@ Crypto Get Strated Area CSS
   top: 10%;
   right: 10%;
   -webkit-transform: translateY(-10%) translateX(-10%);
-          transform: translateY(-10%) translateX(-10%);
+  transform: translateY(-10%) translateX(-10%);
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
   z-index: -1;
 }
 
@@ -9718,7 +9928,7 @@ Key Features Area CSS
   position: relative;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
   padding: 30px 30px 30px 125px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -9748,7 +9958,7 @@ Key Features Area CSS
   text-align: center;
   border-radius: 50px;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
@@ -9771,7 +9981,7 @@ Key Features Area CSS
 
 .key-features-card .key-content:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /*================================================
@@ -9856,7 +10066,7 @@ Trade Over Area CSS
 .trade-over-inner-box {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 3px 20px rgba(36, 157, 210, 0.12);
-          box-shadow: 0px 3px 20px rgba(36, 157, 210, 0.12);
+  box-shadow: 0px 3px 20px rgba(36, 157, 210, 0.12);
   border-radius: 5px;
   padding-left: 50px;
   padding-right: 50px;
@@ -9894,7 +10104,7 @@ Trade Over Area CSS
   padding: 8px 10px 5px;
   background: #76BAAF;
   -webkit-box-shadow: -2px 6px 20px rgba(255, 109, 52, 0.07);
-          box-shadow: -2px 6px 20px rgba(255, 109, 52, 0.07);
+  box-shadow: -2px 6px 20px rgba(255, 109, 52, 0.07);
   border-radius: 5px;
   font-size: 14.5px;
   margin-left: 10px;
@@ -9966,7 +10176,7 @@ Why Choose Us Area CSS
   list-style-type: none;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
   position: relative;
   margin-bottom: 20px;
   padding: 15px 15px 15px 40px;
@@ -9996,7 +10206,7 @@ Why Choose Us Area CSS
 
 .why-choose-us-content .choose-list li:hover {
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .why-choose-us-card {
@@ -10017,7 +10227,7 @@ Why Choose Us Area CSS
   text-align: center;
   border-radius: 50px;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
   margin-bottom: 28px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -10030,7 +10240,7 @@ Why Choose Us Area CSS
 
 .why-choose-us-card:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
   border: 1px solid #6A2186;
 }
 
@@ -10055,7 +10265,8 @@ Unique Feedback Area CSS
   color: #ffffff;
 }
 
-.unique-feedback-area .section-title h2 {     text-align: center;
+.unique-feedback-area .section-title h2 {
+  text-align: center;
   color: #ffffff;
 }
 
@@ -10091,7 +10302,7 @@ Unique Feedback Area CSS
 .unique-single-feedback {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
   padding: 40px 45px;
   border: 1px solid #F9F9F9;
   border-radius: 5px;
@@ -10135,7 +10346,7 @@ Unique Feedback Area CSS
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .unique-single-feedback .client-info h3 {
@@ -10193,7 +10404,7 @@ Unique Feedback Area CSS
   border: 1px solid #6A2186;
 }
 
-.unique-feedback-slides.owl-theme .owl-nav.disabled + .owl-dots {
+.unique-feedback-slides.owl-theme .owl-nav.disabled+.owl-dots {
   margin-top: 30px;
 }
 
@@ -10209,7 +10420,8 @@ Unique Feedback Area CSS
   display: inline-block;
 }
 
-.unique-feedback-slides.owl-theme .owl-dots .owl-dot:hover span, .unique-feedback-slides.owl-theme .owl-dots .owl-dot.active span {
+.unique-feedback-slides.owl-theme .owl-dots .owl-dot:hover span,
+.unique-feedback-slides.owl-theme .owl-dots .owl-dot.active span {
   background-color: #6A2186;
   width: 30px;
 }
@@ -10220,7 +10432,7 @@ Unique Feedback Area CSS
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: -1;
 }
 
@@ -10264,7 +10476,7 @@ Mobile App Area CSS
   color: #737b9a;
   background-color: #ffffff;
   -webkit-box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
-          box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
+  box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
   font-size: 14px;
   font-weight: 500;
   padding-top: 12px;
@@ -10285,7 +10497,7 @@ Mobile App Area CSS
 
 .mobile-app-content .app-btn-box .playstore-btn .. {
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   position: absolute;
   left: 20px;
   top: 50%;
@@ -10294,7 +10506,7 @@ Mobile App Area CSS
 .mobile-app-content .app-btn-box .playstore-btn:hover {
   background-color: #6A2186;
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
   color: #ffffff;
 }
 
@@ -10309,7 +10521,7 @@ Mobile App Area CSS
   color: #737b9a;
   background-color: #ffffff;
   -webkit-box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
-          box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
+  box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
   font-size: 14px;
   font-weight: 500;
   padding-top: 12px;
@@ -10330,7 +10542,7 @@ Mobile App Area CSS
 
 .mobile-app-content .app-btn-box .applestore-btn .. {
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   position: absolute;
   left: 20px;
   top: 50%;
@@ -10339,7 +10551,7 @@ Mobile App Area CSS
 .mobile-app-content .app-btn-box .applestore-btn:hover {
   background-color: #212529;
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
   color: #ffffff;
 }
 
@@ -10427,7 +10639,7 @@ Blog Area CSS
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .single-blog-card .info h3 {
@@ -10445,7 +10657,7 @@ Blog Area CSS
 .single-blog-card:hover {
   border: 1px solid #6A2186;
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .single-blog-card:hover h3 a {
@@ -10489,7 +10701,7 @@ Blog Area CSS
   border: 1px solid #161618;
   background-color: #161618;
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /*================================================
@@ -10618,7 +10830,7 @@ Subscribe Wrap Area CSS
   bottom: 30px;
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 .subscribe-wrap-inner-box .subscribe-shape-2 {
@@ -10627,7 +10839,7 @@ Subscribe Wrap Area CSS
   top: 50px;
   z-index: -1;
   -webkit-animation: moveLeftBounce 3s linear infinite;
-          animation: moveLeftBounce 3s linear infinite;
+  animation: moveLeftBounce 3s linear infinite;
 }
 
 .subscribe-wrap-inner-box .subscribe-shape-3 {
@@ -10636,7 +10848,7 @@ Subscribe Wrap Area CSS
   top: 50px;
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 /*================================================
@@ -10756,13 +10968,13 @@ Cyber Security Banner Area CSS
 
 .cs-banner-shape .. {
   -webkit-animation-name: rotateMe;
-          animation-name: rotateMe;
+  animation-name: rotateMe;
   -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  animation-duration: 30s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 .cs-lock {
@@ -10770,10 +10982,10 @@ Cyber Security Banner Area CSS
   top: 10%;
   left: 50%;
   -webkit-transform: translateY(-10%) translateX(-50%);
-          transform: translateY(-10%) translateX(-50%);
+  transform: translateY(-10%) translateX(-50%);
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 /*================================================
@@ -10912,7 +11124,7 @@ Features Area CSS
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   right: 30px;
 }
 
@@ -11023,7 +11235,7 @@ CS About Area CSS
   line-height: 85px;
   background: #161618;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
   color: #ffffff;
   font-size: 35px;
   text-align: center;
@@ -11171,7 +11383,7 @@ CS Services Area CSS
   margin-bottom: 30px;
   background: #161618;
   -webkit-box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
   padding: 30px;
   border-radius: 5px;
   -webkit-transition: 0.5s;
@@ -11205,7 +11417,7 @@ CS Services Area CSS
   line-height: 100px;
   background: #1F1F22;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
   text-align: center;
   border-radius: 50%;
   margin-bottom: 28px;
@@ -11232,7 +11444,7 @@ CS Services Area CSS
 
 .cs-services-card:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .cs-services-card:hover::before {
@@ -11387,7 +11599,7 @@ Leading Technology Area CSS
 .leading-technology-content .list li:hover {
   border: 1px solid #3F51B5;
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 /*================================================
@@ -11433,7 +11645,7 @@ CS Overview Area CSS
 .cs-overview-item:hover {
   border: 1px solid #6A2186;
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /*================================================
@@ -11460,7 +11672,7 @@ Big Data Banner Area CSS
 .bd-banner-content .sub-title {
   background-color: #ffffff;
   -webkit-box-shadow: -2px 6px 15px rgba(67, 127, 236, 0.07);
-          box-shadow: -2px 6px 15px rgba(67, 127, 236, 0.07);
+  box-shadow: -2px 6px 15px rgba(67, 127, 236, 0.07);
   color: #737b9a;
   font-size: 16px;
   font-weight: 500;
@@ -11556,7 +11768,7 @@ Big Data Banner Area CSS
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   right: -150px;
 }
 
@@ -11566,7 +11778,7 @@ Big Data Banner Area CSS
   top: 50px;
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 .bd-banner-shape-2 {
@@ -11574,10 +11786,10 @@ Big Data Banner Area CSS
   top: 5%;
   left: 45%;
   -webkit-transform: translateY(-5%) translateX(-45%);
-          transform: translateY(-5%) translateX(-45%);
+  transform: translateY(-5%) translateX(-45%);
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 .bd-banner-shape-3 {
@@ -11585,10 +11797,10 @@ Big Data Banner Area CSS
   bottom: 10%;
   left: 30%;
   -webkit-transform: translateY(-10%) translateX(-30%);
-          transform: translateY(-10%) translateX(-30%);
+  transform: translateY(-10%) translateX(-30%);
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 /*================================================
@@ -11647,7 +11859,7 @@ BD Fun Facts Area CSS
   line-height: 80px;
   background: rgba(255, 255, 255, 0.2);
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.09);
   text-align: center;
   border-radius: 50%;
   margin-bottom: 28px;
@@ -11700,7 +11912,7 @@ BD Featured Area CSS
   margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
   padding: 30px;
   border-radius: 5px;
   -webkit-transition: 0.5s;
@@ -11716,7 +11928,7 @@ BD Featured Area CSS
   text-align: center;
   border-radius: 50px;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
   margin-bottom: 28px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -11733,7 +11945,7 @@ BD Featured Area CSS
 
 .bd-featured-card:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .bd-featured-shape {
@@ -11741,10 +11953,10 @@ BD Featured Area CSS
   top: 5%;
   right: 5%;
   -webkit-transform: translateY(-5%) translateX(-5%);
-          transform: translateY(-5%) translateX(-5%);
+  transform: translateY(-5%) translateX(-5%);
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 /*================================================
@@ -11798,7 +12010,7 @@ BD About Area CSS
   border-radius: 5px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.07);
   margin-top: 30px;
   position: relative;
   padding: 30px 30px 30px 138px;
@@ -11815,7 +12027,7 @@ BD About Area CSS
   text-align: center;
   border-radius: 50px;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
@@ -11830,7 +12042,7 @@ BD About Area CSS
 
 .bd-about-content .inner-content-card:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .bd-about-shape {
@@ -11838,10 +12050,10 @@ BD About Area CSS
   top: 5%;
   right: 5%;
   -webkit-transform: translateY(-5%) translateX(-5%);
-          transform: translateY(-5%) translateX(-5%);
+  transform: translateY(-5%) translateX(-5%);
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
 }
 
 /*================================================
@@ -11855,7 +12067,7 @@ BD Services Area CSS
   margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
   padding: 30px;
   border-radius: 5px;
   -webkit-transition: 0.5s;
@@ -11871,7 +12083,7 @@ BD Services Area CSS
   text-align: center;
   border-radius: 50px;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
   margin-bottom: 28px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -11915,7 +12127,7 @@ BD Services Area CSS
 
 .bd-services-card:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .bd-services-card:hover .get-started-btn {
@@ -12011,7 +12223,7 @@ BD Choose Area CSS
 }
 
 .bd-overview-content {
- /* max-width: 650px;*/
+  /* max-width: 650px;*/
   margin-left: auto;
 }
 
@@ -12019,7 +12231,7 @@ BD Choose Area CSS
   margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
-          box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
+  box-shadow: 0px 6px 20px rgba(26, 137, 185, 0.07);
   padding: 30px;
   border-radius: 5px;
   -webkit-transition: 0.5s;
@@ -12035,7 +12247,7 @@ BD Choose Area CSS
   text-align: center;
   border-radius: 50px;
   -webkit-box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
-          box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
+  box-shadow: 0px 4px 20px rgba(26, 137, 185, 0.1);
   margin-bottom: 28px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -12056,7 +12268,7 @@ BD Choose Area CSS
 
 .bd-overview-card:hover {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /*================================================
@@ -12126,7 +12338,7 @@ Footer Wrap Area CSS
   color: #ffffff;
   background-color: #6A2186;
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .single-footer-card .footer-quick-links {
@@ -12204,19 +12416,19 @@ Footer Wrap Area CSS
   top: 10%;
   right: 5%;
   -webkit-transform: translateY(-10%) translateX(-5%);
-          transform: translateY(-10%) translateX(-5%);
+  transform: translateY(-10%) translateX(-5%);
   z-index: -1;
 }
 
 .footer-wrap-shape .. {
   -webkit-animation-name: rotateMe;
-          animation-name: rotateMe;
+  animation-name: rotateMe;
   -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  animation-duration: 30s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 .footer-wrap-shape-2 {
@@ -12224,9 +12436,9 @@ Footer Wrap Area CSS
   bottom: 10%;
   left: 2%;
   -webkit-transform: translateY(-10%) translateX(-2%);
-          transform: translateY(-10%) translateX(-2%);
+  transform: translateY(-10%) translateX(-2%);
   -webkit-animation: moveBounce 5s linear infinite;
-          animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
   z-index: -1;
 }
 
@@ -12305,18 +12517,35 @@ Copyright Wrap Area CSS
 /* End "Cryptocurrency Demo CSS, "Cyber Security Demo CSS & Big Data Solution Demo CSS" */
 /*# sourceMappingURL=style.css.map */
 
-h1,h2,h3,h4,h5,h6{font-size: 26px;}
-p{font-size: 22px;
-text-align: right;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 26px;
 }
 
-.titleh2{text-align: center;}
+p {
+  font-size: 22px;
+  text-align: right;
+}
+
+.titleh2 {
+  text-align: center;
+}
 
 /*--------------------------------------------------*/
 /*questions1*/
-.questions1{width:500px;
-  
+.questions1 {
+  width: 500px;
+
 }
-h2{padding: 40px;
+
+h2 {
+  padding: 40px;
 }
-p{font-size: 24px;}
+
+p {
+  font-size: 24px;
+}

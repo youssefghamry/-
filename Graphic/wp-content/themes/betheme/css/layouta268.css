@@ -645,7 +645,6 @@ body.header-stack:not(.template-slider) #Header{min-height:315px}
 /* Side Slide ------------------------------------------------------------------------- */
 #body_overlay{position:fixed;top:0;left:0;width:100%;height:120%;background:rgba(0,0,0,.6);z-index:9002;display:none;} /* height +20% - mobile fallback */
 
-body.mobile-side-slide{position:relative;overflow-x:visible;}
 
 #Side_slide{display:block;position:fixed;top:0px;right:-250px;max-width:100%;width:250px;height:100%;overflow:auto;border-bottom-width:60px;border-bottom-style:solid;z-index:99999;z-index:100000;} /* border-bottom:60px - mobile fallback */
 #Side_slide.left{left:-250px;right:auto}
