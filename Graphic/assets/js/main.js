@@ -1,62 +1,62 @@
-(function($){
-	"use strict";
+(function ($) {
+    "use strict";
 
     // Header Sticky
-    $(window).on('scroll',function() {
-        if ($(this).scrollTop() > 120){  
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 120) {
             $('.navbar-area').addClass("is-sticky");
         }
-        else{
+        else {
             $('.navbar-area').removeClass("is-sticky");
         }
     });
 
     // Sidebar Modal
-    $(".burger-menu").on('click',  function() {
+    $(".burger-menu").on('click', function () {
         $('.sidebar-modal').toggleClass('active');
     });
-    $(".sidebar-modal-close-btn").on('click',  function() {
+    $(".sidebar-modal-close-btn").on('click', function () {
         $('.sidebar-modal').removeClass('active');
     });
-    
+
     // Search Popup JS
-    $('.close-btn').on('click',function() {
+    $('.close-btn').on('click', function () {
         $('.search-overlay').fadeOut();
         $('.search-btn').show();
         $('.close-btn').removeClass('active');
     });
-    $('.search-btn').on('click',function() {
+    $('.search-btn').on('click', function () {
         $(this).hide();
         $('.search-overlay').fadeIn();
         $('.close-btn').addClass('active');
     });
-    
+
     // Mean Menu
     jQuery('.mean-menu').meanmenu({
         meanScreenWidth: "991"
     });
 
     // Button Hover JS
-    $(function() {
+    $(function () {
         $('.default-btn')
-        .on('mouseenter', function(e) {
-            var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-            $(this).find('span').css({top:relY, left:relX})
-        })
-        .on('mouseout', function(e) {
-            var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-            $(this).find('span').css({top:relY, left:relX})
-        });
+            .on('mouseenter', function (e) {
+                var parentOffset = $(this).offset(),
+                    relX = e.pageX - parentOffset.left,
+                    relY = e.pageY - parentOffset.top;
+                $(this).find('span').css({ top: relY, left: relX })
+            })
+            .on('mouseout', function (e) {
+                var parentOffset = $(this).offset(),
+                    relX = e.pageX - parentOffset.left,
+                    relY = e.pageY - parentOffset.top;
+                $(this).find('span').css({ top: relY, left: relX })
+            });
     });
 
     // Odometer JS
-    $('.odometer').appear(function(e) {
+    $('.odometer').appear(function (e) {
         var odo = $(".odometer");
-        odo.each(function() {
+        odo.each(function () {
             var countNumber = $(this).attr("data-count");
             $(this).html(countNumber);
         });
@@ -102,8 +102,8 @@
     (function ($) {
         $('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
         $('.tab ul.tabs li a').on('click', function (g) {
-            var tab = $(this).closest('.tab'), 
-            index = $(this).closest('li').index();
+            var tab = $(this).closest('.tab'),
+                index = $(this).closest('li').index();
             tab.find('ul.tabs > li').removeClass('current');
             $(this).closest('li').addClass('current');
             tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
@@ -111,7 +111,7 @@
             g.preventDefault();
         });
     })(jQuery);
-    
+
     // Popup Video
     $('.popup-youtube').magnificPopup({
         disableOn: 320,
@@ -181,15 +181,15 @@
     $('select').niceSelect();
 
     // Input Plus & Minus Number JS
-    $('.input-counter').each(function() {
+    $('.input-counter').each(function () {
         var spinner = jQuery(this),
-        input = spinner.find('input[type="text"]'),
-        btnUp = spinner.find('.plus-btn'),
-        btnDown = spinner.find('.minus-btn'),
-        min = input.attr('min'),
-        max = input.attr('max');
-        
-        btnUp.on('click', function() {
+            input = spinner.find('input[type="text"]'),
+            btnUp = spinner.find('.plus-btn'),
+            btnDown = spinner.find('.minus-btn'),
+            min = input.attr('min'),
+            max = input.attr('max');
+
+        btnUp.on('click', function () {
             var oldValue = parseFloat(input.val());
             if (oldValue >= max) {
                 var newVal = oldValue;
@@ -199,7 +199,7 @@
             spinner.find("input").val(newVal);
             spinner.find("input").trigger("change");
         });
-        btnDown.on('click', function() {
+        btnDown.on('click', function () {
             var oldValue = parseFloat(input.val());
             if (oldValue <= min) {
                 var newVal = oldValue;
@@ -212,8 +212,8 @@
     });
 
     // FAQ Accordion
-    $(function() {
-        $('.accordion').find('.accordion-title').on('click', function(){
+    $(function () {
+        $('.accordion').find('.accordion-title').on('click', function () {
             // Adds Active Class
             $(this).toggleClass('active');
             // Expand or Collapse This Panel
@@ -221,14 +221,14 @@
             // Hide The Other Panels
             $('.accordion-content').not($(this).next()).slideUp('fast');
             // Removes Active Class From Other Titles
-            $('.accordion-title').not($(this)).removeClass('active');		
+            $('.accordion-title').not($(this)).removeClass('active');
         });
     });
 
     // Subscribe form
     $(".newsletter-form").validator().on("submit", function (event) {
         if (event.isDefaultPrevented()) {
-        // handle the invalid form...
+            // handle the invalid form...
             formErrorSub();
             submitMSGSub(false, "Please enter your email correctly.");
         } else {
@@ -236,7 +236,7 @@
             event.preventDefault();
         }
     });
-    function callbackFunction (resp) {
+    function callbackFunction(resp) {
         if (resp.result === "success") {
             formSuccessSub();
         }
@@ -244,40 +244,40 @@
             formErrorSub();
         }
     }
-    function formSuccessSub(){
+    function formSuccessSub() {
         $(".newsletter-form")[0].reset();
         submitMSGSub(true, "Thank you for subscribing!");
-        setTimeout(function() {
+        setTimeout(function () {
             $("#validator-newsletter").addClass('hide');
         }, 4000)
     }
-    function formErrorSub(){
+    function formErrorSub() {
         $(".newsletter-form").addClass("animate__animated animate__shake");
-        setTimeout(function() {
+        setTimeout(function () {
             $(".newsletter-form").removeClass("animate__animated animate__shake");
         }, 1000)
     }
-    function submitMSGSub(valid, msg){
-        if(valid){
+    function submitMSGSub(valid, msg) {
+        if (valid) {
             var msgClasses = "validation-success";
         } else {
             var msgClasses = "validation-danger";
         }
         $("#validator-newsletter").removeClass().addClass(msgClasses).text(msg);
     }
-   
+
 
     // Go to Top
-    $(function(){
+    $(function () {
         // Scroll Event
-        $(window).on('scroll', function(){
+        $(window).on('scroll', function () {
             var scrolled = $(window).scrollTop();
             if (scrolled > 600) $('.go-top').addClass('active');
             if (scrolled < 600) $('.go-top').removeClass('active');
-        });  
+        });
         // Click Event
-        $('.go-top').on('click', function() {
-            $("html, body").animate({ scrollTop: "0" },  500);
+        $('.go-top').on('click', function () {
+            $("html, body").animate({ scrollTop: "0" }, 500);
         });
     });
 
@@ -344,7 +344,7 @@
         margin: 0,
         autoplayHoverPause: true,
         autoplay: true,
-        autoHeight:true,
+        autoHeight: true,
         mouseDrag: false,
         navText: [
             "<i class='flaticon-left-chevron'></i>",
@@ -352,12 +352,12 @@
         ],
     });
 
-    $(".seo-banner-slider").on("translate.owl.carousel", function(){
+    $(".seo-banner-slider").on("translate.owl.carousel", function () {
         $(".seo-banner h1, .seo-banner p").removeClass("animate__animated animate__fadeInUp").css("opacity", "0");
         $(".seo-banner .banner-btn").removeClass("animate__animated animate__fadeInDown").css("opacity", "0");
     });
-    
-    $(".seo-banner-slider").on("translated.owl.carousel", function(){
+
+    $(".seo-banner-slider").on("translated.owl.carousel", function () {
         $(".seo-banner h1, .seo-banner p").addClass("animate__animated animate__fadeInUp").css("opacity", "1");
         $(".seo-banner .banner-btn").addClass("animate__animated animate__fadeInDown").css("opacity", "1");
     });
@@ -382,7 +382,7 @@
         dots: true,
         margin: 0,
         autoplayHoverPause: true,
-        autoHeight:true,
+        autoHeight: true,
         mouseDrag: false,
         navText: [
             "<i class='flaticon-left-chevron'></i>",
@@ -390,46 +390,46 @@
         ],
     });
 
-    $(".machine-learning-slider").on("translate.owl.carousel", function(){
+    $(".machine-learning-slider").on("translate.owl.carousel", function () {
         $(".machine-learning-banner h1, .machine-learning-banner p").removeClass("animate__animated animate__fadeInUp").css("opacity", "0");
         $(".machine-learning-banner .banner-btn").removeClass("animate__animated animate__fadeInDown").css("opacity", "0");
     });
-    
-    $(".machine-learning-slider").on("translated.owl.carousel", function(){
+
+    $(".machine-learning-slider").on("translated.owl.carousel", function () {
         $(".machine-learning-banner h1, .machine-learning-banner p").addClass("animate__animated animate__fadeInUp").css("opacity", "1");
         $(".machine-learning-banner .banner-btn").addClass("animate__animated animate__fadeInDown").css("opacity", "1");
     });
-	
-	// WOW JS
-	$(window).on ('load', function (){
-        if ($(".wow").length) { 
-            var wow = new WOW ({
-                boxClass:     'wow',      // animate__animated animate__element css class (default is wow)
+
+    // WOW JS
+    $(window).on('load', function () {
+        if ($(".wow").length) {
+            var wow = new WOW({
+                boxClass: 'wow',      // animate__animated animate__element css class (default is wow)
                 animateClass: 'animated', // Animation css class (default is animated)
-                offset:       20,         // Distance to the element when triggering the animation (default is 0)
-                mobile:       true,       // Trigger animations on mobile devices (default is true)
-                live:         true,       // Act on asynchronously loaded content (default is true)
+                offset: 20,         // Distance to the element when triggering the animation (default is 0)
+                mobile: true,       // Trigger animations on mobile devices (default is true)
+                live: true,       // Act on asynchronously loaded content (default is true)
             });
             wow.init();
         }
     });
 
     // Preloader Area
-	$(window).on('load', function() {
-		$('.preloader').addClass('preloader-deactivate');
-	});
+    $(window).on('load', function () {
+        $('.preloader').addClass('preloader-deactivate');
+    });
 
     /* Start "Cryptocurrency Demo JS, "Cyber Security Demo JS & Big Data Solution Demo JS" */
 
     $('.value-trade-slides').owlCarousel({
-		nav: false,
-		loop: true,
-		margin: 25,
-		dots: false,
-		autoplay: true,
-		autoplayHoverPause: true,
-		
-		responsive: {
+        nav: false,
+        loop: true,
+        margin: 25,
+        dots: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+
+        responsive: {
             0: {
                 items: 1,
             },
@@ -449,7 +449,7 @@
                 items: 4,
             }
         }
-	});
+    });
 
     // Unique Feedback Slides
     $('.unique-feedback-slides').owlCarousel({
@@ -459,7 +459,7 @@
         margin: 25,
         autoplayHoverPause: true,
         autoplay: true,
-        
+
         responsive: {
             0: {
                 items: 1,
@@ -510,7 +510,7 @@
     // Buy Now Btn
 
     // Switch Btn
-	$('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
+    $('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
 
     /* End "Cryptocurrency Demo JS, "Cyber Security Demo JS & Big Data Solution Demo JS" */
 
@@ -518,24 +518,62 @@
 
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
-	localStorage.setItem('aronix_theme', themeName);
-	document.documentElement.className = themeName;
+    localStorage.setItem('aronix_theme', themeName);
+    document.documentElement.className = themeName;
 }
 // function to toggle between light and dark theme
 function toggleTheme() {
-	if (localStorage.getItem('aronix_theme') === 'theme-dark') {
-		setTheme('theme-light');
-	} else {
-		setTheme('theme-dark');
-	}
+    if (localStorage.getItem('aronix_theme') === 'theme-dark') {
+        setTheme('theme-light');
+    } else {
+        setTheme('theme-dark');
+    }
 }
 // Immediately invoked function to set the theme on initial load
 (function () {
-	if (localStorage.getItem('aronix_theme') === 'theme-dark') {
-		setTheme('theme-dark');
-		document.getElementById('slider').checked = false;
-	} else {
-		setTheme('theme-light');
-	document.getElementById('slider').checked = true;
-	}
+    if (localStorage.getItem('aronix_theme') === 'theme-dark') {
+        setTheme('theme-dark');
+        document.getElementById('slider').checked = false;
+    } else {
+        setTheme('theme-light');
+        document.getElementById('slider').checked = true;
+    }
 })();
+/******************************************* */
+! function(e, t, n, s, u, a) {
+    e.twq || (s = e.twq = function() {
+            s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+        }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = 'http://static.ads-twitter.com/uwt.js',
+        a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+}(window, document, 'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init', 'o4chn');
+twq('track', 'PageView');
+
+document.addEventListener('keydown', function(e) {
+// منع F12 (أدوات المطور)
+if (e.key === 'F12') {
+    e.preventDefault();
+}
+
+// منع النسخ (Ctrl + C)، القص (Ctrl + X)، واللصق (Ctrl + V)
+if ((e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'v'))) {
+    e.preventDefault();
+}
+
+// منع حفظ الصفحة (Ctrl + S)
+if (e.ctrlKey && e.key === 's') {
+    e.preventDefault();
+}
+
+// يمكنك إضافة منع أزرار أخرى حسب الحاجة
+});
+
+document.addEventListener('contextmenu', function(e) {
+e.preventDefault(); // منع القائمة السياقية (زر الفأرة الأيسر)
+});
+document.addEventListener('keydown', function(e) {
+if (e.ctrlKey) {
+    e.preventDefault(); // يمنع أي اختصار مرتبط بمفتاح Ctrl
+}
+});

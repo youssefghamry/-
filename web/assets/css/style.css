@@ -80126,4 +80126,10 @@ span.flatpickr-weekday {
   animation-duration: .75s;
   animation-timing-function: linear;
   animation-iteration-count: 1
+}/*********************************************************/
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
