@@ -124,7 +124,7 @@ var Mailcheck = {
   },
 
   sift4Distance: function(s1, s2, maxOffset) {
-    // sift4: http://siderite.blogspot.com/2014/11/super-fast-and-accurate-string-distance.html
+    // sift4: http://siderite.blogspot.com/2014/11/super-fast-and-accurate-string-distance
     if (maxOffset === undefined) {
         maxOffset = 5; //default
     }

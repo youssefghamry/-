@@ -181,7 +181,7 @@
             '<button class="', buttonClass, '"', buttonDisabled, '>', buttonLabel, '</button>'
             ].join('')
       
-      this._$button.html(buttons)
+      this._$button(buttons)
     }
     
   })

@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__);
@@ -474,7 +474,7 @@ Wpcf7cfForm.prototype.updateSummaryFields = function () {
     contentType: false,
     dataType: 'json',
     success: function success(json) {
-      $summary.html(json.summaryHtml);
+      $summary(json.summaryHtml);
     }
   });
 };
@@ -864,7 +864,7 @@ function Wpcf7cfMultistep($multistep, form) {
   multistep.$dots = $multistep.find('.wpcf7cf_steps-dots');
   multistep.currentStep = 0;
   multistep.numSteps = multistep.$steps.length;
-  multistep.$dots.html('');
+  multistep.$dots('');
 
   for (var i = 1; i <= multistep.numSteps; i++) {
     multistep.$dots.append("\n            <div class=\"dot\" data-step=\"".concat(i, "\">\n                <div class=\"step-index\">").concat(i, "</div>\n                <div class=\"step-title\">").concat(multistep.$steps.eq(i - 1).attr('data-title'), "</div>\n            </div>\n        "));
@@ -1746,9 +1746,9 @@ module.exports = _unsupportedIterableToArray;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/***/ "./node_modules/@babel/runtime/regenerator.js":
 /*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  !*** ./node_modules/@babel/runtime/regenerator.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1757,9 +1757,9 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
-/***/ "./node_modules/es6-promise-promise/index.js":
+/***/ "./node_modules/es6-promise-promise.js":
 /*!***************************************************!*\
-  !*** ./node_modules/es6-promise-promise/index.js ***!
+  !*** ./node_modules/es6-promise-promise.js ***!
   \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3399,7 +3399,7 @@ var runtime = function (exports) {
         if (method === "throw") {
           throw arg;
         } // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        // https://people.mozilla.org/~jorendorff/es6-draft#sec-generatorresume
 
 
         return doneResult();
@@ -3953,7 +3953,7 @@ module.exports = function (module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! es6-promise-promise */"./node_modules/es6-promise-promise/index.js");
+__webpack_require__(/*! es6-promise-promise */"./node_modules/es6-promise-promise.js");
 module.exports = __webpack_require__(/*! ./js/scripts_es6.js */"./js/scripts_es6.js");
 
 

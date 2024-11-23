@@ -311,12 +311,12 @@
 				} );
 			}
 
-			$message.html( '' ).append( data.message ).slideDown( 'fast' );
+			$message( '' ).append( data.message ).slideDown( 'fast' );
 			$message.attr( 'role', 'alert' );
 
 			$( '.screen-reader-response', $form.closest( '.wpcf7' ) ).each( function() {
 				var $response = $( this );
-				$response.html( '' ).attr( 'role', '' ).append( data.message );
+				$response( '' ).attr( 'role', '' ).append( data.message );
 
 				if ( data.invalidFields ) {
 					var $invalids = $( '<ul></ul>' );

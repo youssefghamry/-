@@ -58224,8 +58224,8 @@ class XFAObject {
         return res;
       }
 
-      if (res.html) {
-        this[$addHTML](res.html, res.bbox);
+      if (res) {
+        this[$addHTML](res, res.bbox);
       }
 
       delete this[$extra].failingNode;
@@ -58244,8 +58244,8 @@ class XFAObject {
         return res;
       }
 
-      if (res.html) {
-        this[$addHTML](res.html, res.bbox);
+      if (res) {
+        this[$addHTML](res, res.bbox);
       }
     }
 
@@ -59188,7 +59188,7 @@ class HTMLResult {
 
   constructor(success, html, bbox, breakNode) {
     this.success = success;
-    this.html = html;
+    this = html;
     this.bbox = bbox;
     this.breakNode = breakNode;
   }
@@ -60529,7 +60529,7 @@ function handleOverflow(node, extraNode, space) {
 
   const res = extraNode[_xfa_object.$toHTML](space);
 
-  node[_xfa_object.$addHTML](res.html, res.bbox);
+  node[_xfa_object.$addHTML](res, res.bbox);
 
   root[_xfa_object.$extra].noLayoutFailure = saved;
   extraNode[_xfa_object.$getSubformParent] = savedMethod;
@@ -65113,9 +65113,9 @@ class Template extends _xfa_object.XFAObject {
         const html = root[_xfa_object.$toHTML](space);
 
         if (html.success) {
-          if (html.html) {
-            hasSomething = hasSomething || html.html.children && html.html.children.length !== 0;
-            htmlContentAreas[i].children.push(html.html);
+          if (html) {
+            hasSomething = hasSomething || html.children && html.children.length !== 0;
+            htmlContentAreas[i].children.push(html);
           } else if (!hasSomething) {
             mainHtml.children.pop();
           }

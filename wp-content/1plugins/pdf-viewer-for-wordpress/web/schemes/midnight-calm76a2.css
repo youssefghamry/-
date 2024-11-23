@@ -81,7 +81,7 @@
     --toolbarButton-viewOutline-icon: url(light-icons/toolbarButton-viewOutline.svg);
     --toolbarButton-viewAttachments-icon: url(light-icons/toolbarButton-viewAttachments.svg);
     --toolbarButton-viewLayers-icon: url(light-icons/toolbarButton-viewLayers.svg);
-    --toolbarButton-currentOutlineItem-icon: url(light-icons/toolbarButton-currentOutlineItem.html);
+    --toolbarButton-currentOutlineItem-icon: url(light-icons/toolbarButton-currentOutlineItem);
     --toolbarButton-search-icon: url(light-icons/toolbarButton-search.svg);
     --findbarButton-previous-icon: url(light-icons/findbarButton-previous.svg);
     --findbarButton-next-icon: url(light-icons/findbarButton-next.svg);
@@ -89,14 +89,14 @@
     --secondaryToolbarButton-lastPage-icon: url(light-icons/secondaryToolbarButton-lastPage.svg);
     --secondaryToolbarButton-rotateCcw-icon: url(light-icons/secondaryToolbarButton-rotateCcw.svg);
     --secondaryToolbarButton-rotateCw-icon: url(light-icons/secondaryToolbarButton-rotateCw.svg);
-    --secondaryToolbarButton-selectTool-icon: url(light-icons/secondaryToolbarButton-selectTool.html);
+    --secondaryToolbarButton-selectTool-icon: url(light-icons/secondaryToolbarButton-selectTool);
     --secondaryToolbarButton-handTool-icon: url(light-icons/secondaryToolbarButton-handTool.svg);
-    --secondaryToolbarButton-scrollVertical-icon: url(light-icons/secondaryToolbarButton-scrollVertical.html);
-    --secondaryToolbarButton-scrollHorizontal-icon: url(light-icons/secondaryToolbarButton-scrollHorizontal.html);
-    --secondaryToolbarButton-scrollWrapped-icon: url(light-icons/secondaryToolbarButton-scrollWrapped.html);
-    --secondaryToolbarButton-spreadNone-icon: url(light-icons/secondaryToolbarButton-spreadNone.html);
-    --secondaryToolbarButton-spreadOdd-icon: url(light-icons/secondaryToolbarButton-spreadOdd.html);
-    --secondaryToolbarButton-spreadEven-icon: url(light-icons/secondaryToolbarButton-spreadEven.html);
+    --secondaryToolbarButton-scrollVertical-icon: url(light-icons/secondaryToolbarButton-scrollVertical);
+    --secondaryToolbarButton-scrollHorizontal-icon: url(light-icons/secondaryToolbarButton-scrollHorizontal);
+    --secondaryToolbarButton-scrollWrapped-icon: url(light-icons/secondaryToolbarButton-scrollWrapped);
+    --secondaryToolbarButton-spreadNone-icon: url(light-icons/secondaryToolbarButton-spreadNone);
+    --secondaryToolbarButton-spreadOdd-icon: url(light-icons/secondaryToolbarButton-spreadOdd);
+    --secondaryToolbarButton-spreadEven-icon: url(light-icons/secondaryToolbarButton-spreadEven);
     --secondaryToolbarButton-documentProperties-icon: url(light-icons/secondaryToolbarButton-documentProperties.svg);
   }
   
@@ -647,7 +647,7 @@
   }
   
   .grab-to-pan-grab {
-    cursor: url("light-icons/grab.html"), move !important;
+    cursor: url("light-icons/grab"), move !important;
     cursor: -webkit-grab !important;
     cursor: grab !important;
   }
@@ -657,7 +657,7 @@
   }
   .grab-to-pan-grab:active,
   .grab-to-pan-grabbing {
-    cursor: url("light-icons/grabbing.html"), move !important;
+    cursor: url("light-icons/grabbing"), move !important;
     cursor: -webkit-grabbing !important;
     cursor: grabbing !important;
     position: fixed;

@@ -1475,7 +1475,7 @@
 
       $('#menu span.icl_lang_sel_bracket').each(function() {
         var el = $(this);
-        el.replaceWith(el.html());
+        el.replaceWith(el());
       });
 
     }
@@ -1488,7 +1488,7 @@
     function breadcrumbsRemoveLastLink() {
       var el = $('.breadcrumbs.no-link').find('li').last();
       var text = el.text();
-      el.html(text);
+      el(text);
     }
     breadcrumbsRemoveLastLink();
 
