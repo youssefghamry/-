@@ -1,9 +1,6 @@
 /*
 
-*******************************************
-*******************************************
-
-** - Default CSS
+ ** - Default CSS
 ** - Preloader Area CSS
 ** - Navbar Area CSS
 ** - Main Banner Area CSS
@@ -12545,9 +12542,7 @@ p {
   font-size: 24px;
 }
 
-/**********************************************************************/
-/*!/wp-content/cache/asset-cleanup/css/item/blocksy-dynamic-global-vc9a1171b99d9d1acfd5aab13ef2f5eef2667ddbb.css*/
-/*!/wp-content/uploads/blocksy/css/global.css*/
+
 [data-header*=type-1] .ct-header [data-id=button] .ct-button-ghost {
   --theme-button-text-initial-color: var(--theme-button-background-initial-color);
   --theme-button-text-hover-color: #fff
@@ -39376,7 +39371,7 @@ h1.entry-title {
 .elementor-222 .elementor-element.elementor-element-74ccdeaf>.elementor-motion-effects-container>.elementor-motion-effects-layer:before {
   --background-overlay: '';
   background-image: var(--e-bg-lazyload-loaded);
-  --e-bg-lazyload: url(*****/wp-content/uploads/background.jpg);
+  --e-bg-lazyload: url(https://ygbrandmaker.cloud/wp-content/uploads/background.jpg);
   background-repeat: no-repeat;
   background-size: cover
 }
@@ -80124,10 +80119,45 @@ span.flatpickr-weekday {
   animation-iteration-count: 1
 }
 
-/**********************************************************/
- body {
+
+/*******************************************************************************************************/
+/* ملف style.css */
+/*********************************************************/
+/****************YG************************************/
+section.footer-wrap-area.pt-100.pb-70 {
+    z-index: 0 !important;
+}
+.navbar-area.is-sticky {
+    position: fixed;
+    top: -20px;
+    height: 80px;
+}
+@media screen and (max-width: 768px) { /* استهداف الشاشات الصغيرة */
+    .navbar-area.is-sticky {
+        top: 0;
+        height: auto; /* يمكنك ضبط القيم أو إزالة التأثير */
+    }
+}
+  /* تعطيل التحديد النصي في الصفحة باستخدام CSS */
+            body {
                 -webkit-user-select: none;
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
             }
+			.unselectable
+{
+-moz-user-select:none;
+-webkit-user-select:none;
+cursor: default;
+}
+html
+{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}

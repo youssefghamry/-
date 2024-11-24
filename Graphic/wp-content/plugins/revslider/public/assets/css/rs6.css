@@ -305,9 +305,9 @@ rs-module .sr-only-focusable:focus,
 							
 
 
-/******************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud
 	-	BASIC STYLES		-
-******************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud/
 
 .tp-fullwidth-forcer { z-index: 0; pointer-events: none}
 rs-module-wrap { visibility: hidden }
@@ -477,9 +477,9 @@ rs-bg-elem 	{	position:absolute; top:0px;left:0px; width:100%;height:100%;z-inde
 .tp-blockmask_in,
 .tp-blockmask_out { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: #fff; z-index: 1000; transform: scaleX(0) scaleY(0);}
 
-/***********************************************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud****
 	- 	ZONES / GOUP / ROW / COLUMN LAYERS AND HELPERS 	-
-***********************************************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud****/
 rs-zone			{	position:absolute; width:100%;left:0px; box-sizing: border-box;min-height:50px; font-size:0px;pointer-events: none}
 rs-row-wrap,
 rs-column,
@@ -638,9 +638,9 @@ rs-column rs-layer { vertical-align: inherit }*/
 
 
 
-/*********************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud***
 	-	SPECIAL TP CAPTIONS -
-**********************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud****/
 
 rs-layer.rs-nointeraction,
 .rs-layer.rs-nointeraction { 
@@ -667,26 +667,26 @@ rs-static-layers.rs-stl-back {
 }		
 
 
-/***********************************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**
 	-	SPECIAL ALTERNATIVE IMAGE SETTINGS	-
-***********************************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 
 img.tp-slider-alternative-image	{	
 	width:100%; height:auto;
 }
 
 
-/******************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud
 	-	IE8 HACKS	-
-*******************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud*/
 .noFilterClass {
 	filter:none !important;
 }
 
 
-/********************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**
 	-	FULLSCREEN VIDEO	-
-*********************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud***/
 
 rs-bgvideo 		{	position: absolute;top:0px;left:0px; width:100%;height:100%;z-index: 0; display: block}
 
@@ -792,9 +792,9 @@ rs-module h5.rs-layer:before,
 rs-module h6.rs-layer:before { content: none; }
 
 
-/********************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**
 	-	DOTTED OVERLAYS	-
-*********************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud***/
 rs-dotted						{	background-repeat:repeat;width:100%;height:100%;position:absolute;top:0px;left:0px;z-index:3;display:block;pointer-events: none}
 rs-sbg-wrap rs-dotted 			{ z-index: 31 }
 rs-dotted.twoxtwo				{	background:url(../assets/gridtile.png)}
@@ -803,9 +803,9 @@ rs-dotted.threexthree			{	background:url(../assets/gridtile_3x3.png)}
 rs-dotted.threexthreewhite		{	background:url(../assets/gridtile_3x3_white.png)}
 
 
-/******************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud
 	-	SHADOWS		-
-******************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud/
 
 .tp-shadowcover	{	width:100%;height:100%;top:0px;left:0px;background: #fff;position: absolute; z-index: -1;}
 .tp-shadow1 	{	box-shadow: 0 10px 6px -6px rgba(0,0,0,0.8);}
@@ -1097,9 +1097,9 @@ rs-dotted.threexthreewhite		{	background:url(../assets/gridtile_3x3_white.png)}
 
 
 
-/************************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud*
 -	TP BANNER TIMER		-
-*************************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 rs-progress						{	visibility: hidden; position:absolute; z-index:200;width:100%;height:100%;}
 rs-progress-bar,
 .rs-progress-bar				{ 	display:block;z-index: 20;box-sizing: border-box;background-clip: content-box;position: absolute; vertical-align:top;line-height:0px;width:100%;height:100%;}
@@ -1108,9 +1108,9 @@ rs-progress-bg					{	display:block;background-clip: content-box; position: absol
 rs-progress-gap					{	display:block;background-clip: content-box; position: absolute;width:100%;height:100%;}
 rs-progress-vis 				{ 	display:block;width: 100%;height: 100%; position: absolute;top: 0px;left: 0px }
 
-/*********************************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud
 -	BASIC SETTINGS FOR THE BANNER	-
-***********************************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 .rs-layer img {
 	background: transparent;
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
@@ -1129,9 +1129,9 @@ rs-progress-vis 				{ 	display:block;width: 100%;height: 100%; position: absolut
 
 
 
-/*********************************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud
 -	WOOCOMMERCE STYLES	-
-***********************************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 
 .rs-layer .rs-starring				{	display: inline-block}
 
@@ -1184,9 +1184,9 @@ rs-progress-vis 				{ 	display:block;width: 100%;height: 100%; position: absolut
 
 
 
-/******************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud
 	-	LOADER FORMS	-
-********************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 
 rs-loader 	{
 	top:50%; left:50%;
@@ -1357,9 +1357,9 @@ rs-layer input::placeholder { vertical-align: middle; line-height: inherit !impo
 a.rs-layer { transition: none }
 
 
-/***********************************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**
 	-  STANDARD NAVIGATION SETTINGS 
-***********************************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 
 rs-thumbs-wrap,
 rs-tabs-wrap,
@@ -1418,9 +1418,9 @@ rs-poster 						 { cursor:pointer; z-index:3; }
 
 /*.tp-thumb-mask {max-width: 100% !important}*/
 
-/************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud****
  - FIXES FOR PE-7 ICONS -
-**************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud*/
 
 .rs-layer [class^="pe-7s-"]:before, 
 .rs-layer [class*=" pe-7s-"]:before,
@@ -1433,17 +1433,17 @@ rs-poster 						 { cursor:pointer; z-index:3; }
 }
 
 
-/***************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**
 	- KEN BURNS FIXES -
-***************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 
 rs-pzimg-wrap { display: block; }
 body.rtl .rs-pzimg {left: 0 !important}
 
 
-/*******************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud*
 	- CUBE & CANVAS SETTINGS -
-********************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 .rs_fake_cube {transform-style:preserve-3d}
 .rs_fake_cube,
 .rs_fake_cube_wall { position:absolute; -webkit-backface-visibility:hidden; backface-visibility:hidden; left:0px; top:0px; z-index: 0 }
@@ -1452,17 +1452,17 @@ body.rtl .rs-pzimg {left: 0 !important}
 rs-sbg canvas { overflow: hidden; z-index: 5; -webkit-backface-visibility:hidden; backface-visibility:hidden;}
 
 			
-/***************************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**
 	- 3D SHADOW MODE -
-***************************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud**/
 
 .dddwrappershadow { box-shadow:0 45px 100px rgba(0, 0, 0, 0.4);}
 
 .dddwrapper { transform-style: flat;perspective: 10000px; }
 
-/*******************
+/https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud****
 	- DEBUG MODE -
-*******************/
+https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud****/
 
 .rs_error_message_box { background: #111;width:800px;margin: 40px auto;padding: 40px 20px;text-align: center;font-family: "Open Sans",sans-serif}
 .rs_error_message_oops {margin: 0px 0px 20px;line-height: 60px;font-size: 34px;color: #FFF;}

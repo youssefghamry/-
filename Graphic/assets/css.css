@@ -1,0 +1,48 @@
+
+<style>
+  .YG-contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    animation: YG-move-up-down 2s ease-in-out infinite;
+  }
+
+  .YG-contact-toggle i {
+    color: #fff;
+    font-size: 40px;
+    animation: YG-bounce 1s infinite cubic-bezier(0.25, 1.5, 0.5, 1);
+  }
+
+  @keyframes YG-move-up-down {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes YG-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .YG-contact-toggle {
+    background-color: #6a2186;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+</style>

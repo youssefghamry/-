@@ -12547,10 +12547,57 @@ p {
 }
 
 /**********************************************************/
-
- body {
+section.footer-wrap-area.pt-100.pb-70 {
+    z-index: 0 !important;
+}
+/*********************************************************/
+.navbar-area.is-sticky {
+    position: fixed;
+    top: -20px;
+    height: 80px;
+}
+@media screen and (max-width: 768px) { /* استهداف الشاشات الصغيرة */
+    .navbar-area.is-sticky {
+        top: 0;
+        height: auto; /* يمكنك ضبط القيم أو إزالة التأثير */
+    }
+}
+/*********************************************************/
+/****************YG************************************/
+section.footer-wrap-area.pt-100.pb-70 {
+    z-index: 0 !important;
+}
+.navbar-area.is-sticky {
+    position: fixed;
+    top: -20px;
+    height: 80px;
+}
+@media screen and (max-width: 768px) { /* استهداف الشاشات الصغيرة */
+    .navbar-area.is-sticky {
+        top: 0;
+        height: auto; /* يمكنك ضبط القيم أو إزالة التأثير */
+    }
+}
+  /* تعطيل التحديد النصي في الصفحة باستخدام CSS */
+            body {
                 -webkit-user-select: none;
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
             }
+			.unselectable
+{
+-moz-user-select:none;
+-webkit-user-select:none;
+cursor: default;
+}
+html
+{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}

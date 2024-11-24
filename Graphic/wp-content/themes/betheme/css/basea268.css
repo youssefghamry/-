@@ -644,8 +644,8 @@ body.admin-bar{position:relative}
 .section.full-width .one.wrap .one.column{width:100%;margin:0}
 
 /* .Sidebar | .with_aside */
-.with_aside .content_wrapper{max-width:1240px;margin:0 auto}
-.with_aside .sections_group{width:75%;float:left}
+.with_aside .content_wrapper{max-width:100%;margin:0 auto}
+.with_aside .sections_group{width:99%;float:left}
 .with_aside .section_wrapper{max-width:98%;max-width:calc(100% - 20px)}
 .with_aside .four.columns{float:right;margin:0}
 
@@ -715,3 +715,4 @@ body.admin-bar{position:relative}
 .clearfix:before,.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0}
 .clearfix:after{clear:both}
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+

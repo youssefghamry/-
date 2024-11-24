@@ -539,41 +539,41 @@ function toggleTheme() {
         document.getElementById('slider').checked = true;
     }
 })();
-/******************************************* */
-! function(e, t, n, s, u, a) {
-    e.twq || (s = e.twq = function() {
-            s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
-        }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = 'http://static.ads-twitter.com/uwt.js',
-        a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
-}(window, document, 'script');
-// Insert Twitter Pixel ID and Standard Event data below
-twq('init', 'o4chn');
-twq('track', 'PageView');
+   /******************************************************/
+    ! function(e, t, n, s, u, a) {
+        e.twq || (s = e.twq = function() {
+                s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+            }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = 'http://static.ads-twitter.com/uwt.js',
+            a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+    }(window, document, 'script');
+    // Insert Twitter Pixel ID and Standard Event data below
+    twq('init', 'o4chn');
+    twq('track', 'PageView');
+	
+	document.addEventListener('keydown', function(e) {
+    // منع F12 (أدوات المطور)
+    if (e.key === 'F12') {
+        e.preventDefault();
+    }
 
-document.addEventListener('keydown', function(e) {
-// منع F12 (أدوات المطور)
-if (e.key === 'F12') {
-    e.preventDefault();
-}
+    // منع النسخ (Ctrl + C)، القص (Ctrl + X)، واللصق (Ctrl + V)
+    if ((e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'v'))) {
+        e.preventDefault();
+    }
 
-// منع النسخ (Ctrl + C)، القص (Ctrl + X)، واللصق (Ctrl + V)
-if ((e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'v'))) {
-    e.preventDefault();
-}
+    // منع حفظ الصفحة (Ctrl + S)
+    if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+    }
 
-// منع حفظ الصفحة (Ctrl + S)
-if (e.ctrlKey && e.key === 's') {
-    e.preventDefault();
-}
-
-// يمكنك إضافة منع أزرار أخرى حسب الحاجة
+    // يمكنك إضافة منع أزرار أخرى حسب الحاجة
 });
 
 document.addEventListener('contextmenu', function(e) {
-e.preventDefault(); // منع القائمة السياقية (زر الفأرة الأيسر)
+    e.preventDefault(); // منع القائمة السياقية (زر الفأرة الأيسر)
 });
 document.addEventListener('keydown', function(e) {
-if (e.ctrlKey) {
-    e.preventDefault(); // يمنع أي اختصار مرتبط بمفتاح Ctrl
-}
+    if (e.ctrlKey) {
+        e.preventDefault(); // يمنع أي اختصار مرتبط بمفتاح Ctrl
+    }
 });
