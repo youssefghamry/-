@@ -42,7 +42,7 @@
     <script>
         // JavaScript لإعادة التوجيه بعد 5 ثوانٍ
         setTimeout(function() {
-            window.location.href = "https://ygbrandmaker.cloud";
+            window.location.href = "https://ygbrandmaker.site";
         }, 100); // 5000 ميلي ثانية = 5 ثواني
     </script>
 </body>

@@ -1455,9 +1455,9 @@
                 );
                 return Iti;
             }();
-            /https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud
+            /https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.site
         *  STATIC METHODS
-        https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloud/
+        https://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.cloudhttps://ygbrandmaker.site/
             // get the country data object
             intlTelInputGlobals.getCountryData = function () {
                 return allCountries;
