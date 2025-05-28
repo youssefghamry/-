@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
@@ -12,18 +12,10 @@
             padding: 20px;
             direction: rtl;
             text-align: center;
+            margin: 0;
         }
-        .offer {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 900px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: right;
-        }
-        h2 {
-            color: #d49e27;
+        h1, h2, h3 {
+            color: #d48806;
         }
         p {
             color: #333;
@@ -35,25 +27,32 @@
             color: #c0392b;
         }
         .cta {
-            background-color: #d49e27;
+            background-color: #007bff;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .cta:hover {
+            background-color: #0056b3;
         }
         .container {
-            text-align: right;
-            max-width: 800px;
+            max-width: 1200px;
             margin: auto;
-            background: #fff;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3 {
-            color: #d48806;
+        .offer {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: right;
         }
         .highlight {
             background: #fff7e6;
@@ -62,6 +61,9 @@
             margin-bottom: 15px;
             font-weight: bold;
         }
+        .highlight1 {
+            text-align: center;
+        }
         ul {
             list-style-type: none;
             padding-right: 20px;
@@ -69,22 +71,25 @@
         li::before {
             content: "✅ ";
         }
-        .cta {
-            display: block;
-            text-align: center;
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 15px;
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
-        .cta:hover {
-            background: #0056b3;
+        @media (min-width: 768px) {
+            .offer {
+                flex: 1;
+                min-width: 300px;
+                max-width: 400px;
+            }
         }
-        .highlight1 {
-            text-align: center;
+        @media (max-width: 767px) {
+            .offer {
+                width: 100%;
+                max-width: 900px;
+                margin: 20px auto;
+            }
         }
         .contact-button {
             position: fixed;
@@ -116,12 +121,14 @@
             display: none;
             width: 180px;
             padding: 10px 0;
-            transform: all 0.25s ease-in-out;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.25s ease-in-out;
         }
-        .show {
+        .contact-menu.show {
             display: block;
-            transform: translateY(0);
             opacity: 1;
+            transform: translateY(0);
         }
         .contact-menu ul {
             list-style: none;
@@ -146,7 +153,6 @@
         .contact-menu ul li a i {
             margin-right: 10px;
             font-size: 20px;
-            transition: 0.3s;
         }
         .whatsapp { background: #25D366; }
         .whatsapp:hover { background: #1DA851; transform: translateX(10px); }
@@ -215,15 +221,17 @@
                 <li>تكامل مع وسائل التواصل الاجتماعي بروابط مباشرة 📲</li>
             </ul>
 
-         <p>⚠ <strong>الخدمات غير المتاحة في هذه الباقة:</strong></p>
-				<p>❌ تصميم UI/UX مخصص</p>
-				<p>❌ إدارة المخزون والتقارير</p>
-				<p>❌ مدونة متكاملة (Blog)</p>
-				<p>❌ تحسين محركات البحث (SEO)</p>
-				<p>❌ تعدد اللغات</p>
-				<p>❌ Google Analytics للتحليل والمتابعة</p>
-				<p>❌ التعديلات بعد التنفيذ</p>
-				<p>❌ دعم فني وصيانة</p>
+            <p>⚠ <strong>الخدمات غير المتاحة في هذه الباقة:</strong></p>
+            <ul>
+                <li>تصميم UI/UX مخصص</li>
+                <li>إدارة المخزون والتقارير</li>
+                <li>مدونة متكاملة (Blog)</li>
+                <li>تحسين محركات البحث (SEO)</li>
+                <li>تعدد اللغات</li>
+                <li>Google Analytics للتحليل والمتابعة</li>
+                <li>التعديلات بعد التنفيذ</li>
+                <li>دعم فني وصيانة</li>
+            </ul>
 
             <p>⏳ <strong>مدة التنفيذ:</strong> 7 أيام فقط!</p>
             <p class="price">💰 <strong>السعر:</strong> يبدأ من 3,997 جنيه مصري</p>
@@ -295,7 +303,7 @@
             <p class="price">💡 <strong>السعر الإجمالي للباقة:</strong> 14,997 جنيه مصري</p>
 
             <p>📢 🌟 احصل على متجر إلكتروني متكامل بمزايا متقدمة وانطلق بقوة في عالم التجارة الإلكترونية! 💥</p>
-            <a href="https://wa.me/201030459067?text=±السلام+عليكم+أخبركم+إني+محتاج+أشتري+🔶+الباقة+الملكية+–+الحل+الأمثل+للمتاجر+الكبرى+والمتاجر+متعددة+الفروع+بسعر+14,997+جنيه!+🐑✨" class="cta">احجز متجرك الآن 🚀</a>
+            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+🔶+الباقة+الملكية+–+الحل+الأمثل+للمتاجر+الكبرى+والمتاجر+متعددة+الفروع+بسعر+14,997+جنيه!+🐑✨" class="cta">احجز متجرك الآن 🚀</a>
         </div>
 
         <!-- الباقة الماسية -->
@@ -318,7 +326,7 @@
                 <li>تحسينات SEO متقدمة لزيادة الظهور في محركات البحث 🔍</li>
                 <li>دعم متعدد اللغات لتوسيع نطاق المتجر عالميًا 🌍</li>
                 <li>تصميم متكامل مع دليل الهوية البصرية الخاص بالعلامة التجارية 🎭</li>
-                <li>حماية قوية مع شهادة SSL وأحدث تقنيات الأمان 🔴</li>
+                <li>حماية قوية مع شهادة SSL وأحدث تقنيات الأمان 🔒</li>
                 <li>تكامل مع أنظمة البث المباشر وواجهات API المتقدمة 🎥</li>
                 <li>نظام تسجيل متكامل مع دعم العضويات والاشتراكات 🛡️</li>
                 <li>إمكانية تعديلات غير محدودة خلال فترة التنفيذ ✏️</li>
@@ -329,7 +337,7 @@
             <p class="price">💡 <strong>السعر الإجمالي:</strong> 24,997 جنيه مصري</p>
 
             <p>📢 💎 انطلق بأعمالك إلى القمة مع حل شامل يغطي كل احتياجاتك في التجارة الإلكترونية والمبيعات! 💥</p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+🔷+الباقة+الماسية+–+الحل+المشامل+للأعمال+الكبرى+مع+تطبيقات+ونظام+POS+بسعر+24,997+جنيه! 💎✨" class="cta">احجز متجرك الآن 🚀</a>
+            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+🔷+الباقة+الماسية+–+الحل+المشامل+للأعمال+الكبرى+مع+تطبيقات+ونظام+POS+بسعر+24,997+جنيه!+💎✨" class="cta">احجز متجرك الآن 🚀</a>
         </div>
     </div>
 
@@ -371,7 +379,7 @@
                 a.setAttribute("target", "_blank");
 
                 const i = document.createElement("i");
-                i.className = `fa-brands fa-${platform.icon}`;
+                i.className = `fa-brands ${platform.icon}`;
 
                 a.appendChild(i);
                 a.appendChild(document.createTextNode(` ${platform.text}`));

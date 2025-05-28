@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
@@ -12,16 +12,9 @@
             padding: 20px;
             direction: rtl;
             text-align: right;
+            margin: 0;
         }
-        .offer {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 650px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
+        h1, h2, h3 {
             color: #d49e27;
         }
         p {
@@ -34,21 +27,30 @@
             color: #c0392b;
         }
         .cta {
-            background-color: #d49e27;
+            background-color: #d48806;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
-            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .cta:hover {
+            background-color: #b36b00;
         }
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: auto;
-            background: #fff;
             padding: 20px;
+        }
+        .offer {
+            background: #fff;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         .highlight {
             background: #fff3cd;
@@ -56,22 +58,28 @@
             border-radius: 5px;
             font-weight: bold;
         }
-        .cta {
-            display: inline-block;
-            background: #d48806;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .cta:hover {
-            background: #b36b00;
-        }
         .highlight1 {
             text-align: center;
+        }
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
+            .offer {
+                flex: 1;
+                min-width: 300px;
+                max-width: 400px;
+            }
+        }
+        @media (max-width: 767px) {
+            .offer {
+                width: 100%;
+                max-width: 650px;
+                margin: 20px auto;
+            }
         }
         .contact-button {
             position: fixed;
@@ -107,7 +115,7 @@
             opacity: 0;
             transition: all 0.3s ease-in-out;
         }
-        .show {
+        .contact-menu.show {
             display: block;
             transform: translateY(0);
             opacity: 1;
@@ -135,7 +143,6 @@
         .contact-menu ul li a i {
             margin-right: 10px;
             font-size: 20px;
-            transition: 0.3s;
         }
         .whatsapp { background: #25D366; } 
         .whatsapp:hover { background: #1DA851; transform: translateX(10px); }
