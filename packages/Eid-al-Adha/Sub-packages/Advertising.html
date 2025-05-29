@@ -1,370 +1,600 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>عروض العيد الأضحى</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>عروض العيد الأضحى 2025 | تصميم وكتابة محتوى احترافي</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            text-align: center;
-            padding: 20px;
-            direction: rtl;
+        :root {
+            --primary-color: #d48806;
+            --secondary-color: #c0392b;
+            --accent-color: #d49e27;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
-        h1, h2, h3 {
-            color: #d48806;
-        }
-        p {
-            color: #333;
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
             line-height: 1.6;
+            direction: rtl;
         }
-        .price {
-            font-size: 20px;
-            font-weight: bold;
-            color: #c0392b;
+        
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
-        .cta {
-            background-color: #d49e27;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-            font-weight: bold;
+        
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
-        .cta:hover {
-            background-color: #b36b00;
+        
+        h2 {
+            font-size: 2rem;
+            border-right: 4px solid var(--accent-color);
+            padding-right: 15px;
+            margin: 2rem 0;
         }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
         .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
         }
-        .offer {
-            background: #fff;
+        
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f5f5f5 0%, #fff7e6 100%);
             border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: right;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1s ease-in-out;
         }
-        .offer1 {
-            background: #fff7e6;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        ul {
-            list-style-type: "🔥 ";
-            padding-right: 20px;
-        }
-        .main {
+        
+        .offer-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 2rem;
+            margin: 3rem 0;
         }
-        @media (min-width: 768px) {
-            .offer {
-                flex: 1;
-                min-width: 300px;
-                max-width: 400px;
-            }
+        
+        .offer {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 400px;
+            transition: var(--transition);
+            border-top: 5px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
         }
-        @media (max-width: 767px) {
-            .offer {
-                width: 100%;
-                max-width: 600px;
-                margin: 20px auto;
-            }
+        
+        .offer:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
+        
+        .offer-badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            font-weight: bold;
+            transform: rotate(-45deg) translate(-25%, -50%);
+            font-size: 0.8rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--secondary-color);
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .price small {
+            font-size: 1rem;
+            color: #666;
+            display: block;
+            font-weight: normal;
+        }
+        
+        .features {
+            list-style-type: none;
+            margin: 1.5rem 0;
+        }
+        
+        .features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+        
+        .features li.excluded:before {
+            content: "✗";
+            color: #999;
+        }
+        
+        .cta {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            transition: var(--transition);
+            border: 2px solid var(--accent-color);
+            margin-top: 1rem;
+        }
+        
+        .cta:hover {
+            background: transparent;
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+        
+        .highlight-box {
+            background: rgba(212, 158, 39, 0.1);
+            border: 1px dashed var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
         .contact-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 2rem;
+            left: 2rem;
             z-index: 1000;
         }
+        
         .contact-toggle {
-            background-color: #007bff;
-            color: #fff;
+            background-color: var(--primary-color);
+            color: var(--white);
             border: none;
-            padding: 15px;
+            padding: 1.2rem;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 20px;
-            transition: 0.3s;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
         }
+        
         .contact-toggle:hover {
-            background-color: #0056b3;
+            background-color: #b36b00;
             transform: scale(1.1);
         }
+        
         .contact-menu {
             position: absolute;
-            bottom: 60px;
-            right: 0;
+            bottom: 70px;
+            left: 0;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             display: none;
-            width: 180px;
-            padding: 10px 0;
+            width: 220px;
+            padding: 1rem 0;
             transform: translateY(10px);
             opacity: 0;
-            transition: all 0.3s ease-in-out;
+            transition: var(--transition);
         }
+        
         .contact-menu.show {
             display: block;
             transform: translateY(0);
             opacity: 1;
         }
+        
         .contact-menu ul {
             list-style: none;
             margin: 0;
             padding: 0;
         }
+        
         .contact-menu ul li {
-            padding: 10px;
-            text-align: center;
+            margin: 0.3rem 0;
         }
+        
         .contact-menu ul li a {
             text-decoration: none;
-            color: #fff;
-            font-size: 16px;
+            color: var(--white);
+            font-size: 1rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 10px;
+            padding: 0.8rem 1rem;
             border-radius: 5px;
-            transition: 0.3s;
+            transition: var(--transition);
         }
+        
         .contact-menu ul li a i {
-            margin-right: 10px;
-            font-size: 20px;
+            margin-left: 0.8rem;
+            font-size: 1.2rem;
         }
+        
         .whatsapp { background: #25D366; } 
-        .whatsapp:hover { background: #1DA851; transform: translateX(10px); }
+        .whatsapp:hover { background: #1DA851; transform: translateX(-10px); }
         .facebook { background: #1877F2; } 
-        .facebook:hover { background: #145DBF; transform: translateX(10px); }
+        .facebook:hover { background: #145DBF; transform: translateX(-10px); }
         .instagram { background: #E4405F; } 
-        .instagram:hover { background: #C13584; transform: translateX(10px); }
+        .instagram:hover { background: #C13584; transform: translateX(-10px); }
         .twitter { background: #1DA1F2; } 
-        .twitter:hover { background: #0C85D0; transform: translateX(10px); }
+        .twitter:hover { background: #0C85D0; transform: translateX(-10px); }
         .linkedin { background: #0077B5; } 
-        .linkedin:hover { background: #005983; transform: translateX(10px); }
+        .linkedin:hover { background: #005983; transform: translateX(-10px); }
         .tiktok { background: #000000; } 
-        .tiktok:hover { background: #111; transform: translateX(10px); }
+        .tiktok:hover { background: #111; transform: translateX(-10px); }
         .youtube { background: #FF0000; } 
-        .youtube:hover { background: #CC0000; transform: translateX(10px); }
+        .youtube:hover { background: #CC0000; transform: translateX(-10px); }
         .snapchat { background: #FFFC00; color: #000; } 
-        .snapchat:hover { background: #E6E200; transform: translateX(10px); }
+        .snapchat:hover { background: #E6E200; transform: translateX(-10px); }
+        
+        .tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d48806, transparent);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .offer {
+                max-width: 100%;
+            }
+            
+            .contact-button {
+                bottom: 1rem;
+                left: 1rem;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* تحسينات للعرض على الشاشات الكبيرة */
+        @media (min-width: 1200px) {
+            .offer-premium {
+                transform: scale(1.05);
+                z-index: 1;
+                border-top: 5px solid gold;
+            }
+            
+            .offer-premium .price {
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>🚀📌📝 عروض تصميم وكتابة المحتوى للعيد الأضحى 🐑✨</h1>		
     <div class="container">
-        <div class="offer1">
-            <h2>خلي محتواك متجدد ومتواكب مع ترندات العيد الأضحى والإعلانات! 🐑✨</h2>
-            <p>إدارة كاملة لصفحات السوشيال ميديا خلال فترة العيد الأضحى، مع محتوى مصمم خصيصًا حسب كل يوم وترنداته!</p>
+        <div class="header pulse">
+            <h1>🎉 عروض العيد الأضحى 2025 🎉</h1>
+            <p class="tag">تصميم جرافيك + كتابة محتوى + إدارة وسائل التواصل الاجتماعي</p>
+            <p>احصل على أفضل العروض لتسويق نشاطك التجاري خلال موسم العيد الأضحى 2025</p>
         </div>
-
-        <h2>🔥 باقات التصميم وكتابة المحتوى للعيد الأضحى 🔥</h2>
-        <ul>
-            <li>📌 متابعة يومية + ربط المحتوى بالترندات لحظة بلحظة!</li>
-            <li>📢 باقات إدارة السوشيال ميديا للعيد الأضحى 🐑🎉</li>
-            <li>🎯 إدارة يومية متكاملة مع الترندات والإعلانات الخاصة بالعيد لحظة بلحظة!</li>
-        </ul>
-
-        <h2>📌 إزاي ده بيتم؟</h2>
-        <h3>1️⃣ متابعة الترندات يوميًا:</h3>
-        <ul>
-            <li>متابعة الأحداث والموضوعات المتعلقة بالعيد الأضحى اللي بقت حديث السوشيال ميديا.</li>
-            <li>تحليل الإعلانات اللي تريند ونستلهم منها أفكار تسويقية قوية.</li>
-            <li>رصد الموضوعات اللي بتشغل الجمهور على تويتر، فيسبوك، إنستجرام وتيك توك.</li>
-        </ul>
-
-        <h3>2️⃣ ربط الترند بالتصميم والمحتوى:</h3>
-        <ul>
-            <li>لو فيه حدث أو جملة تريند مرتبطة بالعيد، بنستخدمه بأسلوب تسويقي يناسب علامتك التجارية.</li>
-            <li>لو فيه إعلان ناجح، بنعمل بوست مستوحى منه بأسلوب براندك.</li>
-            <li>لو فيه موضوع شاغل الناس، بنكتب بوست تفاعلي يوصّل رسالتك للجمهور.</li>
-        </ul>
-
-        <h2>🎯 إيه الفايدة؟</h2>
-        <ul>
-            <li>✅ **جذب انتباه الجمهور**: الناس بتحب الترندات وتتفاعل مع اللي بيتكلم عنها.</li>
-            <li>✅ **زيادة التفاعل والمشاركة**: البوستات المرتبطة بالترندات بتوصل لأكبر عدد من الناس.</li>
-            <li>✅ **إحساس بالحداثة**: علامتك التجارية هتظهر متجددة ومواكبة لأحداث العيد.</li>
-            <li>✅ **توصيل الرسالة بشكل إبداعي**: مش مجرد إعلان، ده محتوى ممتع ومتناسق مع روح العيد الأضحى.</li>
-        </ul>
-
-        <p><strong>باختصار، هنخلي علامتك التجارية جزء من حديث الناس اليومي في العيد الأضحى! 🔥</strong></p>
+        
+        <div class="highlight-box">
+            <h2>✨ لماذا تختار خدماتنا لهذا العيد؟</h2>
+            <p>نقدم لك محتوى متميزًا يتناسب مع روح العيد الأضحى ويلائم جمهورك المستهدف، مع:</p>
+            <ul class="features">
+                <li>تصاميم احترافية بجودة عالية تناسب هوية علامتك التجارية</li>
+                <li>نصوص إبداعية جذابة تحقق التفاعل المطلوب</li>
+                <li>متابعة يومية للترندات والأحداث المتعلقة بالعيد</li>
+                <li>ربط المحتوى باحتياجات الجمهور خلال فترة العيد</li>
+            </ul>
+        </div>
+        
+        <h2>🎁 اختر الباقة المناسبة لك</h2>
+        <p>نقدم مجموعة من الباقات المصممة خصيصًا لتلبية احتياجاتك وميزانيتك</p>
+        
+        <div class="offer-container">
+            <!-- الباقة الأساسية -->
+            <div class="offer">
+                <div class="offer-badge">الأكثر طلبًا</div>
+                <h3>الباقة الأساسية</h3>
+                <p>مناسبة للمشاريع الصغيرة والشركات الناشئة</p>
+                
+                <div class="price">
+                    5,997 جنيه
+                    <small>بدلاً من <del>7,500 جنيه</del></small>
+                </div>
+                
+                <ul class="features">
+                    <li>30 تصميم احترافي (منشورات + ستوري)</li>
+                    <li>30 نص إعلاني مخصص</li>
+                    <li>مدة الحملة: 30 يومًا</li>
+                    <li>تنسيق التغذية البصرية (Feed Design)</li>
+                    <li>دعم فني خلال أوقات العمل</li>
+                    <li class="excluded">رفع البوستات من خلالنا</li>
+                    <li class="excluded">تعديلات غير محدودة</li>
+                </ul>
+                
+                <a href="https://wa.me/201030459067?text=أرغب%20في%20حجز%20الباقة%20الأساسية%20للعيد%20الأضحى%202025" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <!-- الباقة المتوسطة -->
+            <div class="offer">
+                <h3>الباقة المتوسطة</h3>
+                <p>مناسبة للشركات المتوسطة وأصحاب المحتوى النشيط</p>
+                
+                <div class="price">
+                    8,997 جنيه
+                    <small>بدلاً من <del>11,000 جنيه</del></small>
+                </div>
+                
+                <ul class="features">
+                    <li>60 تصميم احترافي (منشورات + ستوري + GIF)</li>
+                    <li>60 نص إعلاني مخصص</li>
+                    <li>مدة الحملة: 30 يومًا</li>
+                    <li>تحسين الهوية البصرية</li>
+                    <li>تنسيق احترافي للتغذية البصرية</li>
+                    <li>رفع البوستات من خلالنا</li>
+                    <li>تعديل واحد لكل تصميم</li>
+                    <li>دعم سريع</li>
+                </ul>
+                
+                <a href="https://wa.me/201030459067?text=أرغب%20في%20حجز%20الباقة%20المتوسطة%20للعيد%20الأضحى%202025" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <!-- الباقة المتميزة -->
+            <div class="offer offer-premium">
+                <div class="offer-badge">الأفضل قيمة</div>
+                <h3>الباقة المتميزة</h3>
+                <p>للعلامات التجارية الكبيرة وصناع التأثير</p>
+                
+                <div class="price">
+                    12,997 جنيه
+                    <small>بدلاً من <del>16,000 جنيه</del></small>
+                </div>
+                
+                <ul class="features">
+                    <li>90 تصميم احترافي (منشورات + ستوري + GIF + فيديو)</li>
+                    <li>90 نص إعلاني مخصص</li>
+                    <li>تصميم هوية بصرية متكاملة</li>
+                    <li>تنسيق احترافي للتغذية البصرية</li>
+                    <li>خطة محتوى استراتيجية</li>
+                    <li>رفع البوستات من خلالنا</li>
+                    <li>تعديلان لكل تصميم</li>
+                    <li>دعم VIP على مدار الساعة</li>
+                    <li>تحليل أداء أسبوعي</li>
+                </ul>
+                
+                <a href="https://wa.me/201030459067?text=أرغب%20في%20حجز%20الباقة%20المتميزة%20للعيد%20الأضحى%202025" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- الباقة الشاملة -->
+        <div class="offer" style="max-width: 100%;">
+            <h3 style="text-align: center;">الباقة الشاملة - حلول متكاملة</h3>
+            <p style="text-align: center;">للشركات التي تحتاج إلى حلول متكاملة تشمل التسويق والتجارة الإلكترونية</p>
+            
+            <div class="price" style="font-size: 2.5rem;">
+                29,997 جنيه
+                <small>بدلاً من <del>37,500 جنيه</del></small>
+            </div>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h4>🎨 خدمات التصميم والمحتوى:</h4>
+                    <ul class="features">
+                        <li>90 تصميم احترافي (منشورات + ستوري + GIF + فيديو)</li>
+                        <li>90 نص إعلاني مخصص</li>
+                        <li>تصميم هوية بصرية متكاملة</li>
+                        <li>إدارة محتوى احترافية لمدة شهر</li>
+                    </ul>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px;">
+                    <h4>🛒 خدمات التجارة الإلكترونية:</h4>
+                    <ul class="features">
+                        <li>متجر إلكتروني متكامل (ويب + موبايل)</li>
+                        <li>تطبيق خاص بالعملاء</li>
+                        <li>تطبيق خاص بالموظفين</li>
+                        <li>نظام نقطة بيع (POS)</li>
+                        <li>تكامل مع شركات الشحن</li>
+                    </ul>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px;">
+                    <h4>⚙ خدمات إضافية:</h4>
+                    <ul class="features">
+                        <li>حماية متقدمة ونسخ احتياطي</li>
+                        <li>تحسين محركات البحث (SEO)</li>
+                        <li>تحليلات وأدوات قياس الأداء</li>
+                        <li>دعم فني لمدة سنة كاملة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://wa.me/201030459067?text=أرغب%20في%20حجز%20الباقة%20الشاملة%20للعيد%20الأضحى%202025" class="cta" style="max-width: 400px; margin: 0 auto;">
+                    احجز الحل المتكامل الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <h2>📌 كيف نعمل؟</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 2rem 0;">
+            <div style="flex: 1; min-width: 300px; background: rgba(212, 136, 6, 0.1); padding: 1.5rem; border-radius: 10px;">
+                <h3>1. دراسة وتحليل</h3>
+                <p>نقوم بدراسة علامتك التجارية وجمهورك المستهدف وتحليل المنافسين لضمان تقديم محتوى فعال.</p>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px; background: rgba(212, 136, 6, 0.1); padding: 1.5rem; border-radius: 10px;">
+                <h3>2. التخطيط الاستراتيجي</h3>
+                <p>نضع خطة محتوى استراتيجية تتوافق مع أهدافك وتراعي أحداث وترندات العيد الأضحى.</p>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px; background: rgba(212, 136, 6, 0.1); padding: 1.5rem; border-radius: 10px;">
+                <h3>3. التنفيذ والمتابعة</h3>
+                <p>ننفذ المحتوى باحترافية ونتابع أداءه مع إجراء التحسينات المستمرة.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="main">
-        <!-- الباقة الاقتصادية -->
-        <div class="offer">
-            <h2>🔹 الباقة الاقتصادية – للمشاريع الصغيرة والشركات الناشئة 💰</h2>
-            <p>💼 <strong>مناسبة لـ:</strong> أصحاب البراندات الجديدة، المشاريع الناشئة، الورش، الصفحات الشخصية أو أي نشاط لسه بيبدأ وعاوز يظهر بشكل احترافي في العيد الأضحى بدون تكلفة كبيرة.</p>
-            <p>✅ عدد التصاميم: 30 تصميمًا (منشورات + ستوري) 🎨</p>
-            <p>✅ عدد البوستات التسويقية: 30 بوستًا تسويقيًا ✍️</p>
-            <p>📅 مدة الحملة: 30 يومًا – فترة العيد الأضحى بمعدل بوست يوميًا!</p>
-
-            <p>🚀 التعديلات والإضافات:</p>
-            <p>❌ التعديل على التصاميم: غير متاح</p>
-            <p>❌ رفع البوستات من خلالنا: غير متاح</p>
-            <p>❌ تصميم الهوية البصرية: غير متاح</p>
-            <p>❌ تنسيق التغذية البصرية (Feed Design): غير متاح</p>
-            <p>🔹 أولوية الدعم: دعم عادي</p>
-
-            <p>📌 التسعير داخل العرض:</p>
-            <p>💰 79.97 جنيه لكتابة البوست التسويقي الواحد</p>
-            <p>💰 79.97 جنيه للتصميم الواحد مع البوست التسويقي</p>
-            <p class="price">💡 السعر الإجمالي للباقة: 4,797 جنيه مصري</p>
-
-            <p>📢 🚀 احجز الآن واستفد من محتوى يومي مميز خلال العيد الأضحى! 🌟</p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+🔹+الباقة+الاقتصادية+–+محتوى+اقتصادي+بجودة+احترافية+للعيد+الأضحى" class="cta">احجز الآن 🚀</a>
-        </div>
-
-        <!-- الباقة الذهبية -->
-        <div class="offer">
-            <h2>🔸 الباقة الذهبية – للمشاريع المتوسطة وأصحاب المحتوى النشيط 🚀</h2>
-            <p>🚀 <strong>مناسبة لـ:</strong> البراندات اللي عندها جمهور موجود وبتنشر بشكل منتظم، عايزين يعززوا التفاعل في فترة العيد الأضحى، زي: الكافيهات، العيادات، المطاعم، البراندات المتوسطة.</p>
-            <p>✅ <strong>عدد التصاميم:</strong> 60 تصميمًا (منشورات + ستوري + تصاميم ترويجية) 🎨</p>
-            <p>✅ <strong>عدد البوستات التسويقية:</strong> 60 بوستًا تسويقيًا مكتوب بإبداع لجذب العملاء! 📝</p>
-            <p>✅ <strong>تحسين الألوان والخطوط للهوية البصرية</strong> – عشان البراند يكون جذاب واحترافي! 🎨✨</p>
-            <p>✅ <strong>تنسيق احترافي للتغذية البصرية (Feed Design)</strong> – يخلي حسابك تحفة فنية!</p>
-
-            <p>🚀 <strong>خدمات إضافية:</strong></p>
-            <p>✔ <strong>رفع البوستات من خلالنا</strong> – نوفر وقتك وندير الحساب باحترافية!</p>
-            <p>🎨 <strong>تعديل واحد متاح على كل تصميم</strong> – لضمان الجودة اللي تناسبك!</p>
-            <p>⚡ <strong>دعم سريع</strong> – عشان كل حاجة تكون جاهزة بدون تأخير!</p>
-
-            <p>📌 <strong>التسعير داخل العرض:</strong></p>
-            <p>💰 59.97 جنيه لكتابة البوست التسويقي الواحد</p>
-            <p>💰 59.97 جنيه للتصميم الواحد مع البوست التسويقي</p>
-            <p class="price">💡 <strong>السعر الإجمالي للباقة:</strong> 7,197 جنيه مصري</p>
-
-            <p>📅 <strong>مدة المحتوى:</strong> 30 يومًا – فترة العيد الأضحى بمعدل بوستين كل يوم!</p>
-
-            <p>📢 💥 احجز الآن وخلّي علامتك التجارية مميزة خلال العيد الأضحى! 🚀🔥</p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+🔸+الباقة+الذهبية+–+تسويق+متكامل+لشركتك+في+العيد+الأضحى!+🐑✨" class="cta">احجز الآن 🚀</a>
-        </div>
-
-        <!-- الباقة الملكية -->
-        <div class="offer">
-            <h2>🔶 الباقة الملكية – لأصحاب البراندات القوية وصناع التأثير 👑</h2>
-            <p>👑 <strong>مناسبة لـ:</strong> البراندات الكبيرة، البرسونال براندز المؤثرة، المشاريع اللي بتشتغل بشكل احترافي وبتحتاج محتوى بجودة عالية ومتابعة دقيقة خلال موسم العيد الأضحى بالكامل.</p>
-            <p>✅ <strong>عدد التصاميم:</strong> 90 تصميمًا (منشورات + ستوري + GIF + تصاميم فيديو قصيرة 🎥)</p>
-            <p>✅ <strong>عدد البوستات التسويقية:</strong> 90 بوستًا تسويقيًا مكتوب بإبداع لجذب العملاء! 📝</p>
-            <p>✅ <strong>تصميم هوية بصرية متكامل:</strong> شعار، ألوان، خطوط، ونمط موحد – يخلي البراند بتاعك مميز! 🎨✨</p>
-            <p>✅ <strong>تنسيق احترافي للتغذية البصرية (Feed Design) + خطة محتوى متكاملة</strong> لضمان اتساق المنشورات!</p>
-
-            <h3>🚀 خدمات إضافية:</h3>
-            <p>🎨 <strong>حتى تعديلين لكل تصميم</strong> – للحصول على الشكل المثالي!</p>
-            <p>📌 <strong>رفع البوستات من خلالنا</strong> – توفير للوقت وإدارة احترافية لحساباتك!</p>
-            <p>⚡ <strong>دعم VIP مخصص</strong> – دعم سريع واستجابة فورية لطلباتك!</p>
-
-            <h3>📌 التسعير داخل العرض:</h3>
-            <p>💰 <strong>49.97 جنيه</strong> لكتابة البوست التسويقي الواحد</p>
-            <p>💰 <strong>49.97 جنيه</strong> للتصميم الواحد مع البوست التسويقي</p>
-            <p class="price">💡 <strong>السعر الإجمالي للباقة:</strong> 8,997 جنيه مصري</p>
-
-            <p>📅 <strong>مدة المحتوى:</strong> 30 يومًا – فترة العيد الأضحى بمعدل <strong>3 بوستات يوميًا!</strong></p>
-
-            <p>📢 💥 احجز الآن وخلّي علامتك التجارية الأقوى في السوق خلال العيد الأضحى! 🚀🔥</p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+🔶+الباقة+الملكية+–+وجود+قوي+لشركتك+على+السوشيال+ميديا+في+العيد+الأضحى!+🐑✨" class="cta">احجز الآن 🚀</a>
-        </div>
-
-        <!-- الباقة الماسية -->
-        <div class="offer">
-            <h2>💎 الباقة الماسية – حل شامل لمحتوى سوشيال ميديا ومتجر إلكتروني 🏬💼</h2>
-            <p>💎 <strong>مناسبة لـ:</strong> الشركات الكبرى والمتاجر اللي عايزة حلول متكاملة تشمل متجر إلكتروني، تطبيقات موبايل، نظام نقاط بيع (POS)، وإدارة محتوى احترافية خلال العيد الأضحى.</p>
-            <p>✅ <strong>عدد التصاميم:</strong> 90 تصميمًا (منشورات + ستوري + GIF + فيديوهات قصيرة) 🎨🎥</p>
-            <p>✅ <strong>عدد البوستات التسويقية:</strong> 90 بوستًا تسويقيًا ✍️</p>
-            <p>✅ <strong>متجر إلكتروني متكامل (ويب وموبايل)</strong> بتصميم متطور 📱💻</p>
-            <p>✅ <strong>تطبيق موبايل للعملاء</strong> لتسهيل الطلبات 🛍️</p>
-            <p>✅ <strong>تطبيق موبايل للمندوبين</strong> لإدارة التوصيل 🚚</p>
-            <p>✅ <strong>تطبيق موبايل للمدير</strong> لمتابعة الأداء 📊</p>
-            <p>✅ <strong>نظام نقطة بيع (POS)</strong> لإدارة المبيعات الفعلية 💳</p>
-            <p>✅ <strong>برنامج سطح مكتب لـ POS</strong> لتسهيل العمليات 🖥️</p>
-            <p>✅ <strong>تصميم هوية بصرية متكاملة</strong> مع تنسيق التغذية البصرية 🎨</p>
-            <p>✅ <strong>إدارة مخزون متقدمة</strong> مع تكامل API للشحن 📦</p>
-            <p>✅ <strong>تحسينات SEO متقدمة</strong> لزيادة الظهور 🔍</p>
-            <p>✅ <strong>دعم متعدد اللغات</strong> للوصول لعملاء عالميين 🌍</p>
-            <p>✅ <strong>تحليلات شاملة</strong> مع تقارير مخصصة 📈</p>
-            <p>✅ <strong>حماية متقدمة</strong> مع SSL وأنظمة أمان 🔒</p>
-            <p>✅ <strong>دعم وصيانة شاملة</strong> لمدة سنة 🛠️</p>
-
-            <p>🚀 <strong>خدمات إضافية:</strong></p>
-            <p>✔ <strong>رفع البوستات من خلالنا</strong> مع إدارة احترافية</p>
-            <p>✔ <strong>تعديلات غير محدودة</strong> على التصاميم خلال التنفيذ</p>
-            <p>✔ <strong>دعم VIP مخصص</strong> مع استجابة فورية</p>
-
-            <p>📅 <strong>مدة التنفيذ:</strong> 30 يومًا!</p>
-            <p class="price">💡 <strong>السعر الإجمالي للباقة:</strong> 24,997 جنيه مصري</p>
-
-            <p>📢 💎 احصل على حل متكامل لأعمالك التجارية وتألق في سوق التجارة الإلكترونية والسوشيال ميديا! 🚀</p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+💎+الباقة+الماسية+–+محتوى+ومتجر+إلكتروني+للعيد+الأضحى!+🏬" class="cta">احجز الحل المتكامل الآن 🚀</a>
+    <!-- زر التواصل -->
+    <div class="contact-button">
+        <button class="contact-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        
+        <div class="contact-menu">
+            <ul>
+                <li>
+                    <a href="https://wa.me/201030459067" class="whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> واتساب
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/YGBrandMaker" class="facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i> فيسبوك
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/YGBrandMaker" class="instagram" target="_blank">
+                        <i class="fab fa-instagram"></i> إنستجرام
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/YGBrandMaker" class="twitter" target="_blank">
+                        <i class="fab fa-twitter"></i> تويتر
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/YGBrandMaker" class="linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i> لينكدإن
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@YGBrandMaker" class="tiktok" target="_blank">
+                        <i class="fab fa-tiktok"></i> تيك توك
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const contactButton = document.createElement("div");
-            contactButton.classList.add("contact-button");
-
-            const contactToggle = document.createElement("button");
-            contactToggle.classList.add("contact-toggle");
-
-            const toggleIcon = document.createElement("i");
-            toggleIcon.classList.add("fa-regular", "fa-comment-dots");
-
-            contactToggle.appendChild(toggleIcon);
-            contactButton.appendChild(contactToggle);
-
-            const contactMenu = document.createElement("div");
-            contactMenu.classList.add("contact-menu");
-
-            const contactList = document.createElement("ul");
-
-            const platforms = [
-                { href: "https://wa.me/201030459067", class: "whatsapp", icon: "fa-whatsapp", text: "WhatsApp" },
-                { href: "https://www.facebook.com/YGBrandMaker", class: "facebook", icon: "fa-facebook", text: "Facebook" },
-                { href: "https://www.instagram.com/YGBrandMaker", class: "instagram", icon: "fa-instagram", text: "Instagram" },
-                { href: "https://twitter.com/YGBrandMaker", class: "twitter", icon: "fa-twitter", text: "Twitter" },
-                { href: "https://www.linkedin.com/company/YGBrandMaker", class: "linkedin", icon: "fa-linkedin", text: "LinkedIn" },
-                { href: "https://www.tiktok.com/@YGBrandMaker", class: "tiktok", icon: "fa-tiktok", text: "TikTok" },
-                { href: "https://www.youtube.com/c/YGBrandMaker", class: "youtube", icon: "fa-youtube", text: "YouTube" },
-                { href: "https://www.snapchat.com/add/YGBrandMaker", class: "snapchat", icon: "fa-snapchat", text: "Snapchat" }
-            ];
-
-            platforms.forEach(platform => {
-                const listItem = document.createElement("li");
-                const link = document.createElement("a");
-                link.href = platform.href;
-                link.classList.add(platform.class);
-                link.setAttribute("target", "_blank");
-
-                const icon = document.createElement("i");
-                icon.classList.add("fa-brands", platform.icon);
-
-                link.appendChild(icon);
-                link.appendChild(document.createTextNode(` ${platform.text}`));
-
-                listItem.appendChild(link);
-                contactList.appendChild(listItem);
-            });
-
-            contactMenu.appendChild(contactList);
-            contactButton.appendChild(contactMenu);
-            document.body.appendChild(contactButton);
-
+            const contactToggle = document.querySelector(".contact-toggle");
+            const contactMenu = document.querySelector(".contact-menu");
+            
             contactToggle.addEventListener("click", function () {
                 contactMenu.classList.toggle("show");
+            });
+            
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest(".contact-button")) {
+                    contactMenu.classList.remove("show");
+                }
+            });
+            
+            // تأثيرات للعروض عند التمرير
+            const offers = document.querySelectorAll(".offer");
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            offers.forEach(offer => {
+                offer.style.opacity = 0;
+                offer.style.transform = "translateY(20px)";
+                offer.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                observer.observe(offer);
             });
         });
     </script>

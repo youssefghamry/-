@@ -1,371 +1,560 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>عروض العيد الأضحى</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>عروض إدارة الحملات الإلكترونية للعيد الأضحى 2025</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding: 20px;
-            direction: rtl;
-            text-align: center;
+        :root {
+            --primary-color: #d48806;
+            --secondary-color: #c0392b;
+            --accent-color: #d49e27;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
-        h1, h2, h3 {
-            color: #d48806;
-        }
-        p {
-            color: #333;
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
             line-height: 1.6;
+            direction: rtl;
         }
-        .price {
-            font-size: 20px;
-            font-weight: bold;
-            color: #c0392b;
+        
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
-        .cta {
-            background-color: #d48806;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: block;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 15px;
+        
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
-        .cta:hover {
-            background-color: #b36b00;
+        
+        h2 {
+            font-size: 2rem;
+            border-right: 4px solid var(--accent-color);
+            padding-right: 15px;
+            margin: 2rem 0;
         }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
         .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
         }
-        .offer {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: right;
-        }
-        .highlight {
-            background: #fff3cd;
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .highlight1 {
+        
+        .header {
             text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f5f5f5 0%, #fff7e6 100%);
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1s ease-in-out;
         }
-        .package {
-            background: #ffefcc;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-            font-weight: bold;
-        }
-        .main {
+        
+        .offer-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 2rem;
+            margin: 3rem 0;
         }
-        @media (min-width: 768px) {
-            .offer {
-                flex: 1;
-                min-width: 300px;
-                max-width: 400px;
-            }
+        
+        .offer {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 400px;
+            transition: var(--transition);
+            border-top: 5px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
         }
-        @media (max-width: 767px) {
-            .offer {
-                width: 100%;
-                max-width: 600px;
-                margin: 20px auto;
-            }
+        
+        .offer:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
+        
+        .offer-badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            font-weight: bold;
+            transform: rotate(-45deg) translate(-25%, -50%);
+            font-size: 0.8rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--secondary-color);
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .price small {
+            font-size: 1rem;
+            color: #666;
+            display: block;
+            font-weight: normal;
+        }
+        
+        .features {
+            list-style-type: none;
+            margin: 1.5rem 0;
+        }
+        
+        .features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+        
+        .features li.excluded:before {
+            content: "✗";
+            color: #999;
+        }
+        
+        .cta {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            transition: var(--transition);
+            border: 2px solid var(--accent-color);
+            margin-top: 1rem;
+        }
+        
+        .cta:hover {
+            background: transparent;
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+        
+        .highlight-box {
+            background: rgba(212, 158, 39, 0.1);
+            border: 1px dashed var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
         .contact-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 2rem;
+            left: 2rem;
             z-index: 1000;
         }
+        
         .contact-toggle {
-            background-color: #007bff;
-            color: #fff;
+            background-color: var(--primary-color);
+            color: var(--white);
             border: none;
-            padding: 15px;
+            padding: 1.2rem;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 20px;
-            transition: 0.3s;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
         }
+        
         .contact-toggle:hover {
-            background-color: #0056b3;
+            background-color: #b36b00;
             transform: scale(1.1);
         }
+        
         .contact-menu {
             position: absolute;
-            bottom: 60px;
-            right: 0;
+            bottom: 70px;
+            left: 0;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             display: none;
-            width: 180px;
-            padding: 10px 0;
-            opacity: 0;
+            width: 220px;
+            padding: 1rem 0;
             transform: translateY(10px);
-            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            transition: var(--transition);
         }
+        
         .contact-menu.show {
             display: block;
-            opacity: 1;
             transform: translateY(0);
+            opacity: 1;
         }
+        
         .contact-menu ul {
             list-style: none;
             margin: 0;
             padding: 0;
         }
+        
         .contact-menu ul li {
-            padding: 10px;
-            text-align: center;
+            margin: 0.3rem 0;
         }
+        
         .contact-menu ul li a {
             text-decoration: none;
-            color: #fff;
-            font-size: 16px;
+            color: var(--white);
+            font-size: 1rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 10px;
+            padding: 0.8rem 1rem;
             border-radius: 5px;
-            transition: 0.3s;
+            transition: var(--transition);
         }
+        
         .contact-menu ul li a i {
-            margin-right: 10px;
-            font-size: 20px;
+            margin-left: 0.8rem;
+            font-size: 1.2rem;
         }
-        .whatsapp { background: #25D366; }
-        .whatsapp:hover { background: #1DA851; transform: translateX(10px); }
-        .facebook { background: #1877F2; }
-        .facebook:hover { background: #145DBF; transform: translateX(10px); }
-        .instagram { background: #E4405F; }
-        .instagram:hover { background: #C13584; transform: translateX(10px); }
-        .twitter { background: #1DA1F2; }
-        .twitter:hover { background: #0C85D0; transform: translateX(10px); }
-        .linkedin { background: #0077B5; }
-        .linkedin:hover { background: #005983; transform: translateX(10px); }
-        .tiktok { background: #000000; }
-        .tiktok:hover { background: #111; transform: translateX(10px); }
-        .youtube { background: #FF0000; }
-        .youtube:hover { background: #CC0000; transform: translateX(10px); }
-        .snapchat { background: #FFFC00; color: #000; }
-        .snapchat:hover { background: #E6E200; transform: translateX(10px); }
+        
+        .whatsapp { background: #25D366; } 
+        .whatsapp:hover { background: #1DA851; transform: translateX(-10px); }
+        .facebook { background: #1877F2; } 
+        .facebook:hover { background: #145DBF; transform: translateX(-10px); }
+        .instagram { background: #E4405F; } 
+        .instagram:hover { background: #C13584; transform: translateX(-10px); }
+        .twitter { background: #1DA1F2; } 
+        .twitter:hover { background: #0C85D0; transform: translateX(-10px); }
+        .linkedin { background: #0077B5; } 
+        .linkedin:hover { background: #005983; transform: translateX(-10px); }
+        .tiktok { background: #000000; } 
+        .tiktok:hover { background: #111; transform: translateX(-10px); }
+        .youtube { background: #FF0000; } 
+        .youtube:hover { background: #CC0000; transform: translateX(-10px); }
+        .snapchat { background: #FFFC00; color: #000; } 
+        .snapchat:hover { background: #E6E200; transform: translateX(-10px); }
+        
+        .tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d48806, transparent);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .offer {
+                max-width: 100%;
+            }
+            
+            .contact-button {
+                bottom: 1rem;
+                left: 1rem;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* تحسينات للعرض على الشاشات الكبيرة */
+        @media (min-width: 1200px) {
+            .offer-premium {
+                transform: scale(1.05);
+                z-index: 1;
+                border-top: 5px solid gold;
+            }
+            
+            .offer-premium .price {
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="highlight1">
-        <h1>🚀📊💖💖 عروض إدارة الحملات الإلكترونية للعيد الأضحى 🎖️💥</h1>
-    </div>
     <div class="container">
-        <h2>📢💖💖 خلي إعلانك يجيب مبيعات بجد، مش مجرد مشاهدات! 🎯💰</h2>
-        <p><strong>العيد الأضحى قرب، وده معناه فرصتك الذهبية للبيع والتوسع! 🐑🎉</strong></p>
-        <p class="highlight">سواء عندك منتج، خدمة، أو متجر إلكتروني، الإعلانات الممولة هي كلمة السر للنجاح! 🚀</p>
-
-        <h2>💡 ليه تحتاج حملة إعلانية ممولة؟</h2>
-        <p>✅ <strong>توصل لأكبر عدد من العملاء المستهدفين</strong> 📈</p>
-        <p>✅ <strong>تزود التفاعل والمبيعات بدون مجهود</strong> 💬💰</p>
-        <p>✅ <strong>تخلي علامتك التجارية رقم 1 في السوق!</strong> 🏆</p>
-
-        <h2>⚡ اختر باقتك الآن:</h2>
-        <p class="package">💖 <strong>الباقة الاقتصادية</strong> – إعلان واحد بسيط بميزانية اقتصادية</p>
-        <p class="package">🚀 <strong>الباقة الذهبية</strong> – إعلانات متنوعة مع استهداف وتحليل متقدم</p>
-        <p class="package">💖 <strong>الباقة الملكية</strong> – حملات قوية، إعادة استهداف، وتحليل عميق للنتائج</p>
-        <p class="package">💎 <strong>الباقة الماسية</strong> – حل شامل مع متجر إلكتروني وتطبيقات ونظام POS</p>
-
-        <h2>✔ مع الباقة تحصل على:</h2>
-        <p>🎨 تصاميم احترافية وفيديوهات جذابة مجانًا! 🎥</p>
-        <p>📝 نصوص إعلانية تسويقية تحقق أعلى تفاعل! 🔥</p>
-        <p>🎯 استهداف دقيق + تحسين مستمر للميزانية! 📊</p>
-
-        <h2>🎊 متخليش موسم العيد الأضحى يعدي عليك! 🚀🔥</h2>
-        <p><strong>اطلب حملتك الإعلانية دلوقتي وكسب فلوس أكتر بأقل تكلفة! 💸🔥</strong></p>
+        <div class="header pulse">
+            <h1>🎉 عروض إدارة الحملات الإلكترونية للعيد الأضحى 2025 🎉</h1>
+            <p class="tag">حملات إعلانية ممولة باحترافية</p>
+            <p>احصل على أفضل العروض لتسويق نشاطك التجاري خلال موسم العيد الأضحى 2025</p>
+        </div>
+        
+        <div class="highlight-box">
+            <h2>✨ لماذا تحتاج حملة إعلانية ممولة في العيد؟</h2>
+            <p>العيد الأضحى هو موسم الذروة للبيع والتفاعل! مع خدماتنا ستحصل على:</p>
+            <ul class="features">
+                <li>وصول لأكبر عدد من العملاء المستهدفين</li>
+                <li>تصاميم احترافية وفيديوهات جذابة</li>
+                <li>استهداف دقيق وتحليل متقدم</li>
+                <li>زيادة المبيعات وتحقيق أعلى عائد على الاستثمار</li>
+            </ul>
+        </div>
+        
+        <h2>🎁 اختر الباقة المناسبة لك</h2>
+        <p>نقدم مجموعة من الباقات المصممة خصيصًا لتلبية احتياجاتك وميزانيتك</p>
+        
+        <div class="offer-container">
+            <!-- الباقة الاقتصادية -->
+            <div class="offer">
+                <div class="offer-badge">الأكثر طلبًا</div>
+                <h3>الباقة الاقتصادية</h3>
+                <p>إعلان ممول بميزانية اقتصادية</p>
+                
+                <div class="price">
+                    25% من ميزانية الإعلان
+                    <small>للميزانيات من 500 إلى 5,000 جنيه</small>
+                </div>
+                
+                <ul class="features">
+                    <li>إعلان واحد ممول</li>
+                    <li>مدة الحملة: 7 أيام</li>
+                    <li>تصميم مجاني (صورة أو فيديو)</li>
+                    <li>كتابة محتوى إعلاني جذاب</li>
+                    <li>استهداف أساسي للجمهور</li>
+                    <li class="excluded">اختبار A/B</li>
+                    <li class="excluded">إعادة استهداف</li>
+                    <li class="excluded">تقارير تحليل الأداء</li>
+                </ul>
+                
+                <a href="https://wa.me/201030459067?text=أرغب%20في%20حجز%20الباقة%20الأساسية%20لإعلان%20ممول%20للعيد%20الأضحى%202025" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <!-- الباقة الذهبية -->
+            <div class="offer">
+                <h3>الباقة الذهبية</h3>
+                <p>إعلان ممول بأداء متقدم</p>
+                
+                <div class="price">
+                    23% من ميزانية الإعلان
+                    <small>للميزانيات من 5,000 إلى 10,000 جنيه</small>
+                </div>
+                
+                <ul class="features">
+                    <li>حتى 3 إعلانات ممولة</li>
+                    <li>مدة الحملة: 14 يومًا</li>
+                    <li>حتى 3 تصميمات إعلانية</li>
+                    <li>كتابة محتوى احترافي</li>
+                    <li>استهداف متقدم للجمهور</li>
+                    <li>اختبار A/B</li>
+                    <li>إعادة استهداف</li>
+                    <li>تقارير أسبوعية</li>
+                </ul>
+                
+                <a href="https://wa.me/201030459067?text=أرغب%20في%20حجز%20الباقة%20الذهبية%20لإعلان%20ممول%20للعيد%20الأضحى%202025" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <!-- الباقة الملكية -->
+            <div class="offer offer-premium">
+                <div class="offer-badge">الأفضل قيمة</div>
+                <h3>الباقة الملكية</h3>
+                <p>إعلان ممول بإدارة احترافية</p>
+                
+                <div class="price">
+                    20% من ميزانية الإعلان
+                    <small>للميزانيات من 10,000 جنيه فأكثر</small>
+                </div>
+                
+                <ul class="features">
+                    <li>حملات متعددة حسب الأهداف</li>
+                    <li>مدة الحملة: 30 يومًا</li>
+                    <li>6 تصميمات إعلانية + 2 فيديو</li>
+                    <li>محتوى تسويقي متطور</li>
+                    <li>استهداف احترافي دقيق</li>
+                    <li>اختبارات A/B متعددة</li>
+                    <li>إعادة استهداف متقدمة</li>
+                    <li>تقارير مفصلة وتحليلات</li>
+                    <li>دعم واستشارات مستمرة</li>
+                </ul>
+                
+                <a href="https://wa.me/201030459067?text=أرغب%20في%20حجز%20الباقة%20الملكية%20لإعلان%20ممول%20للعيد%20الأضحى%202025" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <h2>📌 كيف نعمل؟</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 2rem 0;">
+            <div style="flex: 1; min-width: 300px; background: rgba(212, 136, 6, 0.1); padding: 1.5rem; border-radius: 10px;">
+                <h3>1. دراسة وتحليل</h3>
+                <p>نقوم بدراسة نشاطك التجاري وجمهورك المستهدف لضمان تصميم حملة فعالة.</p>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px; background: rgba(212, 136, 6, 0.1); padding: 1.5rem; border-radius: 10px;">
+                <h3>2. التخطيط الاستراتيجي</h3>
+                <p>نضع خطة إعلانية متكاملة تتوافق مع أهدافك وميزانيتك.</p>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px; background: rgba(212, 136, 6, 0.1); padding: 1.5rem; border-radius: 10px;">
+                <h3>3. التنفيذ والمتابعة</h3>
+                <p>ننفذ الحملة باحترافية ونتابع أداءها مع تحسين مستمر.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <h2>🚀 ما الذي يميز خدماتنا؟</h2>
+            <ul class="features">
+                <li>فريق محترف متخصص في الإعلانات الممولة</li>
+                <li>تصاميم إبداعية وفيديوهات جذابة</li>
+                <li>استهداف دقيق للجمهور المناسب</li>
+                <li>تحسين مستمر للحملات لتحقيق أفضل النتائج</li>
+                <li>تقارير أداء شفافة تساعدك على اتخاذ القرارات</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="main">
-        <!-- الباقة الاقتصادية -->
-        <div class="offer">
-            <div class="highlight1">
-                <h2>💖 الباقة الاقتصادية – إعلان ممول بميزانية اقتصادية</h2>
-            </div>
-            <h3>🔹 مناسبة للمبتدئين وأصحاب المشاريع الصغيرة اللي عاوزين إعلان فعال بميزانية محدودة</h3>
-            <p>📌 <strong>تفاصيل الباقة:</strong></p>
+    <!-- زر التواصل -->
+    <div class="contact-button">
+        <button class="contact-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        
+        <div class="contact-menu">
             <ul>
-                <li>الميزانية الإعلانية المقترحة: من 500 جنيه إلى 5,000 جنيه 💰</li>
-                <li>عدد الإعلانات: إعلان واحد فقط 📢</li>
-                <li>مدة الحملة: 7 أيام ⏳</li>
-                <li>إعداد حملة أساسية وإدارتها 🎯</li>
-                <li>تصميم مجاني (صورة أو فيديو واحد) 🎨🎥</li>
-                <li>كتابة محتوى جذاب للإعلان مع CTA ✍️</li>
-                <li>تحليل الجمهور واستهدافه بشكل أساسي 👥</li>
-                <li>إدارة الميزانية لتحقيق أفضل النتائج 📊</li>
+                <li>
+                    <a href="https://wa.me/201030459067" class="whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> واتساب
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/YGBrandMaker" class="facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i> فيسبوك
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/YGBrandMaker" class="instagram" target="_blank">
+                        <i class="fab fa-instagram"></i> إنستجرام
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/YGBrandMaker" class="twitter" target="_blank">
+                        <i class="fab fa-twitter"></i> تويتر
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/YGBrandMaker" class="linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i> لينكدإن
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@YGBrandMaker" class="tiktok" target="_blank">
+                        <i class="fab fa-tiktok"></i> تيك توك
+                    </a>
+                </li>
             </ul>
-            <p>🚫 <strong>غير متاح:</strong></p>
-            <ul>
-                <li>اختبار A/B لتحسين الأداء</li>
-                <li>تقارير تحليل الأداء</li>
-                <li>إعادة استهداف العملاء (Retargeting)</li>
-                <li>استشارات تسويقية متقدمة</li>
-            </ul>
-            <p class="price">💰 <strong>التكلفة:</strong> 25% من قيمة الإعلان</p>
-            <p>📢 🚀 ابدأ بحملة إعلانية ذكية بميزانية صغيرة وحقق أفضل النتائج الممكنة! 🔥</p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+💖+الباقة+الاقتصادية+–+إعلان+ممول+بميزانية+اقتصادية+للعيد+الأضحى" class="cta">ابدأ حملتك الآن 🚀</a>
-        </div>
-
-        <!-- الباقة الذهبية -->
-        <div class="offer">
-            <div class="highlight1">
-                <h2>🚀 الباقة الذهبية – إعلان ممول بأداء متقدم</h2>
-            </div>
-            <h3>🔹 مثالية للشركات والمتاجر اللي عاوزة إعلانات قوية بأداء احترافي وتحليل متقدم</h3>
-            <p>📌 <strong>تفاصيل الباقة:</strong></p>
-            <ul>
-                <li>الميزانية الإعلانية المقترحة: من 5,000 جنيه إلى 10,000 جنيه 💰</li>
-                <li>عدد الإعلانات: حتى 3 إعلانات مختلفة 📢</li>
-                <li>مدة الحملة: 14 يومًا ⏳</li>
-                <li>استهداف وتحليل متقدم 🎯</li>
-                <li>حتى 3 تصميمات إعلانية مجانية (صور/فيديو) 🎨🎥</li>
-                <li>كتابة محتوى احترافي يجذب الفئة المستهدفة ✍️</li>
-                <li>استهداف دقيق حسب الاهتمامات والسلوكيات 👥</li>
-                <li>تحسين إنفاق الميزانية لتحقيق أفضل النتائج 📊</li>
-                <li>اختبار A/B – مقارنة بين إعلانين لتحسين الأداء 🔍</li>
-                <li>تقارير أسبوعية لتحليل الأداء 📑</li>
-                <li>إعادة استهداف المهتمين بالإعلان (Retargeting) 🔄</li>
-                <li>جلسة استشارية مجانية لتحسين الاستراتيجية 🧠</li>
-            </ul>
-            <p class="price">💰 <strong>التكلفة:</strong> 23% من قيمة الإعلان</p>
-            <p>🚀 احصل على حملة إعلانية احترافية تحقق أقصى استفادة من ميزانيتك التسويقية!</p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+🚀+الباقة+الذهبية+–+إعلان+ممول+بأداء+متقدم+للعيد+الأضحى" class="cta">ابدأ حملتك الآن 🚀</a>
-        </div>
-
-        <!-- الباقة الملكية -->
-        <div class="offer">
-            <div class="highlight1">
-                <h2>💖 الباقة الملكية – إعلان ممول بإدارة احترافية</h2>
-            </div>
-            <h3>🔹 مثالية للشركات والمتاجر اللي عاوزة حملات إعلانية قوية ومستدامة بأعلى عائد على الاستثمار (ROI)</h3>
-            <p>📌 <strong>تفاصيل الباقة:</strong></p>
-            <ul>
-                <li>الميزانية الإعلانية المقترحة: من 10,000 جنيه فأكثر 💰</li>
-                <li>عدد الإعلانات: حملات متعددة حسب الأهداف التسويقية 📢</li>
-                <li>مدة الحملة: 30 يومًا ⏳</li>
-                <li>إدارة كاملة واستراتيجيات تسويقية احترافية 🎯</li>
-                <li>6 تصميمات إبداعية متقدمة + 2 فيديو إعلاني عالي الجودة 🎨🎥</li>
-                <li>محتوى تسويقي متطور لتحقيق أعلى معدلات تحويل (Conversion Rate) ✍️</li>
-                <li>استهداف احترافي مع تحسين دقيق للجمهور 👥</li>
-                <li>اختبار A/B على أكثر من سيناريو لضمان أفضل النتائج 🔍</li>
-                <li>تحليل مستمر للبيانات وتحسين الأداء بشكل دوري 📊</li>
-                <li>اختبارات متعددة لقياس الأداء وتحسين الحملات 🔄</li>
-                <li>تقارير مفصلة + تحليلات متعمقة + توصيات عملية للتحسين 📑</li>
-                <li>إعادة استهداف متقدمة للوصول إلى العملاء المحتملين بشكل أكثر دقة 🔁</li>
-                <li>دعم مستمر + استشارات تسويقية خلال مدة الحملة 🧠</li>
-            </ul>
-            <p class="price">💰 <strong>التكلفة:</strong> 20% من قيمة الإعلان</p>
-            <p>🚀 <strong>لو عاوز ترفع مبيعاتك وتحقق أفضل عائد على الاستثمار، الباقة دي مصممة لك!</strong></p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+💖+الباقة+الملكية+–+إعلان+ممول+بإدارة+احترافية+للعيد+الأضحى" class="cta">احجز حملتك الإعلانية الآن! 📢🔥</a>
-        </div>
-
-        <!-- الباقة الماسية -->
-        <div class="offer">
-            <div class="highlight1">
-                <h2>💎 الباقة الماسية – حل شامل مع متجر إلكتروني وإعلانات ممولة</h2>
-            </div>
-            <h3>🔹 مناسبة للشركات الكبرى اللي عاوزة متجر إلكتروني متكامل مع حملات إعلانية قوية</h3>
-            <p>📌 <strong>تفاصيل الباقة:</strong></p>
-            <ul>
-                <li><strong>متجر إلكتروني متكامل (ويب وموبايل)</strong> بتصميم متطور 📱💻</li>
-                <li><strong>تطبيق موبايل للعملاء</strong> لتسهيل الطلبات 🛍️</li>
-                <li><strong>تطبيق موبايل للمندوبين</strong> لإدارة التوصيل 🚚</li>
-                <li><strong>تطبيق موبايل للمدير</strong> لمتابعة الأداء 📊</li>
-                <li><strong>نظام نقطة بيع (POS)</strong> لإدارة المبيعات الفعلية 💳</li>
-                <li><strong>برنامج سطح مكتب لـ POS</strong> لتسهيل العمليات 🖥️</li>
-                <li><strong>حملات إعلانية ممولة</strong> بميزانية تصل إلى 10,000 جنيه 📢</li>
-                <li><strong>6 تصميمات إعلانية</strong> + 2 فيديو إعلاني 🎨🎥</li>
-                <li><strong>إدارة مخزون متقدمة</strong> با تكامل API للشحن 📦</li>
-                <li><strong>تحسينات SEO متقدمة</strong> لزيادة الظهور 🔍</li>
-                <li><strong>دعم متعدد اللغات</strong> للوصول لعملاء عالميين 🌍</li>
-                <li><strong>تحليلات شاملة</strong> مع تقارير مخصصة 📈</li>
-                <li><strong>حماية متقدمة</strong> مع SSL وأنظمة أمان 🔒</li>
-                <li><strong>دعم وصيانة شاملة</strong> لمدة سنة 🛠️</li>
-            </ul>
-            <p>⏳ <strong>مدة التنفيذ:</strong> 30 يومًا!</p>
-            <p class="price">💰 <strong>السعر الإجمالي:</strong> 24,997 جنيه مصري</p>
-            <p>📢 💎 احصل على حل متكامل لأعمالك التجارية وتألق في سوق التجارة الإلكترونية! 🚀</p>
-            <a href="https://wa.me/201030459067?text=السلام+عليكم+أخبركم+إني+محتاج+أشتري+💎+الباقة+الماسية+–+متجر+إلكتروني+مع+إعلانات+ممولة+للعيد+الأضحى" class="cta">احجز الحل المتكامل الآن 🚀</a>
         </div>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const contactButton = document.createElement("div");
-            contactButton.classList.add("contact-button");
-
-            const contactToggle = document.createElement("button");
-            contactToggle.classList.add("contact-toggle");
-
-            const toggleIcon = document.createElement("i");
-            toggleIcon.classList.add("fa-regular", "fa-comment-dots");
-
-            contactToggle.appendChild(toggleIcon);
-            contactButton.appendChild(contactToggle);
-
-            const contactMenu = document.createElement("div");
-            contactMenu.classList.add("contact-menu");
-
-            const contactList = document.createElement("ul");
-
-            const platforms = [
-                { href: "https://wa.me/201030459067", class: "whatsapp", icon: "fa-whatsapp", text: "WhatsApp" },
-                { href: "https://www.facebook.com/YGBrandMaker", class: "facebook", icon: "fa-facebook", text: "Facebook" },
-                { href: "https://www.instagram.com/YGBrandMaker", class: "instagram", icon: "fa-instagram", text: "Instagram" },
-                { href: "https://twitter.com/YGBrandMaker", class: "twitter", icon: "fa-twitter", text: "Twitter" },
-                { href: "https://www.linkedin.com/company/YGBrandMaker", class: "linkedin", icon: "fa-linkedin", text: "LinkedIn" },
-                { href: "https://www.tiktok.com/@YGBrandMaker", class: "tiktok", icon: "fa-tiktok", text: "TikTok" },
-                { href: "https://www.youtube.com/c/YGBrandMaker", class: "youtube", icon: "fa-youtube", text: "YouTube" },
-                { href: "https://www.snapchat.com/add/YGBrandMaker", class: "snapchat", icon: "fa-snapchat", text: "Snapchat" }
-            ];
-
-            platforms.forEach(platform => {
-                const listItem = document.createElement("li");
-                const link = document.createElement("a");
-                link.href = platform.href;
-                link.classList.add(platform.class);
-                link.setAttribute("target", "_blank");
-
-                const icon = document.createElement("i");
-                icon.classList.add("fa-brands", platform.icon);
-
-                link.appendChild(icon);
-                link.appendChild(document.createTextNode(` ${platform.text}`));
-
-                listItem.appendChild(link);
-                contactList.appendChild(listItem);
-            });
-
-            contactMenu.appendChild(contactList);
-            contactButton.appendChild(contactMenu);
-            document.body.appendChild(contactButton);
-
+            const contactToggle = document.querySelector(".contact-toggle");
+            const contactMenu = document.querySelector(".contact-menu");
+            
             contactToggle.addEventListener("click", function () {
                 contactMenu.classList.toggle("show");
+            });
+            
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest(".contact-button")) {
+                    contactMenu.classList.remove("show");
+                }
+            });
+            
+            // تأثيرات للعروض عند التمرير
+            const offers = document.querySelectorAll(".offer");
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            offers.forEach(offer => {
+                offer.style.opacity = 0;
+                offer.style.transform = "translateY(20px)";
+                offer.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                observer.observe(offer);
             });
         });
     </script>
