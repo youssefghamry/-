@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تعليمات ملف العملاء - Part</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      direction: rtl;
+      line-height: 1.8;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    ol, ul {
+      padding-right: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .note {
+      background-color: #fffbcc;
+      border: 1px solid #e6db55;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      color: #444;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      background-color: #fff;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: right;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>تعليمات العمل على ملف العملاء <span style="color: #4CAF50;">Part</span></h1>
+
+    <h2>🎯 الهدف:</h2>
+    <p>البحث عن اسم مسئول أو رئيس في كل مطعم موجود داخل الملف، وكتابة الاسم في عمود <strong>  notes</strong>.</p>
+
+    <h2>📁 محتويات الملف:</h2>
+    <ul>
+      <li><strong>Restaurant name:</strong> اسم المطعم.</li>
+      <li><strong>Data extracted from:</strong> رابط بيانات من الإنترنت.</li>
+      <li><strong>Phone number - branches:</strong> أرقام التواصل والفروع.</li>
+      <li><strong>Restaurant type:</strong> نوع المطعم.</li>
+      <li><strong> notes:</strong> عمود ملاحظات تكتب فيه اسم المسئول.</li>
+    </ul>
+
+    <h2>🧠 خطوات العمل:</h2>
+    <ol>
+      <li>افتح ملف <strong>Part.xlsx</strong>.</li>
+      <li>ابدأ بكل صف يحتوي على اسم مطعم.</li>
+      <li>افتح الرابط في عمود <strong>Data extracted from</strong>.</li>
+      <li>ابحث داخل الرابط عن اسم صاحب المطعم أو المدير أو المسئول.</li>
+      <li>إذا لم تجد، توجه إلى:
+        <br><a href="https://ygbrandmaker.site/jobs/OperationsManual" target="_blank">https://ygbrandmaker.site/jobs/OperationsManual</a>
+        وابحث باستخدام اسم المطعم أو رقم الهاتف أو العنوان.
+      </li>
+      <li>دوّن الاسم في عمود <strong>communication & notes</strong>.</li>
+      <li>إذا لم تجد اسمًا، اكتب: <strong>not found (تم البحث على الموقع الرسمي والمصادر المتاحة)</strong></li>
+    </ol>
+
+    <div class="note">
+      ✅ لا تكتب أي ملاحظات غير رسمية مثل "مش لاقي"، استخدم فقط: <strong>not found</strong><br>
+      ✅ لو وجدت أكثر من اسم، اكتب الاسم الأشهر أو المنصب الأعلى فقط.<br>
+      ✅ لا تعدل أي أعمدة أخرى في الملف.
+    </div>
+
+    <h2>📌 نموذج للبيانات داخل الملف:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Restaurant name</th>
+          <th>Data extracted from</th>
+          <th>Phone</th>
+          <th>Type</th>
+          <th>communication & notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>القاضي</td>
+          <td><a href="#">رابط</a></td>
+          <td>01002243975</td>
+          <td>توصيل</td>
+          <td>Hassan Abu Shakra</td>
+        </tr>
+        <tr>
+          <td>كبابجي زمان</td>
+          <td><a href="#">رابط</a></td>
+          <td>0227026198</td>
+          <td>مشويات</td>
+          <td>not found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

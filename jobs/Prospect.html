@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تعليمات Prospect - البحث على LinkedIn</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #222;
+    }
+
+    ol, ul {
+      padding-right: 20px;
+      line-height: 1.8;
+    }
+
+    .note {
+      background-color: #fff3cd;
+      padding: 15px;
+      margin: 20px 0;
+      border: 1px solid #ffeeba;
+      border-radius: 8px;
+      color: #856404;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: right;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📋 تعليمات العمل على شيت Prospect</h1>
+    
+    <h2>🎯 الهدف:</h2>
+    <p>الدخول على روابط LinkedIn المجمعة حسب الحروف، واستخراج بيانات الشركات والمدراء لغرض التواصل معهم وكتابة تقرير داخل ملف Prospect.</p>
+
+    <h2>🧠 خطوات العمل:</h2>
+    <ol>
+      <li>افتح ملف <strong>Prospect.xlsx</strong>.</li>
+      <li>ابدأ بكل حرف يحتوي على قائمة روابط LinkedIn (أسماء أفراد أو شركات).</li>
+      <li>ادخل على الرابط الأول الموجود في العمود.</li>
+      <li>قم بما يلي:
+        <ul>
+          <li>استخرج اسم الشركة.</li>
+          <li>افتح صفحة الشركة على LinkedIn (LinkedIn Company Page).</li>
+          <li>ابحث عن أحد المدراء أو مسؤولي القرار (مثل: CEO, Marketing Manager, Founder, etc).</li>
+          <li>افتح رابط المدير.</li>
+          <li>تواصل معه برسالة أولى عن النظام.</li>
+        </ul>
+      </li>
+      <li>قم بكتابة هذه البيانات في الشيت تحت كل حرف.</li>
+      <li>سجل الحالة: <strong>تم التواصل / لم يتم التواصل / بانتظار رد</strong>.</li>
+    </ol>
+
+    <div class="note">
+      ✅ ركز على المدراء أو أصحاب المناصب العليا<br>
+      ✅ لا تكرر نفس الشركة أكثر من مرة<br>
+      ✅ لا تتواصل من حساب وهمي أو غير موثوق<br>
+      ✅ في حالة عدم وجود شركة، اكتب "not found"
+    </div>
+
+    <h2>📌 مثال داخل شيت Prospect:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>الحرف</th>
+          <th>اسم الشركة</th>
+          <th>رابط الشركة</th>
+          <th>اسم المدير</th>
+          <th>رابط المدير</th>
+          <th>الحالة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>Alpha Marketing</td>
+          <td><a href="#">linkedin.com/company/alpha</a></td>
+          <td>أحمد علي</td>
+          <td><a href="#">linkedin.com/in/ahmed-ali</a></td>
+          <td>تم التواصل</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>not found</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>not found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
