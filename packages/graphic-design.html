@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>عروض الهوية البصرية الشاملة | تصميم جرافيك متكامل</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --primary-dark: #1a252f;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #f5f5f5;
+            --dark: #333;
+            --gray: #6b7280;
+            --white: #ffffff;
+            --success: #27ae60;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            direction: rtl;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-right: 4px solid var(--accent);
+            padding-right: 1rem;
+            margin: 2rem 0;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #f5f5f5, #fff7e6);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .highlight-box {
+            background: rgba(243, 156, 18, 0.1);
+            border: 1px dashed var(--accent);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 2rem 0;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--secondary);
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .price small {
+            font-size: 1rem;
+            color: var(--gray);
+            display: block;
+            font-weight: normal;
+        }
+        
+        .cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .cta:hover {
+            background: transparent;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .offer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .offer {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .offer:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .offer-badge {
+            position: absolute;
+            top: 1rem;
+            left: -2.5rem;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 0.5rem 2.5rem;
+            font-weight: 700;
+            transform: rotate(-45deg);
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-sm);
+            z-index: 1;
+        }
+        
+        .features {
+            list-style-type: none;
+            margin: 1.5rem 0;
+        }
+        
+        .features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+        
+        .features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+        
+        .features li.excluded::before {
+            content: "✗";
+            color: var(--gray);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent), transparent);
+            margin: 2rem 0;
+        }
+        
+        .contact-button {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 1000;
+        }
+        
+        .contact-toggle {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 1.2rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .contact-toggle:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+        
+        .contact-menu {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            background: var(--white);
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-lg);
+            display: none;
+            width: 220px;
+            padding: 1rem 0;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: var(--transition);
+        }
+        
+        .contact-menu.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .contact-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .contact-menu ul li {
+            margin: 0.3rem 0;
+        }
+        
+        .contact-menu ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            border-radius: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .contact-menu ul li a i {
+            margin-left: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .whatsapp { background: #25D366; }
+        .whatsapp:hover { background: #1DA851; transform: translateX(-10px); }
+        .facebook { background: #1877F2; }
+        .facebook:hover { background: #145DBF; transform: translateX(-10px); }
+        .instagram { background: #E4405F; }
+        .instagram:hover { background: #C13584; transform: translateX(-10px); }
+        
+        .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin: 0.5rem 0.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .offer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-button {
+                bottom: 1rem;
+                left: 1rem;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        /* تحسينات للعرض على الشاشات الكبيرة */
+        @media (min-width: 1200px) {
+            .offer-premium {
+                transform: scale(1.03);
+                z-index: 1;
+                border-top: 5px solid var(--secondary);
+            }
+            
+            .offer-premium .price {
+                font-size: 2.8rem;
+            }
+        }
+        
+        /* تأثيرات التمرير */
+        .scroll-effect {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .scroll-effect.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero scroll-effect">
+            <div class="hero-content">
+                <h1>🎨 عروض الهوية البصرية الشاملة بالجنيه المصري</h1>
+                <p>تصميم متكامل يعبر عن هوية علامتك التجارية ويجذب عملاءك</p>
+                <p class="tag">عرض خاص لفترة محدودة</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box scroll-effect">
+            <h2>🔥 لماذا تحتاج هوية بصرية متكاملة؟</h2>
+            <p>الهوية البصرية القوية تزيد من ثقة العملاء وتجعل علامتك التجارية لا تنسى:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
+                <span class="tag">🎯 تميز عن المنافسين</span>
+                <span class="tag">💼 احترافية وثقة</span>
+                <span class="tag">📈 زيادة المبيعات</span>
+                <span class="tag">🧠 تعزيز الذاكرة البصرية</span>
+                <span class="tag">🔄 تجانس جميع المواد التسويقية</span>
+            </div>
+        </div>
+        
+        <div class="scroll-effect">
+            <h2>📊 إحصائيات مهمة عن أهمية الهوية البصرية</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--secondary);">+80%</h3>
+                    <p>زيادة في التعرف على العلامة التجارية مع هوية بصرية متسقة</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--secondary);">+65%</h3>
+                    <p>من المستهلكين يتخذون قرارات شراء بناءً على التصميم</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--secondary);">90%</h3>
+                    <p>من المعلومات التي يرسلها الدماغ بصرية</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--secondary);">10 ثوان</h3>
+                    <p>متوسط الوقت الذي يستغرقه العميل لتكوين انطباع أول</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-effect">
+            <h2>🎨 ماذا تشمل خدمات الهوية البصرية؟</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div style="background: rgba(44, 62, 80, 0.1); padding: 1.5rem; border-radius: 0.75rem;">
+                    <h3>🎯 تصميم الشعار</h3>
+                    <p>تصميم شعار احترافي يعبر عن هوية علامتك التجارية</p>
+                </div>
+                <div style="background: rgba(44, 62, 80, 0.1); padding: 1.5rem; border-radius: 0.75rem;">
+                    <h3>📝 بطاقات العمل</h3>
+                    <p>تصميم كارت شخصي احترافي بلمسات فريدة</p>
+                </div>
+                <div style="background: rgba(44, 62, 80, 0.1); padding: 1.5rem; border-radius: 0.75rem;">
+                    <h3>📱 وسائل التواصل</h3>
+                    <p>تصميم منشورات وملفات تعريف لوسائل التواصل الاجتماعي</p>
+                </div>
+                <div style="background: rgba(44, 62, 80, 0.1); padding: 1.5rem; border-radius: 0.75rem;">
+                    <h3>📄 الأوراق الرسمية</h3>
+                    <p>تصميم ظروف رسمية وأوراق A4 للشركات</p>
+                </div>
+                <div style="background: rgba(44, 62, 80, 0.1); padding: 1.5rem; border-radius: 0.75rem;">
+                    <h3>🛍️ مواد التسويق</h3>
+                    <p>تصميم يافطات المحلات ومواد الدعاية والإعلان</p>
+                </div>
+                <div style="background: rgba(44, 62, 80, 0.1); padding: 1.5rem; border-radius: 0.75rem;">
+                    <h3>📚 دليل الهوية</h3>
+                    <p>دليل استخدام مفصل للهوية البصرية</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="divider scroll-effect"></div>
+        
+        <h2 class="scroll-effect">🎁 اختر الباقة المناسبة لك</h2>
+        <p class="scroll-effect" style="text-align: center; margin-bottom: 2rem;">عروضنا تشمل جميع احتياجاتك من التصميم الجرافيكي والهوية البصرية</p>
+        
+        <div class="offer-container">
+            <!-- الباقة المبدئية -->
+            <div class="offer scroll-effect">
+                <div class="offer-badge">الأكثر طلباً</div>
+                <h3>الباقة المبدئية</h3>
+                <p>للمشاريع الصغيرة والأفراد</p>
+                
+                <div class="price">
+                    2,499 جنيه
+                    <small>بدلاً من <del>3,500 جنيه</del></small>
+                </div>
+                
+                <ul class="features">
+                    <li>تصميم شعار احترافي (3 مقترحات)</li>
+                    <li>تصميم كارت شخصي</li>
+                    <li>تصميم توقيع إلكتروني</li>
+                    <li>تصميم ملف تعريف فيسبوك</li>
+                    <li>تصميم 5 منشورات لوسائل التواصل</li>
+                    <li>تصميم ظرف رسمي</li>
+                    <li>تصميم ورقة A4</li>
+                    <li class="excluded">دليل الهوية البصرية</li>
+                    <li class="excluded">تصميم مواد دعائية</li>
+                    <li class="excluded">تعديلات غير محدودة</li>
+                </ul>
+                
+                <a href="https://wa.me/20123456789?text=أرغب%20في%20حجز%20الباقة%20المبدئية%20للهوية%20البصرية%20بسعر%202,499%20جنيه" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <!-- باقة المتاجر -->
+            <div class="offer scroll-effect">
+                <h3>باقة المتاجر</h3>
+                <p>للمحلات والمتاجر الإلكترونية</p>
+                
+                <div class="price">
+                    4,999 جنيه
+                    <small>بدلاً من <del>6,500 جنيه</del></small>
+                </div>
+                
+                <ul class="features">
+                    <li>تصميم هوية متكاملة</li>
+                    <li>تصميم يافطة المحل</li>
+                    <li>تصميم كوبونات خصم (3 تصميمات)</li>
+                    <li>تصميم فلاير A5</li>
+                    <li>تصميم شنطة تسوق</li>
+                    <li>تصميم فاتورة وإيصال دفع</li>
+                    <li>تصميم منيو مطعم/قائمة أسعار</li>
+                    <li>تصميم 3 ستوريات انستقرام</li>
+                    <li>دليل استخدام أساسي</li>
+                    <li class="excluded">تصميم فيديو موشن جرافيك</li>
+                    <li class="excluded">تعديلات غير محدودة</li>
+                </ul>
+                
+                <a href="https://wa.me/20123456789?text=أرغب%20في%20حجز%20باقة%20المتاجر%20للهوية%20البصرية%20بسعر%204,999%20جنيه" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <!-- باقة الشركات -->
+            <div class="offer offer-premium scroll-effect">
+                <div class="offer-badge" style="background: var(--primary);">الأفضل قيمة</div>
+                <h3>باقة الشركات</h3>
+                <p>للشركات الناشئة والمتوسطة</p>
+                
+                <div class="price">
+                    8,999 جنيه
+                    <small>بدلاً من <del>12,000 جنيه</del></small>
+                </div>
+                
+                <ul class="features">
+                    <li>تصميم هوية بصرية متكاملة</li>
+                    <li>تصميم بروفايل شركة (20 صفحة)</li>
+                    <li>تصميم كروت موظفين</li>
+                    <li>تصميم زي عمل</li>
+                    <li>تصميم رول أب للمعارض</li>
+                    <li>تصميم تقرير أداء سنوي</li>
+                    <li>تصميم 10 بوستات لوسائل التواصل</li>
+                    <li>تصميم غلاف فيسبوك وتويتر</li>
+                    <li>تصميم فيديو موشن جرافيك (30 ثانية)</li>
+                    <li>دليل استخدام مفصل للهوية</li>
+                    <li>3 مراجعات مجانية</li>
+                    <li class="excluded">تعديلات غير محدودة</li>
+                </ul>
+                
+                <a href="https://wa.me/20123456789?text=أرغب%20في%20حجز%20باقة%20الشركات%20للهوية%20البصرية%20بسعر%208,999%20جنيه" class="cta">
+                    احجز الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="divider scroll-effect"></div>
+        
+        <!-- الباقة المميزة -->
+        <div class="offer scroll-effect" style="max-width: 100%;">
+            <h3 style="text-align: center;">الباقة المميزة - حلول متكاملة</h3>
+            <p style="text-align: center;">حزمة تصميمات متكاملة للعلامات التجارية الكبرى</p>
+            
+            <div class="price" style="font-size: 3rem;">
+                14,999 جنيه
+                <small>بدلاً من <del>20,000 جنيه</del></small>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div>
+                    <h4>🎨 خدمات التصميم الأساسية:</h4>
+                    <ul class="features">
+                        <li>تصميم هوية بصرية متكاملة</li>
+                        <li>دليل استخدام الهوية المفصل</li>
+                        <li>تصميم جميع مواد الطباعة</li>
+                        <li>تصميم حافظة ورق (فولدر)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>📱 خدمات الوسائط الرقمية:</h4>
+                    <ul class="features">
+                        <li>حزمة وسائط رقمية كاملة</li>
+                        <li>10 بوستات شهرية لمدة 3 أشهر</li>
+                        <li>5 فيديوهات موشن جرافيك</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>⚙ خدمات إضافية:</h4>
+                    <ul class="features">
+                        <li>إدارة مشروع كامل</li>
+                        <li>5 مراجعات مجانية</li>
+                        <li>تعديلات </li>
+                        <li>دعم فني لمدة 6 أشهر</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://wa.me/20123456789?text=أرغب%20في%20حجز%20الباقة%20المميزة%20للهوية%20البصرية%20بسعر%2014,999%20جنيه" class="cta" style="max-width: 400px; margin: 0 auto;">
+                    احجز الحل المتكامل الآن <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="divider scroll-effect"></div>
+        
+        <div class="scroll-effect">
+            <h2>📌 خدمات إضافية حسب الطلب:</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0;">
+                <span class="tag">تصميم أغلفة كتب</span>
+                <span class="tag">تصميم دعوات زواج</span>
+                <span class="tag">تصميم عربة متنقلة</span>
+                <span class="tag">تصميم واجهة محل</span>
+                <span class="tag">تصميم تطبيق جوال</span>
+                <span class="tag">تصميم موقع إلكتروني</span>
+                <span class="tag">تصميم إعلان تلفزيوني</span>
+                <span class="tag">تصميم كتالوج منتجات</span>
+            </div>
+
+            <p style="text-align: center; margin-top: 1rem; color: var(--secondary); font-weight: bold;">
+                للاستفسار أو الطلبات الخاصة: <a href="tel:+20123456789" style="color: var(--primary);">+20 123 456 789</a>
+            </p>
+        </div>
+        
+        <div class="divider scroll-effect"></div>
+        
+        <div class="scroll-effect">
+            <h2>🔄 كيف نعمل؟</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div style="background: rgba(243, 156, 18, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-right: 4px solid var(--accent);">
+                    <h3>1. الدراسة والتحليل</h3>
+                    <p>نقوم بدراسة متطلباتك وتحليل السوق والمنافسين</p>
+                </div>
+                
+                <div style="background: rgba(243, 156, 18, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-right: 4px solid var(--accent);">
+                    <h3>2. التخطيط الإبداعي</h3>
+                    <p>نضع خطة تصميمية تعبر عن هوية علامتك التجارية</p>
+                </div>
+                
+                <div style="background: rgba(243, 156, 18, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-right: 4px solid var(--accent);">
+                    <h3>3. التصميم والتطوير</h3>
+                    <p>ننفذ التصاميم وفق أحدث المعايير الفنية</p>
+                </div>
+                
+                <div style="background: rgba(243, 156, 18, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-right: 4px solid var(--accent);">
+                    <h3>4. المراجعة والتسليم</h3>
+                    <p>نقدم التصاميم لك للمراجعة ثم التسليم النهائي</p>
+                </div>
+                
+                <div style="background: rgba(243, 156, 18, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-right: 4px solid var(--accent);">
+                    <h3>5. الدعم والمتابعة</h3>
+                    <p>نقدم الدعم الفني بعد التسليم حسب الباقة</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر التواصل -->
+    <div class="contact-button">
+        <button class="contact-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        
+        <div class="contact-menu">
+            <ul>
+                <li>
+                    <a href="https://wa.me/20123456789" class="whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> واتساب
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/YourBrand" class="facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i> فيسبوك
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/YourBrand" class="instagram" target="_blank">
+                        <i class="fab fa-instagram"></i> إنستجرام
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactToggle = document.querySelector(".contact-toggle");
+            const contactMenu = document.querySelector(".contact-menu");
+            
+            contactToggle.addEventListener("click", function () {
+                contactMenu.classList.toggle("show");
+            });
+            
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest(".contact-button")) {
+                    contactMenu.classList.remove("show");
+                }
+            });
+            
+            // تأثيرات التمرير
+            const scrollElements = document.querySelectorAll(".scroll-effect");
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            scrollElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
