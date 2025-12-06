@@ -60,7 +60,7 @@
             "right" === u && (w = "right:" + m + ";left:auto;"), "left" === u && (w = "left:" + m + ";right:auto;"), x();
             var M = "",
                 P = function() {
-                    M(jQuery(M).is(".meanmenu-reveal.meanclose") ? r : s)
+                    M.html(jQuery(M).is(".meanmenu-reveal.meanclose") ? r : s)
                 },
                 W = function() {
                     jQuery(".mean-bar,.mean-push").remove(), jQuery(t).removeClass("mean-container"), jQuery(n).css("display", g), A = !1, E = !1, jQuery(p).removeClass("mean-remove")
