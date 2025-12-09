@@ -1,0 +1,1509 @@
+<script>// YG Brand Maker Dynamic Navigation Script
+(function() {
+    // إضافة CSS ديناميكي
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Reset وتنسيقات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .YG-navigation-container {
+            direction: rtl;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        /* الشريط العلوي */
+        .YG-topbar-wrap-area {
+            background: linear-gradient(90deg, #1a237e, #283593);
+            padding: 10px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .YG-container-fluid {
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+        
+        .YG-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .YG-align-items-center {
+            align-items: center;
+        }
+        
+        .YG-justify-content-center {
+            justify-content: center;
+        }
+        
+        .YG-col-lg-8, .YG-col-md-8, .YG-col-lg-4, .YG-col-md-4 {
+            position: relative;
+            width: 100%;
+            padding: 0 15px;
+        }
+        
+        /* روابط السوشيال ميديا */
+        .YG-topbar-social-links {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .YG-topbar-social-links li {
+            position: relative;
+        }
+        
+        .YG-topbar-social-links a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .YG-topbar-social-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .YG-topbar-social-links i {
+            margin-left: 8px;
+            font-size: 16px;
+        }
+        
+        /* الهاتف */
+        .YG-topbar-action-list {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        
+        .YG-topbar-action-list li {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .YG-topbar-action-list a {
+            background: linear-gradient(45deg, #25D366, #1da851);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .YG-topbar-action-list a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .YG-topbar-action-list i {
+            margin-left: 8px;
+            font-size: 18px;
+        }
+        
+        .YG-topbar-action-list span {
+            color: #fff;
+            font-size: 14px;
+        }
+        
+        /* شريط التنقل الرئيسي */
+        .YG-navbar-area {
+            background-color: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+        
+        .YG-navbar-area-with-position-relative {
+            position: relative;
+        }
+        
+        .YG-responsive-nav {
+            display: none;
+        }
+        
+        .YG-container {
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+        
+        /* اللوجو */
+        .YG-logo {
+            text-align: center;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .YG-logo a {
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .YG-logo img {
+            height: 150px !important;
+            width: auto;
+            max-width: 200px;
+            transition: all 0.3s ease;
+            object-fit: contain;
+        }
+        
+        /* لوجو القائمة الجانبية */
+        .YG-sidebar-header .YG-logo img {
+            height: 80px !important;
+            max-width: 180px;
+        }
+        
+        /* قائمة التنقل */
+        .YG-navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            position: relative;
+        }
+        
+        .YG-navbar-nav {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .YG-nav-item {
+            position: relative;
+        }
+        
+        .YG-nav-link {
+            color: #333;
+            text-decoration: none;
+            padding: 15px 18px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border-radius: 8px;
+            margin: 0 3px;
+            position: relative;
+            font-size: 15px;
+        }
+        
+        .YG-nav-link:hover, .YG-nav-link.YG-active {
+            color: #1a237e;
+            background-color: rgba(26, 35, 126, 0.08);
+            transform: translateY(-2px);
+        }
+        
+        .YG-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            right: 18px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #1a237e, #283593);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .YG-nav-link:hover::after, .YG-nav-link.YG-active::after {
+            width: calc(100% - 36px);
+        }
+        
+        /* القوائم المنسدلة للشاشات الكبيرة */
+        .YG-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            min-width: 250px;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            list-style: none;
+            padding: 15px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 1001;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .YG-nav-item:hover > .YG-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+        
+        .YG-dropdown-menu .YG-dropdown-menu {
+            top: -15px;
+            right: 100%;
+            margin-right: 5px;
+        }
+        
+        .YG-dropdown-menu li {
+            width: 100%;
+        }
+        
+        .YG-dropdown-menu .YG-nav-link {
+            padding: 12px 20px;
+            color: #555;
+            justify-content: space-between;
+            border-radius: 0;
+            margin: 0;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .YG-dropdown-menu .YG-nav-link:hover {
+            background-color: rgba(26, 35, 126, 0.1);
+            color: #1a237e;
+            padding-right: 25px;
+            transform: translateX(-5px);
+        }
+        
+        .YG-dropdown-menu .YG-nav-link:last-child {
+            border-bottom: none;
+        }
+        
+        /* القائمة الجانبية */
+        .YG-sidebar-modal {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .YG-sidebar-modal.YG-active {
+            right: 0;
+        }
+        
+        .YG-sidebar-header {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        
+        .YG-close-sidebar {
+            background: #1a237e;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .YG-close-sidebar:hover {
+            background: #283593;
+            transform: rotate(90deg);
+        }
+        
+        /* حاوية التمرير الداخلية */
+        .YG-sidebar-scroll-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            -webkit-overflow-scrolling: touch;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* تنسيقات القوائم داخل الحاوية */
+        .YG-sidebar-scroll-container .YG-navbar-nav {
+            display: flex !important;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 20px;
+        }
+        
+        /* تعديلات القوائم المتداخلة للجوال */
+        .YG-sidebar-scroll-container .YG-dropdown-menu {
+            position: static !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none !important;
+            box-shadow: none !important;
+            padding-right: 0 !important;
+            max-height: 0 !important;
+            overflow: hidden !important;
+            transition: max-height 0.3s ease !important;
+            border: none !important;
+            border-radius: 0 !important;
+            margin-top: 5px !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            border-radius: 10px !important;
+            margin: 5px 0 !important;
+        }
+        
+        .YG-sidebar-scroll-container .YG-dropdown-menu.YG-show {
+            max-height: 500px !important;
+            overflow-y: auto !important;
+        }
+        
+        .YG-sidebar-scroll-container .YG-dropdown-menu .YG-dropdown-menu {
+            max-height: 0 !important;
+            overflow: hidden !important;
+            transition: max-height 0.3s ease !important;
+            margin-right: 20px !important;
+            background: rgba(255, 255, 255, 0.8) !important;
+            border-right: 2px solid rgba(26, 35, 126, 0.1) !important;
+        }
+        
+        .YG-sidebar-scroll-container .YG-dropdown-menu .YG-dropdown-menu.YG-show {
+            max-height: 400px !important;
+            overflow-y: auto !important;
+        }
+        
+        /* أيقونات السهم لجميع المستويات */
+        .YG-sidebar-scroll-container .YG-nav-link.has-dropdown {
+            position: relative !important;
+            padding-right: 40px !important;
+        }
+        
+        .YG-sidebar-scroll-container .YG-nav-link.has-dropdown::after {
+            content: '\\f078' !important;
+            font-family: 'Font Awesome 6 Free' !important;
+            font-weight: 900 !important;
+            position: absolute !important;
+            left: 15px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            transition: transform 0.3s ease !important;
+            font-size: 12px !important;
+            color: #1a237e;
+        }
+        
+        .YG-sidebar-scroll-container .YG-nav-link.has-dropdown.YG-rotated::after {
+            transform: translateY(-50%) rotate(180deg) !important;
+        }
+        
+        /* تحسين المسافات والخطوط */
+        .YG-sidebar-scroll-container .YG-nav-link {
+            padding: 15px !important;
+            font-size: 16px !important;
+            border-radius: 10px;
+            border: 1px solid rgba(26, 35, 126, 0.1);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+            background: white;
+            color: #333;
+        }
+        
+        /* تأثير الهفر على الروابط */
+        .YG-sidebar-scroll-container .YG-nav-link:hover,
+        .YG-sidebar-scroll-container .YG-nav-link.YG-active {
+            background: linear-gradient(135deg, #1a237e, #283593) !important;
+            color: white !important;
+            border-color: transparent !important;
+            transform: translateX(-5px);
+        }
+        
+        /* تنسيق الروابط داخل القوائم المنسدلة */
+        .YG-sidebar-scroll-container .YG-dropdown-menu .YG-nav-link {
+            padding: 12px 20px !important;
+            font-size: 15px !important;
+            border: 1px solid rgba(0, 0, 0, 0.05) !important;
+            background: white !important;
+        }
+        
+        .YG-sidebar-scroll-container .YG-dropdown-menu .YG-dropdown-menu .YG-nav-link {
+            padding-right: 35px !important;
+            font-size: 14px !important;
+        }
+        
+        /* زر القائمة الجانبية */
+        .YG-others-options {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .YG-burger-menu {
+            width: 32px;
+            height: 26px;
+            position: relative;
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .YG-burger-menu span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(90deg, #1a237e, #283593);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .YG-burger-menu.YG-active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        
+        .YG-burger-menu.YG-active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .YG-burger-menu.YG-active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .YG-nav-link {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+            
+            .YG-dropdown-menu {
+                min-width: 220px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .YG-col-lg-8 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .YG-col-lg-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-top: 15px;
+            }
+            
+            .YG-navbar-nav {
+                display: none !important;
+            }
+            
+            .YG-responsive-nav {
+                display: block;
+                padding: 10px 0;
+            }
+            
+            .YG-responsive-menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+            }
+            
+            .YG-burger-menu {
+                display: flex;
+            }
+            
+            .YG-sidebar-modal {
+                width: 350px;
+                max-width: 85%;
+                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+            }
+            
+            .YG-sidebar-header .YG-logo {
+                justify-content: flex-start;
+            }
+            
+            .YG-sidebar-header .YG-logo img {
+                height: 60px !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .YG-topbar-wrap-area {
+                padding: 8px 0;
+            }
+            
+            .YG-topbar-social-links {
+                gap: 3px;
+                justify-content: center;
+            }
+            
+            .YG-topbar-social-links a {
+                font-size: 0;
+                padding: 10px;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.15);
+            }
+            
+            .YG-topbar-social-links i {
+                margin: 0;
+                font-size: 18px;
+            }
+            
+            .YG-topbar-action-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .YG-topbar-action-list li {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+            
+            .YG-topbar-action-list a {
+                padding: 10px 15px;
+                font-size: 14px;
+                border-radius: 20px;
+            }
+            
+            .YG-topbar-action-list span {
+                display: none;
+            }
+            
+            .YG-topbar-action-list i {
+                margin: 0 5px;
+            }
+            
+            .YG-responsive-nav .YG-logo {
+                margin: 0 auto;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .YG-responsive-nav .YG-logo img {
+                height: 60px !important;
+            }
+            
+            .YG-sidebar-header {
+                padding: 15px;
+                background: white;
+            }
+            
+            .YG-sidebar-scroll-container {
+                padding: 15px;
+                background: rgba(255, 255, 255, 0.98);
+            }
+            
+            .YG-sidebar-scroll-container .YG-nav-link {
+                padding: 12px 15px !important;
+                font-size: 15px !important;
+                margin: 3px 0;
+            }
+            
+            .YG-close-sidebar {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .YG-topbar-wrap-area {
+                padding: 6px 0;
+            }
+            
+            .YG-topbar-social-links a {
+                width: 36px;
+                height: 36px;
+                padding: 8px;
+            }
+            
+            .YG-topbar-social-links i {
+                font-size: 16px;
+            }
+            
+            .YG-topbar-action-list a {
+                font-size: 13px;
+                padding: 8px 12px;
+            }
+            
+            .YG-topbar-action-list i {
+                font-size: 16px;
+            }
+            
+            .YG-logo img {
+                height: 120px !important;
+                max-width: 160px;
+            }
+            
+            .YG-responsive-nav .YG-logo img {
+                height: 50px !important;
+            }
+            
+            .YG-sidebar-modal {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .YG-sidebar-scroll-container .YG-nav-link {
+                padding: 10px 12px !important;
+                font-size: 14px !important;
+            }
+            
+            .YG-sidebar-header {
+                padding: 12px;
+            }
+            
+            .YG-sidebar-scroll-container {
+                padding: 12px;
+            }
+            
+            .YG-close-sidebar {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .YG-topbar-social-links {
+                justify-content: space-around;
+            }
+            
+            .YG-topbar-social-links a {
+                width: 32px;
+                height: 32px;
+                padding: 6px;
+            }
+            
+            .YG-topbar-social-links i {
+                font-size: 14px;
+            }
+            
+            .YG-topbar-action-list a {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+            
+            .YG-logo img {
+                height: 100px !important;
+                max-width: 140px;
+            }
+        }
+        
+        /* تأثيرات الحركة */
+        .YG-nav-link, .YG-topbar-social-links a, .YG-topbar-action-list a {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        /* تأثير التمرير على الهيدر */
+        .YG-navbar-area.YG-scrolled {
+            padding: 0;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .YG-navbar-area.YG-scrolled .YG-logo img {
+            height: 80px !important;
+        }
+        
+        .YG-navbar-area.YG-scrolled .YG-nav-link {
+            padding: 12px 15px;
+        }
+        
+        /* تأثير عند تحميل الصفحة */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .YG-topbar-wrap-area, .YG-navbar-area {
+            animation: fadeInDown 0.5s ease-out;
+        }
+        
+        /* تأثير على العناصر النشطة */
+        .YG-nav-item > .YG-nav-link.YG-active {
+            background: linear-gradient(90deg, rgba(26, 35, 126, 0.1), rgba(40, 53, 147, 0.1));
+            color: #1a237e;
+            font-weight: 700;
+        }
+        
+        /* شريط التمرير المخفي */
+        .YG-sidebar-scroll-container::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .YG-sidebar-scroll-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .YG-sidebar-scroll-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        
+        .YG-sidebar-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        /* زر واتساب */
+        .YG-whatsapp-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 50px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+        
+        .YG-whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        /* تأثير النبض */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .YG-whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                right: 15px;
+                bottom: 20px;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // إنشاء الهيكل HTML
+    const navigationHTML = `
+        <div class="YG-navigation-container">
+            <!-- الشريط العلوي -->
+            <div class="YG-topbar-wrap-area">
+                <div class="YG-container-fluid">
+                    <div class="YG-row YG-align-items-center YG-justify-content-center">
+                        <div class="YG-col-lg-8 YG-col-md-8">
+                            <ul class="YG-topbar-social-links">
+                                <li><a href="https://www.fb.com/YGBrandMaker" target="_blank" title="فيسبوك"><i class="fab fa-facebook"></i> فيسبوك</a></li>
+                                <li><a href="https://twitter.com/YGBrandMaker" target="_blank" title="تويتر"><i class="fab fa-twitter"></i> تويتر</a></li>
+                                <li><a href="https://www.linkedin.com/company/ygbrandmaker/" target="_blank" title="لينكدإن"><i class="fab fa-linkedin"></i> لينكدإن</a></li>
+                                <li><a href="https://www.instagram.com/ygbrandmaker/" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i> إنستغرام</a></li>
+                                <li><a href="https://t.me/YGBrandMaker" target="_blank" title="تليجرام"><i class="fab fa-telegram"></i> تليجرام</a></li>
+                                <li><a href="https://www.tiktok.com/@ygbrandmaker" target="_blank" title="تيك توك"><i class="fab fa-tiktok"></i> تيك توك</a></li>
+                                <li><a href="#" target="_blank" title="سناب شات"><i class="fab fa-snapchat"></i> سناب شات</a></li>
+                                <li><a href="https://wa.me/201030459067" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i> واتساب</a></li>
+                            </ul>
+                        </div>
+                        <div class="YG-col-lg-4 YG-col-md-4">
+                            <ul class="YG-topbar-action-list">
+                                <li> <a href="tel:01030459067"><i class="bi bi-telephone-fill"></i> 01030459067</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- شريط التنقل الرئيسي -->
+            <div class="YG-navbar-area YG-navbar-area-with-position-relative" id="YG-navbarArea">
+                <div class="YG-responsive-nav">
+                    <div class="YG-container">
+                        <div class="YG-responsive-menu">
+                            <div class="YG-logo">
+                                <a href="https://ygbrandmaker.site">
+                                    <img src="https://ygbrandmaker.site/logo.gif" alt="YG Brand Maker" 
+                                         onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60/1a237e/ffffff?text=YG+Brand+Maker'">
+                                </a>
+                            </div>
+                            <div class="YG-burger-menu" id="YG-burgerMenu">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="YG-aronix-nav">
+                    <div class="YG-container-fluid">
+                        <nav class="YG-navbar YG-navbar-expand-md YG-navbar-light">
+                            <div class="YG-logo">
+                                <a href="https://ygbrandmaker.site">
+                                    <img src="https://ygbrandmaker.site/logo.gif" alt="YG Brand Maker" 
+                                         onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60/1a237e/ffffff?text=YG+Brand+Maker'">
+                                </a>
+                            </div>
+                            <div class="YG-collapse YG-navbar-collapse YG-mean-menu" id="YG-navbarSupportedContent">
+                                <ul class="YG-navbar-nav" id="YG-mainNav">
+                                    <!-- سيتم إضافة القوائم ديناميكياً -->
+                                </ul>
+                                
+                                <div class="YG-others-options">
+                                    <div class="YG-cart-items"></div>
+                                    <div class="YG-burger-menu" id="YG-desktopBurgerMenu">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- القائمة الجانبية -->
+            <div class="YG-sidebar-modal" id="YG-sidebarModal">
+                <div class="YG-sidebar-header">
+                    <div class="YG-logo">
+                        <a href="https://ygbrandmaker.site">
+                            <img src="https://ygbrandmaker.site/logo.gif" alt="YG Brand Maker"
+                                 onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60/1a237e/ffffff?text=YG+Brand+Maker'">
+                        </a>
+                    </div>
+                    <button class="YG-close-sidebar" id="YG-closeSidebar">✕</button>
+                </div>
+                <div class="YG-sidebar-scroll-container" id="YG-sidebarScroll">
+                    <ul class="YG-navbar-nav" id="YG-sidebarNav">
+                        <!-- سيتم إضافة القوائم ديناميكياً -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر واتساب -->
+        <a href="https://wa.me/201030459067?text=مرحباً، أنا مهتم بالخدمات التي تقدمونها. أرجو التواصل معي للاستفسار عن التفاصيل والأسعار." 
+           class="YG-whatsapp-btn" target="_blank" title="تواصل معنا على واتساب">
+           <i class="fab fa-whatsapp"></i>
+        </a>
+    `;
+
+    // بيانات القوائم
+    const menuData = [
+        {
+            title: '🏠 الرئيسية',
+            link: 'https://ygbrandmaker.site',
+            active: false
+        },
+        {
+            title: '📢 ركن التسويق',
+            link: '#',
+            active: true,
+            dropdown: [
+                {
+                    title: '🚀 خدمات التسويق الالكتروني',
+                    link: 'https://ygbrandmaker.site/marketing/E-marketing-services'
+                },
+                {
+                    title: '🛒 حلول التجارة الإلكترونية',
+                    link: 'https://ygbrandmaker.site/marketing/e-commerce-solutions'
+                },
+                {
+                    title: '📱 حملات السوشيال ميديا',
+                    link: 'https://ygbrandmaker.site/marketing/social-media-campaign',
+                    active: true
+                },
+                {
+                    title: '🔍 التسويق عبر محركات البحث SEO',
+                    link: 'https://ygbrandmaker.site/marketing/seo'
+                },
+                {
+                    title: '✍️ كتابة المحتوي',
+                    link: 'https://ygbrandmaker.site/marketing/content-creation'
+                },
+                {
+                    title: '📲 تسويق السوشيل ميديا',
+                    link: '#',
+                    dropdown: [
+                        { title: '📘 التسويق عبر الفيسبوك', link: 'https://ygbrandmaker.site/marketing/facebook-marketing' },
+                        { title: '💼 التسويق عبر لينكد ان', link: 'https://ygbrandmaker.site/marketing/linkedin-marketing' },
+                        { title: '📨 التسويق عبر تلجرام', link: 'https://ygbrandmaker.site/marketing/Telegram-marketing' },
+                        { title: '📸 التسويق عبر انستجرام', link: 'https://ygbrandmaker.site/marketing/instagram-marketing' },
+                        { title: '🐦 التسويق عبر تويتر', link: 'https://ygbrandmaker.site/marketing/Twitter-Marketing' },
+                        { title: '👻 التسويق عبر سناب شات', link: 'https://ygbrandmaker.site/marketing/Snapchat-Marketing' },
+                        { title: '🎵 التسويق عبر تيك توك', link: 'https://ygbrandmaker.site/marketing/TikTok-Marketing' },
+                        { title: '🔍 التسويق عبر جوجل', link: 'https://ygbrandmaker.site/marketing/Google-Adwords' }
+                    ]
+                }
+            ]
+        },
+        {
+            title: '💻 ركن البرمجة',
+            link: '#',
+            dropdown: [
+                {
+                    title: '🌐 ركن برمجة المواقع',
+                    link: '#',
+                    dropdown: [
+                        { title: '🎓 تصميم المواقع الالكترونية', link: 'https://ygbrandmaker.site/web/design-educational-website' },
+                        { title: '🏢 تصميم موقع شركة', link: 'https://ygbrandmaker.site/web/design-company-website' },
+                        { title: '📰 تصميم موقع اخباري', link: 'https://ygbrandmaker.site/web/design-news-website' },
+                        { title: '🍽️ تصميم موقع مطعم', link: 'https://ygbrandmaker.site/web/design-restaurant-website' },
+                        { title: '📚 تصميم موقع تعليمي', link: 'https://ygbrandmaker.site/web/design-educational-website' },
+                        { title: '🗺️ تصميم موقع سياحي', link: 'https://ygbrandmaker.site/web/design-tourist-website' },
+                        { title: '🏠 تصميم موقع عقاري', link: 'https://ygbrandmaker.site/web/design-real-estate-website' },
+                        { title: '🏥 تصميم موقع طبي', link: 'https://ygbrandmaker.site/web/design-clinic-website' },
+                        { title: '⚽ تصميم موقع رياضي', link: 'https://ygbrandmaker.site/web/design-sports-website' },
+                        { title: '⚖️ تصميم موقع محاماة', link: 'https://ygbrandmaker.site/web/design-law-firm-website' },
+                        { title: '🚗 تصميم موقع معرض سيارات', link: 'https://ygbrandmaker.site/web/design-car-website' },
+                        { title: '🛒 تصميم متاجر الكترونية', link: 'https://ygbrandmaker.site/web/design-online-store' },
+                        { title: '🔧 تصميم متجر ووردبريس', link: '#' },
+                        { title: '⚙️ تصميم متجر ماجنتو', link: '#' }
+                    ]
+                },
+                {
+                    title: '📱 ركن برمجة التطبيقات',
+                    link: '#',
+                    dropdown: [
+                        { title: '💊 تصميم تطبيق وتوصيل أدوية للصيدلية', link: '#' },
+                        { title: '🏫 تصميم تطبيق مدرسة', link: '#' },
+                        { title: '🚕 تطبيق مثل اوبر وكريم وتوصيل ركاب', link: '#' },
+                        { title: '📦 تصميم تطبيق توصيل طلبات', link: '#' },
+                        { title: '🏘️ تصميم تطبيق عقاري مثل عقار ماب', link: '#' },
+                        { title: '🏪 تصميم تطبيق إعلانات بيع وشراء مثل حراج', link: '#' },
+                        { title: '✈️ تصميم تطبيق سياحى مثل Tripadvisor', link: '#' },
+                        { title: '👕 تصميم متجر بيع ملابس أونلاين', link: '#' },
+                        { title: '📦 تصميم تطبيق توصيل طرود لشركة شحن وتوصيل', link: '#' },
+                        { title: '📚 تصميم تطبيق مكتبة إلكترونية', link: '#' },
+                        { title: '🚗 تصميم تطبيق تأجير سيارات مثل درايف', link: '#' },
+                        { title: '📖 تصميم تطبيق مصحف قرءان كريم', link: '#' },
+                        { title: '👥 تصميم متجر الكتروني متعدد التجار', link: '#' }
+                    ]
+                }
+            ]
+        },
+        {
+            title: '🎨 ركن التصميمات',
+            link: '#',
+            dropdown: [
+                {
+                    title: '🎭 ركن تصميمات الهوية البصرية',
+                    link: '#',
+                    dropdown: [
+                        { title: '📁 تصميم بورتفوليو', link: 'https://ygbrandmaker.site/Graphic/portfolio-design-contracting' },
+                        { title: '🖋️ تصميم ختم', link: '#' },
+                        { title: '📝 تصميم ملصق اعلاني ارشادي', link: 'https://ygbrandmaker.site/Graphic/design-company-stamp' },
+                        { title: '🎫 تصميم كوبون هدية', link: 'https://ygbrandmaker.site/Graphic/design-gift-coupon' },
+                        { title: '📊 مقاسات وابعاد ملف تعريفي للشركة', link: '#' },
+                        { title: '🏢 تصميم يافطة شركة من الداخل والخارج', link: 'https://ygbrandmaker.site/Graphic/design-company-sign' },
+                        { title: '📓 تصميم نوت بوك جذابة باسم الشركة', link: 'https://ygbrandmaker.site/Graphic/design-company-notebook' },
+                        { title: '📅 تصميم نتيجة العام الجديد 2024', link: 'https://ygbrandmaker.site/Graphic/design-new-year-calendar' },
+                        { title: '📧 تصميم توقيع البريد الالكتروني', link: 'https://ygbrandmaker.site/Graphic/design-email-signature' },
+                        { title: '✏️ تصميم اقلام شركة للدعاية', link: 'https://ygbrandmaker.site/Graphic/design-advertising-pens' },
+                        { title: '📜 تصميم رول اب', link: 'https://ygbrandmaker.site/Graphic/design-company-rollup' },
+                        { title: '👔 تصميم زي عمل للموظفين والشركات', link: 'https://ygbrandmaker.site/Graphic/design-uniforms-for-employees-and-companies' },
+                        { title: '📄 تصميم فلاير اعلاني flyer', link: 'https://ygbrandmaker.site/Graphic/design-advertising-flyer' }
+                    ]
+                },
+                {
+                    title: '📄 تصميمات المطبوعات الورقية',
+                    link: '#',
+                    dropdown: [
+                        { title: '🧾 تصميم ايصال دفع', link: 'https://ygbrandmaker.site/Graphic/design-payment-receipts' },
+                        { title: '🧾 تصميم ايصال قبض', link: 'https://ygbrandmaker.site/Graphic/design-receipt' },
+                        { title: '📊 تصميم تقرير للعمل لقياس الاداء', link: 'https://ygbrandmaker.site/Graphic/design-measure-performance' },
+                        { title: '📁 تصميم حافظة اوراق فولدر', link: 'https://ygbrandmaker.site/Graphic/design-folder' },
+                        { title: '💌 تصميم دعوة فرح وحضور مؤتمرات', link: 'https://ygbrandmaker.site/Graphic/design-wedding-invitation-and-attending-conferences' },
+                        { title: '📑 تصميم دفتر فواتير شركة', link: 'https://ygbrandmaker.site/Graphic/design-company-invoice' },
+                        { title: '📜 تصميم رول اب شركة rollup', link: 'https://ygbrandmaker.site/Graphic/design-company-rollup' },
+                        { title: '✉️ تصميم ظرف مراسلات للشركات', link: 'https://ygbrandmaker.site/Graphic/design-corporate-envelopes' },
+                        { title: '📚 تصميم غلاف كتاب او مجلة', link: 'https://ygbrandmaker.site/Graphic/design-book-or-magazine-cover' },
+                        { title: '🍽️ تصميم منيو مطعم قائمة اسعار', link: 'https://ygbrandmaker.site/Graphic/design-restaurant-menus' },
+                        { title: '📄 تصميم ورقة شركة A4', link: 'https://ygbrandmaker.site/Graphic/design-letterhead-a4' }
+                    ]
+                },
+                {
+                    title: '📱 ركن تصميمات السوشيل ميديا',
+                    link: '#',
+                    dropdown: [
+                        { title: '🐦 تصميم غلاف وصورة تويتر', link: 'https://ygbrandmaker.site/Graphic/twitter-cover-and-photo-design' },
+                        { title: '📺 تصميم غلاف قناة يوتيوب احترافي', link: 'https://ygbrandmaker.site/Graphic/youtube-cover-channel-design' },
+                        { title: '🎬 تصميم صور متحركة للفيس وانستقرام', link: 'https://ygbrandmaker.site/Graphic/design-animated-for-facebook-and-instagram' },
+                        { title: '📸 تصميم صور اعلانات وبوستات انستقرام', link: 'https://ygbrandmaker.site/Graphic/instagram-ads-design-pictures' },
+                        { title: '🔷 تصميم لوجو فيسبوك احترافي', link: 'https://ygbrandmaker.site/Graphic/design-logo-facebook-instagram-youtube' },
+                        { title: '📖 تصميم قصة انستقرام', link: 'https://ygbrandmaker.site/Graphic/instagram-story-design' },
+                        { title: '📱 تصميم منشور انستا', link: 'https://ygbrandmaker.site/Graphic/instagram-post-design' },
+                        { title: '🎥 تصميم صور فيديوهات قناة اليوتيوب', link: 'https://ygbrandmaker.site/Graphic/youtube-video-design-pictures' },
+                        { title: '📘 تصميم بوستات فيس بوك', link: 'https://ygbrandmaker.site/Graphic/facebook-post-design' },
+                        { title: '🏢 تصميم غلاف فيس بوك', link: 'https://ygbrandmaker.site/Graphic/facebook-cover-design' }
+                    ]
+                }
+            ]
+        },
+        {
+            title: '📌 أشياء تهمك',
+            link: '#',
+            dropdown: [
+                { title: '👥 من نحن', link: 'https://ygbrandmaker.site/web/about-us' },
+                { title: '🏷️ العلامة التجارية', link: 'https://ygbrandmaker.site/brand' },
+                { title: '💳 طرق الدفع', link: 'https://ygbrandmaker.site/web/payment' },
+                { title: '📜 اتفاقية وشروط الاستخدام', link: 'https://ygbrandmaker.site/web/terms' }
+            ]
+        },
+        {
+            title: '📂 أعمالنا',
+            link: '#',
+            dropdown: [
+                { title: '🎨 الهوية البصرية', link: 'https://ygbrandmaker.site/portfolio' },
+                { title: '🌐 مواقع - ومتاجر', link: 'https://ygbrandmaker.site/portfolio/portfolio/web' }
+            ]
+        }
+    ];
+
+    // دالة لإنشاء القوائم
+    function createMenu(menuItems, isMobile = false) {
+        const ul = document.createElement('ul');
+        ul.className = 'YG-navbar-nav';
+        
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            li.className = 'YG-nav-item';
+            
+            const a = document.createElement('a');
+            a.href = item.link;
+            a.className = 'YG-nav-link';
+            if (item.active) a.classList.add('YG-active');
+            
+            // إضافة أيقونة السهم إذا كان هناك قائمة فرعية
+            if (item.dropdown) {
+                a.innerHTML = `${item.title} <i class="fas fa-chevron-down"></i>`;
+            } else {
+                a.textContent = item.title;
+            }
+            
+            li.appendChild(a);
+            
+            // إضافة القائمة المنسدلة إذا كانت موجودة
+            if (item.dropdown) {
+                const dropdown = document.createElement('ul');
+                dropdown.className = 'YG-dropdown-menu';
+                
+                item.dropdown.forEach(subItem => {
+                    const subLi = document.createElement('li');
+                    subLi.className = 'YG-nav-item';
+                    
+                    if (subItem.dropdown) {
+                        // عنصر به قائمة فرعية داخلية
+                        const subMenu = createSubMenu([subItem], isMobile);
+                        subLi.appendChild(subMenu);
+                    } else {
+                        // عنصر عادي
+                        const subA = document.createElement('a');
+                        subA.href = subItem.link;
+                        subA.className = 'YG-nav-link';
+                        if (subItem.active) subA.classList.add('YG-active');
+                        subA.textContent = subItem.title;
+                        subLi.appendChild(subA);
+                    }
+                    
+                    dropdown.appendChild(subLi);
+                });
+                
+                li.appendChild(dropdown);
+            }
+            
+            ul.appendChild(li);
+        });
+        
+        return ul;
+    }
+
+    // دالة لإنشاء القوائم الفرعية
+    function createSubMenu(items, isMobile) {
+        const fragment = document.createDocumentFragment();
+        
+        items.forEach(item => {
+            if (item.dropdown) {
+                // عنصر مع قائمة فرعية
+                const li = document.createElement('li');
+                li.className = 'YG-nav-item';
+                
+                const a = document.createElement('a');
+                a.href = item.link;
+                a.className = 'YG-nav-link';
+                a.innerHTML = `${item.title} <i class="fas fa-chevron-down"></i>`;
+                
+                li.appendChild(a);
+                
+                const subDropdown = document.createElement('ul');
+                subDropdown.className = 'YG-dropdown-menu';
+                
+                item.dropdown.forEach(subItem => {
+                    const subLi = document.createElement('li');
+                    subLi.className = 'YG-nav-item';
+                    
+                    if (subItem.dropdown) {
+                        // قائمة داخل قائمة (مستوى ثالث)
+                        const deepMenu = createSubMenu([subItem], isMobile);
+                        subLi.appendChild(deepMenu);
+                    } else {
+                        const subA = document.createElement('a');
+                        subA.href = subItem.link;
+                        subA.className = 'YG-nav-link';
+                        subA.textContent = subItem.title;
+                        subLi.appendChild(subA);
+                    }
+                    
+                    subDropdown.appendChild(subLi);
+                });
+                
+                li.appendChild(subDropdown);
+                fragment.appendChild(li);
+            } else {
+                // عنصر عادي
+                const li = document.createElement('li');
+                li.className = 'YG-nav-item';
+                
+                const a = document.createElement('a');
+                a.href = item.link;
+                a.className = 'YG-nav-link';
+                a.textContent = item.title;
+                
+                li.appendChild(a);
+                fragment.appendChild(li);
+            }
+        });
+        
+        return fragment;
+    }
+
+    // دالة التهيئة الرئيسية
+    function initNavigation() {
+        // إضافة الهيكل HTML إلى الصفحة
+        const container = document.createElement('div');
+        container.innerHTML = navigationHTML;
+        document.body.prepend(container);
+        
+        // إنشاء القوائم الرئيسية
+        const mainNav = document.getElementById('YG-mainNav');
+        const sidebarNav = document.getElementById('YG-sidebarNav');
+        
+        mainNav.appendChild(createMenu(menuData));
+        sidebarNav.appendChild(createMenu(menuData, true));
+        
+        // تهيئة JavaScript
+        setupNavigation();
+    }
+
+    // دالة إعداد التنقل
+    function setupNavigation() {
+        const burgerMenu = document.getElementById('YG-burgerMenu');
+        const desktopBurgerMenu = document.getElementById('YG-desktopBurgerMenu');
+        const sidebarModal = document.getElementById('YG-sidebarModal');
+        const closeSidebar = document.getElementById('YG-closeSidebar');
+        const navbarArea = document.getElementById('YG-navbarArea');
+        const sidebarNav = document.getElementById('YG-sidebarNav');
+        const sidebarScroll = document.getElementById('YG-sidebarScroll');
+        
+        // إنشاء القوائم الجانبية ديناميكياً
+        function createMobileMenu() {
+            const mainNav = document.querySelector('.YG-navbar-nav');
+            if (!mainNav) return;
+            
+            const clonedNav = mainNav.cloneNode(true);
+            
+            function processDropdowns(element) {
+                element.querySelectorAll('.YG-nav-link').forEach(link => {
+                    const hasDropdown = link.nextElementSibling && 
+                                      link.nextElementSibling.classList.contains('YG-dropdown-menu');
+                    
+                    if (hasDropdown) {
+                        link.classList.add('has-dropdown');
+                        
+                        const icon = link.querySelector('.fa-chevron-down');
+                        if (icon) icon.style.display = 'none';
+                        
+                        const dropdown = link.nextElementSibling;
+                        if (dropdown) {
+                            processDropdowns(dropdown);
+                        }
+                    }
+                });
+            }
+            
+            processDropdowns(clonedNav);
+            
+            sidebarNav.innerHTML = '';
+            sidebarNav.appendChild(clonedNav);
+            setupAllMobileDropdowns();
+        }
+        
+        function setupAllMobileDropdowns() {
+            const allDropdownLinks = sidebarNav.querySelectorAll('.YG-nav-link.has-dropdown');
+            
+            allDropdownLinks.forEach(link => {
+                link.removeEventListener('click', handleMobileDropdownClick);
+                link.addEventListener('click', handleMobileDropdownClick);
+            });
+        }
+        
+        function handleMobileDropdownClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const link = this;
+            const dropdown = link.nextElementSibling;
+            
+            if (dropdown && dropdown.classList.contains('YG-dropdown-menu')) {
+                const isTopLevel = !link.closest('.YG-dropdown-menu');
+                
+                if (isTopLevel) {
+                    document.querySelectorAll('.YG-sidebar-scroll-container > .YG-navbar-nav > .YG-nav-item > .YG-nav-link.has-dropdown').forEach(otherLink => {
+                        if (otherLink !== link) {
+                            const otherDropdown = otherLink.nextElementSibling;
+                            if (otherDropdown) {
+                                otherDropdown.classList.remove('YG-show');
+                                otherLink.classList.remove('YG-rotated');
+                                
+                                otherDropdown.querySelectorAll('.YG-dropdown-menu.YG-show').forEach(innerDropdown => {
+                                    innerDropdown.classList.remove('YG-show');
+                                    const innerLink = innerDropdown.previousElementSibling;
+                                    if (innerLink) innerLink.classList.remove('YG-rotated');
+                                });
+                            }
+                        }
+                    });
+                }
+                
+                const isOpen = dropdown.classList.contains('YG-show');
+                dropdown.classList.toggle('YG-show');
+                link.classList.toggle('YG-rotated');
+                
+                if (isOpen && isTopLevel) {
+                    dropdown.querySelectorAll('.YG-dropdown-menu.YG-show').forEach(innerDropdown => {
+                        innerDropdown.classList.remove('YG-show');
+                        const innerLink = innerDropdown.previousElementSibling;
+                        if (innerLink) innerLink.classList.remove('YG-rotated');
+                    });
+                }
+                
+                link.classList.add('YG-active');
+                setTimeout(() => {
+                    link.classList.remove('YG-active');
+                }, 300);
+            }
+        }
+        
+        function closeAllDropdowns() {
+            document.querySelectorAll('.YG-dropdown-menu.YG-show').forEach(menu => {
+                menu.classList.remove('YG-show');
+            });
+            
+            document.querySelectorAll('.YG-nav-link.has-dropdown.YG-rotated').forEach(link => {
+                link.classList.remove('YG-rotated');
+            });
+        }
+        
+        function openSidebar() {
+            sidebarModal.classList.add('YG-active');
+            burgerMenu.classList.add('YG-active');
+            desktopBurgerMenu.classList.add('YG-active');
+            document.body.style.overflow = 'hidden';
+            
+            createMobileMenu();
+            sidebarScroll.scrollTop = 0;
+        }
+        
+        function closeSidebarFunc() {
+            sidebarModal.classList.remove('YG-active');
+            burgerMenu.classList.remove('YG-active');
+            desktopBurgerMenu.classList.remove('YG-active');
+            document.body.style.overflow = '';
+            closeAllDropdowns();
+        }
+        
+        // إضافة الأحداث
+        burgerMenu.addEventListener('click', openSidebar);
+        desktopBurgerMenu.addEventListener('click', openSidebar);
+        closeSidebar.addEventListener('click', closeSidebarFunc);
+        
+        document.addEventListener('click', function(event) {
+            if (!sidebarModal.contains(event.target) && 
+                !burgerMenu.contains(event.target) && 
+                !desktopBurgerMenu.contains(event.target)) {
+                closeSidebarFunc();
+            }
+        });
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeSidebarFunc();
+            }
+        });
+        
+        // تأثير التمرير
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 50) {
+                navbarArea.classList.add('YG-scrolled');
+            } else {
+                navbarArea.classList.remove('YG-scrolled');
+            }
+            
+            if (window.innerWidth <= 992) {
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    navbarArea.style.transform = 'translateY(-100%)';
+                    navbarArea.style.transition = 'transform 0.3s ease';
+                } else {
+                    navbarArea.style.transform = 'translateY(0)';
+                }
+                
+                if (scrollTop > 100) {
+                    closeSidebarFunc();
+                }
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+        
+        // تأثير hover على روابط السوشيال ميديا
+        const socialLinks = document.querySelectorAll('.YG-topbar-social-links a');
+        socialLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px) scale(1.05)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+        
+        // القوائم المنسدلة للشاشات الكبيرة
+        function handleDesktopDropdowns() {
+            const navItems = document.querySelectorAll('.YG-nav-item');
+            
+            if (window.innerWidth > 992) {
+                navItems.forEach(item => {
+                    item.addEventListener('mouseenter', function() {
+                        const dropdown = this.querySelector('.YG-dropdown-menu');
+                        if (dropdown) {
+                            dropdown.style.opacity = '1';
+                            dropdown.style.visibility = 'visible';
+                            dropdown.style.transform = 'translateY(5px)';
+                        }
+                    });
+                    
+                    item.addEventListener('mouseleave', function() {
+                        const dropdown = this.querySelector('.YG-dropdown-menu');
+                        if (dropdown) {
+                            dropdown.style.opacity = '0';
+                            dropdown.style.visibility = 'hidden';
+                            dropdown.style.transform = 'translateY(15px)';
+                        }
+                    });
+                });
+            }
+        }
+        
+        sidebarNav.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (link && !link.classList.contains('has-dropdown')) {
+                closeSidebarFunc();
+            }
+        });
+        
+        // إنشاء القائمة أول مرة
+        createMobileMenu();
+        handleDesktopDropdowns();
+        
+        window.addEventListener('resize', function() {
+            handleDesktopDropdowns();
+            
+            if (window.innerWidth <= 992) {
+                createMobileMenu();
+            }
+        });
+        
+        // تأثير fadeIn عند تحميل الصفحة
+        const headerElements = document.querySelectorAll('.YG-topbar-wrap-area, .YG-navbar-area');
+        headerElements.forEach(el => {
+            el.style.animation = 'fadeInDown 0.6s ease-out';
+        });
+        
+        // معالجة الأخطاء في الصور
+        const logoImages = document.querySelectorAll('.YG-logo img');
+        logoImages.forEach(img => {
+            img.onerror = function() {
+                this.src = 'https://via.placeholder.com/200x60/1a237e/ffffff?text=YG+Brand+Maker';
+                this.style.height = '150px';
+            };
+        });
+    }
+
+    // تشغيل التهيئة عند تحميل الصفحة
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initNavigation);
+    } else {
+        initNavigation();
+    }
+
+    // دالة لإضافة الرابط يدوياً
+    window.YGAddNavigation = function() {
+        initNavigation();
+    };
+})();</script>
