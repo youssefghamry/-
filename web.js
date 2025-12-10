@@ -3,7 +3,7 @@
     'use strict';
     
     // إنشاء الشريط العلوي
-    function createTopBar() {
+    function YG_createTopBar() {
         return `
         <div class="YG-topbar-wrap-area">
             <div class="YG-container-fluid">
@@ -31,19 +31,19 @@
     }
 
     // إنشاء شريط التنقل الرئيسي
-    function createNavbar() {
+    function YG_createNavbar() {
         return `
-        <div class="YG-navbar-area YG-navbar-area-with-position-relative" id="YG-navbarArea">
+        <div class="YG-navbar-area YG-navbar-area-with-position-relative" id="YG_navbarArea">
             <div class="YG-responsive-nav">
                 <div class="YG-container">
                     <div class="YG-responsive-menu">
                         <div class="YG-logo">
                             <a href="https://ygbrandmaker.site">
                                 <img src="https://ygbrandmaker.site/logo.gif" alt="YG Brand Maker" 
-                                     onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60/1a237e/ffffff?text=YG+Brand+Maker'">
+                                     onerror="this.onerror=null; this.src='https://ygbrandmaker.site/logo.gif'">
                             </a>
                         </div>
-                        <div class="YG-burger-menu" id="YG-burgerMenu">
+                        <div class="YG-burger-menu" id="YG_burgerMenu">
                             <span></span><span></span><span></span>
                         </div>
                     </div>
@@ -56,10 +56,10 @@
                         <div class="YG-logo">
                             <a href="https://ygbrandmaker.site">
                                 <img src="https://ygbrandmaker.site/logo.gif" alt="YG Brand Maker" 
-                                     onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60/1a237e/ffffff?text=YG+Brand+Maker'">
+                                     onerror="this.onerror=null; this.src='https://ygbrandmaker.site/logo.gif'">
                             </a>
                         </div>
-                        <div class="YG-collapse YG-navbar-collapse YG-mean-menu" id="YG-navbarSupportedContent">
+                        <div class="YG-collapse YG-navbar-collapse YG-mean-menu" id="YG_navbarSupportedContent">
                             <ul class="YG-navbar-nav">
                                 <li class="YG-nav-item"> 
                                     <a href="https://ygbrandmaker.site" class="YG-nav-link">🏠 الرئيسية</a> 
@@ -349,7 +349,7 @@
                             
                             <div class="YG-others-options">
                                 <div class="YG-cart-items"></div>
-                                <div class="YG-burger-menu" id="YG-desktopBurgerMenu">
+                                <div class="YG-burger-menu" id="YG_desktopBurgerMenu">
                                     <span></span><span></span><span></span>
                                 </div>
                             </div>
@@ -361,20 +361,20 @@
     }
 
     // إنشاء القائمة الجانبية
-    function createSidebar() {
+    function YG_createSidebar() {
         return `
-        <div class="YG-sidebar-modal" id="YG-sidebarModal">
+        <div class="YG-sidebar-modal" id="YG_sidebarModal">
             <div class="YG-sidebar-header">
                 <div class="YG-logo">
                     <a href="https://ygbrandmaker.site">
                         <img src="https://ygbrandmaker.site/logo.gif" alt="YG Brand Maker"
-                             onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60/1a237e/ffffff?text=YG+Brand+Maker'">
+                             onerror="this.onerror=null; this.src='https://ygbrandmaker.site/logo.gif'">
                     </a>
                 </div>
-                <button class="YG-close-sidebar" id="YG-closeSidebar">✕</button>
+                <button class="YG-close-sidebar" id="YG_closeSidebar">✕</button>
             </div>
-            <div class="YG-sidebar-scroll-container" id="YG-sidebarScroll">
-                <ul class="YG-navbar-nav" id="YG-sidebarNav">
+            <div class="YG-sidebar-scroll-container" id="YG_sidebarScroll">
+                <ul class="YG-navbar-nav" id="YG_sidebarNav">
                     <!-- سيتم إضافة القوائم ديناميكياً -->
                 </ul>
             </div>
@@ -382,7 +382,7 @@
     }
 
     // إنشاء زر واتساب
-    function createWhatsappButton() {
+    function YG_createWhatsappButton() {
         return `
         <a href="https://wa.me/201030459067?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D8%AA%D9%82%D8%AF%D9%85%D9%88%D9%86%D9%87%D8%A7.%20%D8%A3%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%8A%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1." 
            class="whatsapp-btn" target="_blank">
@@ -391,7 +391,7 @@
     }
 
     // إنشاء الـ CSS
-    function createStyles() {
+    function YG_createStyles() {
         return `
         <style>
             /* الشريط العلوي */
@@ -1330,90 +1330,90 @@
     }
 
     // إدراج جميع العناصر في الصفحة
-    function insertNavigation() {
+    function YG_insertNavigation() {
         // إضافة الـ CSS أولاً
-        document.head.insertAdjacentHTML('beforeend', createStyles());
+        document.head.insertAdjacentHTML('beforeend', YG_createStyles());
         
         // إنشاء حاوية للتنقل
         const navigationContainer = document.createElement('div');
-        navigationContainer.id = 'YG-navigation-container';
+        navigationContainer.id = 'YG_navigation-container';
         
         // إضافة العناصر بالترتيب
-        navigationContainer.innerHTML = createTopBar() + createNavbar() + createSidebar() + createWhatsappButton();
+        navigationContainer.innerHTML = YG_createTopBar() + YG_createNavbar() + YG_createSidebar() + YG_createWhatsappButton();
         
         // إضافة الحاوية في بداية body
         document.body.insertAdjacentElement('afterbegin', navigationContainer);
     }
 
     // تهيئة النظام الأساسي
-    class YGNavigationSystem {
+    class YG_NavigationSystem {
         constructor() {
-            this.init();
+            this.YG_init();
         }
 
-        init() {
-            this.burgerMenu = null;
-            this.desktopBurgerMenu = null;
-            this.sidebarModal = null;
-            this.closeSidebar = null;
-            this.navbarArea = null;
-            this.sidebarNav = null;
-            this.sidebarScroll = null;
+        YG_init() {
+            this.YG_burgerMenu = null;
+            this.YG_desktopBurgerMenu = null;
+            this.YG_sidebarModal = null;
+            this.YG_closeSidebar = null;
+            this.YG_navbarArea = null;
+            this.YG_sidebarNav = null;
+            this.YG_sidebarScroll = null;
             
-            this.lastScrollTop = 0;
-            this.isSidebarOpen = false;
-            this.isMobile = window.innerWidth <= 992;
+            this.YG_lastScrollTop = 0;
+            this.YG_isSidebarOpen = false;
+            this.YG_isMobile = window.innerWidth <= 992;
             
-            this.setupElements();
-            this.setupEvents();
-            this.createMobileMenu();
-            this.handleDesktopDropdowns();
-            this.setupScrollEffects();
-            this.setupLogoErrorHandling();
-            this.setupSocialLinksHover();
+            this.YG_setupElements();
+            this.YG_setupEvents();
+            this.YG_createMobileMenu();
+            this.YG_handleDesktopDropdowns();
+            this.YG_setupScrollEffects();
+            this.YG_setupLogoErrorHandling();
+            this.YG_setupSocialLinksHover();
         }
 
-        setupElements() {
-            this.burgerMenu = document.getElementById('YG-burgerMenu');
-            this.desktopBurgerMenu = document.getElementById('YG-desktopBurgerMenu');
-            this.sidebarModal = document.getElementById('YG-sidebarModal');
-            this.closeSidebar = document.getElementById('YG-closeSidebar');
-            this.navbarArea = document.getElementById('YG-navbarArea');
-            this.sidebarNav = document.getElementById('YG-sidebarNav');
-            this.sidebarScroll = document.getElementById('YG-sidebarScroll');
+        YG_setupElements() {
+            this.YG_burgerMenu = document.getElementById('YG_burgerMenu');
+            this.YG_desktopBurgerMenu = document.getElementById('YG_desktopBurgerMenu');
+            this.YG_sidebarModal = document.getElementById('YG_sidebarModal');
+            this.YG_closeSidebar = document.getElementById('YG_closeSidebar');
+            this.YG_navbarArea = document.getElementById('YG_navbarArea');
+            this.YG_sidebarNav = document.getElementById('YG_sidebarNav');
+            this.YG_sidebarScroll = document.getElementById('YG_sidebarScroll');
         }
 
-        setupEvents() {
+        YG_setupEvents() {
             // فتح/إغلاق القائمة الجانبية
-            this.burgerMenu?.addEventListener('click', () => this.openSidebar());
-            this.desktopBurgerMenu?.addEventListener('click', () => this.openSidebar());
-            this.closeSidebar?.addEventListener('click', () => this.closeSidebarFunc());
+            this.YG_burgerMenu?.addEventListener('click', () => this.YG_openSidebar());
+            this.YG_desktopBurgerMenu?.addEventListener('click', () => this.YG_openSidebar());
+            this.YG_closeSidebar?.addEventListener('click', () => this.YG_closeSidebarFunc());
             
             // إغلاق القائمة عند النقر خارجها
             document.addEventListener('click', (event) => {
-                if (this.sidebarModal?.classList.contains('YG-active') &&
-                    !this.sidebarModal.contains(event.target) && 
-                    !this.burgerMenu?.contains(event.target) && 
-                    !this.desktopBurgerMenu?.contains(event.target)) {
-                    this.closeSidebarFunc();
+                if (this.YG_sidebarModal?.classList.contains('YG-active') &&
+                    !this.YG_sidebarModal.contains(event.target) && 
+                    !this.YG_burgerMenu?.contains(event.target) && 
+                    !this.YG_desktopBurgerMenu?.contains(event.target)) {
+                    this.YG_closeSidebarFunc();
                 }
             });
             
             // إغلاق القائمة عند الضغط على Esc
             document.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape') {
-                    this.closeSidebarFunc();
+                    this.YG_closeSidebarFunc();
                 }
             });
         }
 
-        createMobileMenu() {
+        YG_createMobileMenu() {
             const mainNav = document.querySelector('.YG-navbar-nav');
-            if (!mainNav || !this.sidebarNav) return;
+            if (!mainNav || !this.YG_sidebarNav) return;
             
             const clonedNav = mainNav.cloneNode(true);
             
-            function processDropdowns(element) {
+            function YG_processDropdowns(element) {
                 element.querySelectorAll('.YG-nav-link').forEach(link => {
                     const hasDropdown = link.nextElementSibling && 
                                       link.nextElementSibling.classList.contains('YG-dropdown-menu');
@@ -1425,27 +1425,27 @@
                         
                         const dropdown = link.nextElementSibling;
                         if (dropdown) {
-                            processDropdowns(dropdown);
+                            YG_processDropdowns(dropdown);
                         }
                     }
                 });
             }
             
-            processDropdowns(clonedNav);
-            this.sidebarNav.innerHTML = '';
-            this.sidebarNav.appendChild(clonedNav);
-            this.setupAllMobileDropdowns();
+            YG_processDropdowns(clonedNav);
+            this.YG_sidebarNav.innerHTML = '';
+            this.YG_sidebarNav.appendChild(clonedNav);
+            this.YG_setupAllMobileDropdowns();
         }
 
-        setupAllMobileDropdowns() {
-            const allDropdownLinks = this.sidebarNav?.querySelectorAll('.YG-nav-link.has-dropdown');
+        YG_setupAllMobileDropdowns() {
+            const allDropdownLinks = this.YG_sidebarNav?.querySelectorAll('.YG-nav-link.has-dropdown');
             allDropdownLinks?.forEach(link => {
-                link.removeEventListener('click', this.handleMobileDropdownClick);
-                link.addEventListener('click', this.handleMobileDropdownClick.bind(this));
+                link.removeEventListener('click', this.YG_handleMobileDropdownClick);
+                link.addEventListener('click', this.YG_handleMobileDropdownClick.bind(this));
             });
         }
 
-        handleMobileDropdownClick(e) {
+        YG_handleMobileDropdownClick(e) {
             e.preventDefault();
             e.stopPropagation();
             
@@ -1492,7 +1492,7 @@
             }
         }
 
-        closeAllDropdowns() {
+        YG_closeAllDropdowns() {
             document.querySelectorAll('.YG-dropdown-menu.YG-show').forEach(menu => {
                 menu.classList.remove('YG-show');
             });
@@ -1502,26 +1502,26 @@
             });
         }
 
-        openSidebar() {
-            this.sidebarModal?.classList.add('YG-active');
-            this.burgerMenu?.classList.add('YG-active');
-            this.desktopBurgerMenu?.classList.add('YG-active');
+        YG_openSidebar() {
+            this.YG_sidebarModal?.classList.add('YG-active');
+            this.YG_burgerMenu?.classList.add('YG-active');
+            this.YG_desktopBurgerMenu?.classList.add('YG-active');
             document.body.style.overflow = 'hidden';
-            this.createMobileMenu();
-            this.sidebarScroll?.scrollTo(0, 0);
-            this.isSidebarOpen = true;
+            this.YG_createMobileMenu();
+            this.YG_sidebarScroll?.scrollTo(0, 0);
+            this.YG_isSidebarOpen = true;
         }
 
-        closeSidebarFunc() {
-            this.sidebarModal?.classList.remove('YG-active');
-            this.burgerMenu?.classList.remove('YG-active');
-            this.desktopBurgerMenu?.classList.remove('YG-active');
+        YG_closeSidebarFunc() {
+            this.YG_sidebarModal?.classList.remove('YG-active');
+            this.YG_burgerMenu?.classList.remove('YG-active');
+            this.YG_desktopBurgerMenu?.classList.remove('YG-active');
             document.body.style.overflow = '';
-            this.closeAllDropdowns();
-            this.isSidebarOpen = false;
+            this.YG_closeAllDropdowns();
+            this.YG_isSidebarOpen = false;
         }
 
-        handleDesktopDropdowns() {
+        YG_handleDesktopDropdowns() {
             const navItems = document.querySelectorAll('.YG-nav-item');
             
             if (window.innerWidth > 992) {
@@ -1547,44 +1547,44 @@
             }
         }
 
-        setupScrollEffects() {
+        YG_setupScrollEffects() {
             window.addEventListener('scroll', () => {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 
                 if (scrollTop > 50) {
-                    this.navbarArea?.classList.add('YG-scrolled');
+                    this.YG_navbarArea?.classList.add('YG-scrolled');
                 } else {
-                    this.navbarArea?.classList.remove('YG-scrolled');
+                    this.YG_navbarArea?.classList.remove('YG-scrolled');
                 }
                 
-                if (this.isMobile) {
-                    if (scrollTop > this.lastScrollTop && scrollTop > 100) {
-                        this.navbarArea.style.transform = 'translateY(-100%)';
-                        this.navbarArea.style.transition = 'transform 0.3s ease';
+                if (this.YG_isMobile) {
+                    if (scrollTop > this.YG_lastScrollTop && scrollTop > 100) {
+                        this.YG_navbarArea.style.transform = 'translateY(-100%)';
+                        this.YG_navbarArea.style.transition = 'transform 0.3s ease';
                     } else {
-                        this.navbarArea.style.transform = 'translateY(0)';
+                        this.YG_navbarArea.style.transform = 'translateY(0)';
                     }
                     
                     if (scrollTop > 100) {
-                        this.closeSidebarFunc();
+                        this.YG_closeSidebarFunc();
                     }
                 }
                 
-                this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                this.YG_lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             });
         }
 
-        setupLogoErrorHandling() {
+        YG_setupLogoErrorHandling() {
             const logoImages = document.querySelectorAll('.YG-logo img');
             logoImages.forEach(img => {
                 img.onerror = function() {
-                    this.src = 'https://via.placeholder.com/200x60/1a237e/ffffff?text=YG+Brand+Maker';
+                    this.src = 'https://ygbrandmaker.site/logo.gif';
                     this.style.height = '150px';
                 };
             });
         }
 
-        setupSocialLinksHover() {
+        YG_setupSocialLinksHover() {
             const socialLinks = document.querySelectorAll('.YG-topbar-social-links a');
             socialLinks.forEach(link => {
                 link.addEventListener('mouseenter', function() {
@@ -1601,27 +1601,26 @@
     // تهيئة النظام عند تحميل الصفحة
     document.addEventListener('DOMContentLoaded', function() {
         // إدراج التنقل في الصفحة
-        insertNavigation();
+        YG_insertNavigation();
         
         // تهيئة النظام بعد إدراج العناصر
         setTimeout(() => {
-            window.YGNavigation = new YGNavigationSystem();
+            window.YG_Navigation = new YG_NavigationSystem();
         }, 100);
         
         // التعامل مع تغيير حجم الشاشة
         window.addEventListener('resize', function() {
-            if (window.YGNavigation) {
-                window.YGNavigation.isMobile = window.innerWidth <= 992;
-                window.YGNavigation.handleDesktopDropdowns();
+            if (window.YG_Navigation) {
+                window.YG_Navigation.YG_isMobile = window.innerWidth <= 992;
+                window.YG_Navigation.YG_handleDesktopDropdowns();
                 
                 if (window.innerWidth <= 992) {
-                    window.YGNavigation.createMobileMenu();
+                    window.YG_Navigation.YG_createMobileMenu();
                 }
             }
         });
     });
-})();
-///////////////////////////////////////////////////////////////
+})();//////////////////////////////////////////////////////////////
 // footer-script.js
 (function() {
     // انتظر تحميل DOM
