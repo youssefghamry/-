@@ -365,12 +365,7 @@
         return `
         <div class="YG-sidebar-modal" id="YG_sidebarModal">
             <div class="YG-sidebar-header">
-                <div class="YG-logo">
-                    <a href="https://ygbrandmaker.site">
-                        <img src="https://ygbrandmaker.site/logo.gif" alt="YG Brand Maker"
-                             onerror="this.onerror=null; this.src='https://ygbrandmaker.site/logo.gif'">
-                    </a>
-                </div>
+               
                 <button class="YG-close-sidebar" id="YG_closeSidebar">✕</button>
             </div>
             <div class="YG-sidebar-scroll-container" id="YG_sidebarScroll">
