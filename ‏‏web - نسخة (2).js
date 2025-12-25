@@ -4,26 +4,30 @@
     
     // إنشاء الشريط العلوي
     function YG_createTopBar() {
-       return `
+    /*    return `
         <div class="YG-topbar-wrap-area">
             <div class="YG-container-fluid">
                 <div class="YG-row YG-align-items-center YG-justify-content-center">
                     <div class="YG-col-lg-8 YG-col-md-8">
                         <ul class="YG-topbar-social-links">
                             <li><a href="https://www.fb.com/YGBrandMaker" target="_blank" title="فيسبوك"><i class="fab fa-facebook"></i> فيسبوك</a></li>
+                            <li><a href="https://twitter.com/YGBrandMaker" target="_blank" title="تويتر"><i class="fab fa-twitter"></i> تويتر</a></li>
                             <li><a href="https://www.linkedin.com/company/ygbrandmaker/" target="_blank" title="لينكدإن"><i class="fab fa-linkedin"></i> لينكدإن</a></li>
+                            <li><a href="https://www.instagram.com/ygbrandmaker/" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i> إنستغرام</a></li>
                             <li><a href="https://t.me/YGBrandMaker" target="_blank" title="تليجرام"><i class="fab fa-telegram"></i> تليجرام</a></li>
+                            <li><a href="https://www.tiktok.com/@ygbrandmaker" target="_blank" title="تيك توك"><i class="fab fa-tiktok"></i> تيك توك</a></li>
+                            <li><a href="#" target="_blank" title="سناب شات"><i class="fab fa-snapchat"></i> سناب شات</a></li>
                             <li><a href="https://wa.me/201030459067" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i> واتساب</a></li>
                         </ul>
                     </div>
                     <div class="YG-col-lg-4 YG-col-md-4">
                         <ul class="YG-topbar-action-list">
-                            <li> <a href="tel:00201030459067"><i class="bi bi-telephone-fill"></i> 00201030459067</a> </li>
+                            <li> <a href="tel:01030459067"><i class="bi bi-telephone-fill"></i> 01030459067</a> </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>`;
+        </div>`;*/
     }
     // إنشاء شريط التنقل الرئيسي
     function YG_createNavbar() {
@@ -1787,6 +1791,42 @@
                 </div>
             </div>
 
+            <div class="YG-footer-middle">
+                <div class="YG-footer-container">
+                    <div class="YG-social-section">
+                        <h4 class="YG-social-title">
+                            <span class="YG-title-icon">🌐</span>
+                            تابعنا على وسائل التواصل
+                        </h4>
+                        <div class="YG-social-buttons">
+                            <a href="https://www.fb.com/YGBrandMaker" class="YG-social-btn YG-facebook" target="_blank">
+                                <span class="YG-social-icon">📘</span>
+                                <span class="YG-social-text">فيسبوك</span>
+                            </a>
+                            <a href="https://www.instagram.com/ygbrandmaker/" class="YG-social-btn YG-instagram" target="_blank">
+                                <span class="YG-social-icon">📸</span>
+                                <span class="YG-social-text">إنستغرام</span>
+                            </a>
+                            <a href="https://www.linkedin.com/company/ygbrandmaker/" class="YG-social-btn YG-linkedin" target="_blank">
+                                <span class="YG-social-icon">💼</span>
+                                <span class="YG-social-text">لينكدإن</span>
+                            </a>
+                            <a href="https://wa.me/201030459067" class="YG-social-btn YG-whatsapp" target="_blank">
+                                <span class="YG-social-icon">💚</span>
+                                <span class="YG-social-text">واتساب</span>
+                            </a>
+                            <a href="https://www.youtube.com/@YGBrandMaker" class="YG-social-btn YG-youtube" target="_blank">
+                                <span class="YG-social-icon">📺</span>
+                                <span class="YG-social-text">يوتيوب</span>
+                            </a>
+                            <a href="https://t.me/YGBrandMaker" class="YG-social-btn YG-telegram" target="_blank">
+                                <span class="YG-social-icon">📨</span>
+                                <span class="YG-social-text">تليجرام</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="YG-footer-bottom">
                 <div class="YG-footer-container">
